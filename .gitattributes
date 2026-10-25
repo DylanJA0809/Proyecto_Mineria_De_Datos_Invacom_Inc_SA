@@ -1,0 +1,6 @@
+# Los scripts corren en Linux (contenedor de Oracle y AWS Glue): siempre con saltos de línea LF,
+# aunque se editen en Windows. Con CRLF, bash y SQL*Loader fallan.
+*.sh  text eol=lf
+*.ctl text eol=lf
+*.sql text eol=lf
+*.py  text eol=lf

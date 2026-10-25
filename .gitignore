@@ -1,0 +1,26 @@
+# Datos: los CSV de olist pesan 121 MB y se descargan de Kaggle (ver README).
+*.csv
+*.zip
+
+# Secretos: las contraseñas viven en el .env del servidor, nunca en el repo.
+.env
+.env.*
+*.par
+
+# Salidas de SQL*Loader
+*.log
+*.bad
+*.dsc
+
+# Python (jobs de Glue)
+__pycache__/
+*.pyc
+.venv/
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
