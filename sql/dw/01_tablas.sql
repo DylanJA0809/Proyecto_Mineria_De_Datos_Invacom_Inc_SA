@@ -65,6 +65,15 @@ CREATE TABLE dim_vendedor (
     CONSTRAINT uq_dim_vendedor_id UNIQUE (seller_id)
 );
 
+
+-- ---------------------------------------------------------------------
+-- INDICES BITMAP sobre las llaves foraneas
+-- ---------------------------------------------------------------------
+CREATE BITMAP INDEX ix_fact_fecha    ON fact_ventas (fecha_key);
+CREATE BITMAP INDEX ix_fact_cliente  ON fact_ventas (cliente_key);
+CREATE BITMAP INDEX ix_fact_producto ON fact_ventas (producto_key);
+CREATE BITMAP INDEX ix_fact_vendedor ON fact_ventas (vendedor_key);
+
 -- ---------------------------------------------------------------------
 -- TABLA DE HECHOS: VENTAS
 -- PK compuesta: order_id + order_item_id
