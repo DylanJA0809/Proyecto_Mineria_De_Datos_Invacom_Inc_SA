@@ -1,87 +1,93 @@
 # Preguntas de negocio — Invacom Inc. S.A.
 
-## 1. ¿Qué categorías de producto venden más por mes?
+Cada pregunta junta varias medidas y varias dimensiones, para que su tabla dinámica traiga muchos
+datos y se pueda filtrar y bajar de nivel (de año a mes, de estado a ciudad). Todas se responden con
+el modelo estrella de `docs/modelo-dimensional.md`.
 
-- **Medidas:** monto vendido (`price`), unidades vendidas (cantidad de ítems), número de pedidos.
-- **Por:** categoría de producto (en inglés), año, mes.
-- **Tablas:** `olist_order_items_dataset`, `olist_products_dataset`, `product_category_name_translation`, `olist_orders_dataset` (fecha de compra).
-- **Ojo:** hay 610 productos sin categoría y 13 productos de 2 categorías sin traducción (`pc_gamer`, `portateis_cozinha_e_preparadores_de_alimentos`); el ETL tiene que decidir cómo nombrarlos (consultas 4.1 y 4.3 de `calidad-datos/consultas.sql`).
+Los análisis por mes van de **enero 2017 a agosto 2018**, los meses con datos completos. Los extremos
+casi no tienen pedidos (2016-09: 4, 2016-12: 1, 2018-09: 16, 2018-10: 4; 2016-11 no tiene ninguno),
+según la consulta 6.8 de `calidad-datos/consultas.sql`.
 
-## 2. ¿En qué estados (y ciudades) de Brasil se compra más?
+---
 
-- **Medidas:** monto vendido, número de pedidos, clientes únicos, ticket promedio.
-- **Por:** estado, ciudad, año, mes.
-- **Tablas:** `olist_customers_dataset`, `olist_orders_dataset`, `olist_order_items_dataset`.
-- **Ojo:** contar clientes con `customer_unique_id` (96 096 clientes reales), no con `customer_id` (99 441, uno por pedido). Hay ciudades escritas de varias formas que el ETL debe unificar (consulta 7.11). La geografía sale de la ciudad y el estado del cliente; `olist_geolocation_dataset` no se usa (sección 10 de `consultas.sql`).
+## 1. ¿Cómo evolucionaron, mes a mes, las ventas de cada categoría en cada estado de Brasil, de enero 2017 a agosto 2018?
 
-## 3. ¿Las entregas atrasadas bajan el puntaje de las reseñas?
+- **Medidas:** monto (`precio`), unidades, pedidos distintos, ticket promedio y `flete`.
+- **Filas:** categoría (74).
+- **Columnas:** año → mes (20).
+- **Filtros:** estado del cliente (27) → ciudad (4 119).
+- **Tamaño:** 74 × 20 × 27 ≈ 40 000 combinaciones.
+- **Ojo:** los 610 productos sin categoría y los 13 sin traducción se resuelven en staging. Hay
+  ciudades escritas de varias formas que el ETL debe unificar (consulta 7.11).
 
-- **Medidas:** puntaje promedio de reseña, % de pedidos con reseña de 1–2 estrellas, días de atraso.
-- **Por:** entregado a tiempo vs. atrasado, rangos de días de atraso, estado del cliente.
-- **Tablas:** `olist_orders_dataset` (`order_delivered_customer_date` vs. `order_estimated_delivery_date`), `olist_order_reviews_dataset`.
-- **Ojo:** solo aplica a pedidos con estado `delivered` y fecha de entrega real (8 `delivered` no la tienen). Una misma reseña puede aparecer en varios pedidos (814 `review_id` repetidos), 547 pedidos tienen más de una reseña y 768 no tienen ninguna; hay que decidir si se promedian.
+## 2. ¿Cómo cambian el tiempo de entrega, los atrasos y el puntaje de las reseñas según la ruta del envío, la categoría y el mes?
 
-## 4. ¿Cuánto tarda en llegar un pedido y dónde se atrasa más?
+- **Medidas:** promedio de `dias_entrega` y `dias_atraso`, % de pedidos a tiempo, promedio de
+  `puntaje_resena` y % de pedidos con reseña de 1 o 2 estrellas.
+- **Filas:** estado del vendedor (23) → estado del cliente (27): hasta 621 rutas.
+- **Columnas:** año → mes (20).
+- **Filtros:** categoría · `estado_pedido` = `delivered`.
+- **Tamaño:** 621 rutas × 20 meses ≈ 12 400 combinaciones, por categoría.
+- **Ojo:** 8 pedidos `delivered` no tienen fecha de entrega, y hay fechas fuera de orden (1 359
+  pedidos pasan a la transportista antes de aprobarse y 23 llegan antes de salir; consultas 6.1 a
+  6.3). Si un pedido tiene varias reseñas, se usa el promedio (547 pedidos); 768 no tienen ninguna.
 
-- **Medidas:** días promedio de compra a entrega, días de aprobación, días en manos de la transportista, % de pedidos atrasados.
-- **Por:** estado del cliente, estado del vendedor, mismo estado vs. distinto estado, año, mes.
-- **Tablas:** `olist_orders_dataset`, `olist_order_items_dataset`, `olist_sellers_dataset`, `olist_customers_dataset`.
-- **Ojo:** hay fechas fuera de orden: 1 359 pedidos pasan a la transportista antes de aprobarse y 23 llegan al cliente antes de salir con la transportista (consultas 6.1 y 6.2). El ETL debe decidir si los excluye de los cálculos de tiempos por etapa.
+## 3. ¿Qué vendedores rinden mejor y peor en ventas, puntualidad y satisfacción, por estado y categoría?
 
-## 5. ¿Cómo pagan los clientes?
+- **Medidas:** monto, pedidos distintos, promedio de `puntaje_resena`, % de pedidos a tiempo y flete
+  promedio.
+- **Filas:** estado del vendedor (23) → vendedor (3 095).
+- **Filtros:** categoría · año.
+- **Tamaño:** 3 095 vendedores.
+- **Ojo:** muchos vendedores tienen muy pocos pedidos; hay que poner un mínimo de pedidos para que
+  el promedio valga.
 
-- **Medidas:** monto pagado, número de pagos, promedio de cuotas.
-- **Por:** tipo de pago (tarjeta, boleto, voucher, débito), número de cuotas, año, mes, estado del cliente.
-- **Tablas:** `olist_order_payments_dataset`, `olist_orders_dataset`, `olist_customers_dataset`.
-- **Ojo:** un pedido puede tener varios pagos (`payment_sequential`). En 249 pedidos el total pagado no cuadra con `price + freight_value` (diferencia mayor a 1), 1 pedido entregado no tiene pagos y hay 3 pagos `not_defined` (consultas 5.2, 5.6 y 7.2).
+## 4. ¿Dónde están los clientes, cuánto gasta cada uno y cuántos vuelven a comprar?
 
-## 6. ¿Qué vendedores tienen mejor y peor desempeño?
+- **Medidas:** clientes únicos, pedidos por cliente, gasto por cliente y % de clientes con
+  `recompra` = S.
+- **Filas:** estado (27) → ciudad (4 119).
+- **Columnas:** año (2016 a 2018).
+- **Filtros:** categoría.
+- **Tamaño:** 96 096 clientes repartidos en 4 119 ciudades.
+- **Ojo:** los clientes se cuentan con `customer_unique_id` (96 096), no con `customer_id` (99 441,
+  uno por pedido). Solo alrededor del 3 % recompra: el resultado será pequeño, pero es un hallazgo
+  válido.
 
-- **Medidas:** monto vendido, pedidos, puntaje promedio de reseña, % de envíos atrasados respecto a `shipping_limit_date`.
-- **Por:** vendedor, estado del vendedor, categoría, año, mes.
-- **Tablas:** `olist_order_items_dataset`, `olist_sellers_dataset`, `olist_orders_dataset`, `olist_order_reviews_dataset`.
+## 5. ¿Qué día y a qué hora se compra más, y cuánto pesa el flete sobre el precio, por categoría y rango de peso?
 
-## 7. ¿Cuánto pesa el flete sobre el precio del producto?
-
-- **Medidas:** flete total, flete promedio, % flete / precio.
-- **Por:** categoría, estado del cliente, estado del vendedor, rangos de peso del producto.
-- **Tablas:** `olist_order_items_dataset`, `olist_products_dataset`, `olist_customers_dataset`, `olist_sellers_dataset`.
-
-## 8. ¿Los clientes vuelven a comprar?
-
-- **Medidas:** % de clientes con más de un pedido, pedidos por cliente, tiempo entre compras.
-- **Por:** estado del cliente, categoría de la primera compra, año de la primera compra.
-- **Tablas:** `olist_customers_dataset` (`customer_unique_id`), `olist_orders_dataset`.
-
-## 9. ¿En qué días y horas se compra más?
-
-- **Medidas:** número de pedidos, monto vendido, ticket promedio.
-- **Por:** día de la semana, hora del día, mes, fin de semana vs. entre semana.
-- **Tablas:** `olist_orders_dataset` (`order_purchase_timestamp`), `olist_order_items_dataset`.
-- **Ojo:** la hora se conserva: el `.ctl` de pedidos carga las fechas con formato `YYYY-MM-DD HH24:MI:SS`. Conviene una dimensión de tiempo con día de la semana y la hora como atributo aparte (o su propia dimensión).
-
-## 10. ¿Qué categorías tienen las reseñas más bajas?
-
-- **Medidas:** puntaje promedio de reseña, % de reseñas de 1–2 estrellas, % de reseñas con comentario escrito.
-- **Por:** categoría de producto, año, mes, estado del cliente.
-- **Tablas:** `olist_order_reviews_dataset`, `olist_order_items_dataset`, `olist_products_dataset`, `product_category_name_translation`.
-- **Ojo:** la reseña es por pedido, no por producto; si un pedido trae productos de varias categorías, la reseña cuenta para cada una. Aplican las mismas notas de la pregunta 1 (610 productos sin categoría) y de la 3 (reseñas repetidas). Conviene un mínimo de reseñas por categoría para que el promedio signifique algo.
+- **Medidas:** pedidos distintos, monto, ticket promedio y % de flete sobre el precio (suma de
+  `flete` ÷ suma de `precio`).
+- **Filas:** `nombre_dia` (7) o `rango_peso`.
+- **Columnas:** `hora_compra` (24).
+- **Filtros:** categoría · `fin_de_semana`.
+- **Tamaño:** 7 × 24 = 168 franjas por categoría.
+- **Ojo:** la carga conservó la hora de compra (formato `HH24:MI:SS` en el `.ctl`). Solo 2 productos
+  no tienen peso y 4 tienen peso 0; 383 ítems tienen flete 0.
 
 ---
 
 ## Evaluación: relevancia y factibilidad
 
-Evaluación hecha contra los datos de `OLIST_SRC` y los resultados de `calidad-datos/consultas.sql`. Los pedidos van de septiembre 2016 a octubre 2018, pero los meses con datos completos son de enero 2017 a agosto 2018. Los extremos casi no tienen pedidos (2016-09: 4, 2016-12: 1, 2018-09: 16, 2018-10: 4; 2016-11 no tiene ninguno), así que los análisis por mes deberían limitarse a ese rango (consulta 6.8).
-
 | # | Pregunta | Relevancia | Factibilidad |
 |---|---|---|---|
-| 1 | Categorías que más venden por mes | **Alta**: guía inventario, marketing y compras. | **Alta**: datos completos. Solo hay que tratar los 610 productos sin categoría y las 2 categorías sin traducción. |
-| 2 | Estados/ciudades donde se compra más | **Alta**: define dónde invertir en publicidad y logística. | **Alta**: todos los clientes tienen estado y ciudad. Algunas ciudades vienen con tildes o escritura inconsistente. |
-| 3 | Atrasos vs. puntaje de reseñas | **Alta**: conecta la operación con la satisfacción del cliente. | **Alta**: solo 768 pedidos no tienen reseña, y casi todos tienen fecha real y estimada. Se limita a pedidos `delivered` con fecha de entrega. |
-| 4 | Tiempo de entrega y dónde se atrasa | **Alta**: identifica cuellos de botella logísticos por región. | **Alta**: las fechas están. Hay que filtrar los 8 `delivered` sin fecha de entrega y tratar las fechas fuera de orden (1 359 + 23 pedidos). |
-| 5 | Cómo pagan los clientes | **Media**: útil para finanzas y para promociones en cuotas. | **Alta**: tabla de pagos casi limpia: 3 `not_defined`, 1 pedido sin pagos y 249 pedidos descuadrados. |
-| 6 | Desempeño de vendedores | **Alta**: permite premiar o sancionar vendedores del marketplace. | **Media**: muchos vendedores tienen muy pocos pedidos; hay que poner un mínimo de ventas para que los promedios signifiquen algo. |
-| 7 | Peso del flete sobre el precio | **Media**: ayuda a revisar la política de envíos y precios por región. | **Alta**: precio y flete vienen por ítem. Solo 2 productos sin peso y 4 con peso 0; 383 ítems tienen flete 0. |
-| 8 | Recompra de clientes | **Alta**: la fidelización es clave en un e-commerce. | **Media**: se calcula con `customer_unique_id`, pero solo alrededor del 3% de clientes recompra, así que el resultado será pequeño (igual es un hallazgo válido). |
-| 9 | Días y horas de compra | **Media**: sirve para programar campañas y soporte. | **Alta**: la carga conservó la hora de compra (formato `HH24:MI:SS` en el `.ctl`). |
-| 10 | Categorías con reseñas más bajas | **Alta**: señala qué categorías generan clientes insatisfechos (calidad del producto, descripciones, devoluciones). | **Alta**: 99 224 reseñas, todas con puntaje de 1 a 5 (consulta 7.7), unidas a la categoría por los ítems del pedido. Solo hay que tratar los productos sin categoría y las reseñas repetidas. |
+| 1 | Ventas por categoría, mes y estado | **Alta**: guía inventario, marketing y dónde invertir en publicidad y logística. | **Alta**: datos completos; solo hay que resolver categorías y ciudades en staging. |
+| 2 | Entregas, atrasos y reseñas por ruta | **Alta**: conecta la logística con la satisfacción del cliente. | **Alta**: casi todos los pedidos tienen fechas y reseña; hay que filtrar los casos anotados. |
+| 3 | Desempeño de vendedores | **Alta**: permite premiar o sancionar vendedores del marketplace. | **Media**: los vendedores con pocos pedidos necesitan un mínimo para que los promedios signifiquen algo. |
+| 4 | Ubicación, gasto y recompra de clientes | **Alta**: muestra dónde está el mercado y qué tanto se fideliza. | **Media**: la recompra es baja (alrededor del 3 %), aunque se calcula sin problema. |
+| 5 | Día, hora y peso del flete | **Media**: sirve para programar campañas y revisar la política de envíos. | **Alta**: la hora se conservó y casi todos los productos tienen peso. |
+
+## Cómo salen de las preguntas anteriores
+
+El primer borrador tenía 10 preguntas más específicas. Las 5 de arriba las juntan:
+
+| Pregunta nueva | Junta las anteriores |
+|---|---|
+| 1 | Categorías que más venden por mes · Estados donde se compra más |
+| 2 | Atrasos vs. reseñas · Tiempo de entrega · Categorías con reseñas más bajas |
+| 3 | Desempeño de vendedores |
+| 4 | Estados donde se compra más · Recompra de clientes |
+| 5 | Peso del flete sobre el precio · Días y horas de compra |
+
+Queda fuera **cómo pagan los clientes**: los pagos son por pedido, un pedido puede tener varios, y no
+entran en la estrella, cuyo grano es un producto por fila.
