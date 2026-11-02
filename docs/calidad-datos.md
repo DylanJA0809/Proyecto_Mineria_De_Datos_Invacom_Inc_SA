@@ -197,3 +197,42 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 
 ---
 
+## 4. Tablas y campos de OLIST_SRC que alimentan el DW
+
+| Tabla en OLIST_SRC | Campo fuente | Tabla en OLIST_DW | Campo destino |
+|---|---|---|---|
+| `olist_customers_dataset` | `customer_unique_id` | `dim_cliente` | `customer_unique_id` |
+| `olist_customers_dataset` | `customer_city` | `dim_cliente` | `ciudad` |
+| `olist_customers_dataset` | `customer_state` | `dim_cliente` | `estado` |
+| `olist_sellers_dataset` | `seller_id` | `dim_vendedor` | `seller_id` |
+| `olist_sellers_dataset` | `seller_city` | `dim_vendedor` | `ciudad` |
+| `olist_sellers_dataset` | `seller_state` | `dim_vendedor` | `estado` |
+| `olist_products_dataset` | `product_id` | `dim_producto` | `product_id` |
+| `olist_products_dataset` | `product_category_name` | `dim_producto` | `categoria` (traducida al inglés) |
+| `olist_products_dataset` | `product_weight_g` | `dim_producto` | `peso_g` |
+| `product_category_name_translation` | `product_category_name_english` | `dim_producto` | `categoria` |
+| `olist_orders_dataset` | `order_purchase_timestamp` | `fact_ventas` | `fecha_key` |
+| `olist_orders_dataset` | `order_purchase_timestamp` | `fact_ventas` | `hora_compra` |
+| `olist_orders_dataset` | `order_id` | `fact_ventas` | `order_id` |
+| `olist_orders_dataset` | `order_status` | `fact_ventas` | `estado_pedido` |
+| `olist_orders_dataset` | `order_delivered_customer_date` | `fact_ventas` | `dias_entrega` |
+| `olist_orders_dataset` | `order_delivered_customer_date` | `fact_ventas` | `dias_atraso` |
+| `olist_orders_dataset` | `order_estimated_delivery_date` | `fact_ventas` | `dias_atraso` |
+| `olist_orders_dataset` | `order_delivered_customer_date` | `fact_ventas` | `a_tiempo` |
+| `olist_orders_dataset` | `order_estimated_delivery_date` | `fact_ventas` | `a_tiempo` |
+| `olist_order_items_dataset` | `order_id` | `fact_ventas` | `order_id` |
+| `olist_order_items_dataset` | `order_item_id` | `fact_ventas` | `order_item_id` |
+| `olist_order_items_dataset` | `product_id` | `fact_ventas` | `producto_key` (lookup) |
+| `olist_order_items_dataset` | `seller_id` | `fact_ventas` | `vendedor_key` (lookup) |
+| `olist_order_items_dataset` | `price` | `fact_ventas` | `precio` |
+| `olist_order_items_dataset` | `freight_value` | `fact_ventas` | `flete` |
+| `olist_order_reviews_dataset` | `review_score` | `fact_ventas` | `puntaje_resena` |
+
+**Tablas de OLIST_SRC que no alimentan el DW:**
+
+- `olist_order_payments_dataset`: no tiene columna propia en el DW; se usa solo en el ETL para validar montos.
+- `olist_geolocation_dataset`: descartada (ver sección 3.4).
+
+
+---
+
