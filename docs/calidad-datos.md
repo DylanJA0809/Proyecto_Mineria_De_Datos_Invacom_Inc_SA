@@ -37,7 +37,7 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 | 3 | Pedidos sin fecha de entrega al cliente | 2 965 | Carga con `NULL`; pedidos no entregados o cancelados | STG | **P3, P4** (atrasos y tiempos) |
 | 4 | Productos sin categoría y sin metadatos | 610 | Homologar nombre a `'sin_categoria'` | STG | **P1, P7, P10** (ventas y reseñas por categoría) |
 | 5 | Categorías sin traducción al inglés | 13 productos (2 categorías) | Insertar traducciones oficiales: `pc_gamer` y `portable_kitchen_and_food_preparers` | STG | **P1, P10** (ventas y satisfacción por categoría) |
-| 6 | Productos con peso nulo o cero | 2 nulos + 4 en cero | Aplicar `NULLIF(product_weight_g, 0)`. Categorizar como `'Sin peso registrado'` en reportes | STG / DW | **P7** (peso vs. flete) |
+| 6 | Productos con peso nulo o cero | 2 nulos + 4 en cero | Aplicar `NULLIF(product_weight_g, 0)`. Rango de peso en `dim_producto.rango_peso` (`VARCHAR2(12)`): `'< 500 g'` (menos de 500), `'500g - 2kg'` (500 a menos de 2 000), `'2kg - 10kg'` (2 000 a menos de 10 000), `'10kg o más'` (10 000 o más) y `'Sin peso'` (peso `NULL`). Ninguna etiqueta pasa de 12 caracteres | STG / DW | **P5** (peso vs. flete)|
 | 7 | Geolocalización: filas duplicadas exactas | 261 831 | Tabla descartada del modelo (no aporta a preguntas de negocio) | N/A | **P2, P4** (análisis geográfico) |
 | 8 | Geolocalización: coordenadas fuera de Brasil | 42 | Tabla descartada del modelo | N/A | **P2, P4** (análisis geográfico) |
 | 9a | Pedidos con más de una reseña registrada | 547 pedidos | Seleccionar la última opinión emitida por el cliente usando la fecha más reciente (`review_creation_date` DESC) | DW | **P3, P6, P10** (puntaje de satisfacción) |
@@ -97,8 +97,15 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 ### 3.3 Pesos nulos y productos con peso cero (problema 6)
 - **Consultas asociadas:** 2.3, 4.5, 7.12, 9.1
 - **Qué pasa en los datos:** 2 productos tienen peso nulo y 4 productos tienen registrado un peso de 0 gramos.
-- **Por qué se aplica `NULLIF`:** Ningún producto físico puede pesar 0 gramos. Si calculamos el costo de flete por kilo en la **Pregunta 7** (*¿Cuánto pesa el flete sobre el precio?*), dividir entre 0 rompería las fórmulas matemáticas o arrojaría infinitos.
-- **Regla aplicada:** Se limpia con `NULLIF(product_weight_g, 0)` para que quede en `NULL`. En los reportes se clasifican bajo el rango `'Sin peso registrado'`, permitiendo medir sus ventas sin alterar los promedios de peso.
+- **Por qué se aplica `NULLIF`:** Ningún producto físico puede pesar 0 gramos. Si calculamos el costo de flete por kilo en la **P5** (*día, hora y flete*), dividir entre 0 rompería las fórmulas matemáticas o arrojaría infinitos.
+- **Regla aplicada:** Se limpia con `NULLIF(product_weight_g, 0)` para que quede en `NULL`. El peso se clasifica en `dim_producto.rango_peso`, que es `VARCHAR2(12)`:
+  | Rango | Etiqueta | Caracteres |
+  |---|---|---|
+  | Menos de 500 g | `< 500 g` | 7 |
+  | De 500 g a menos de 2 000 g | `500g - 2kg` | 10 |
+  | De 2 000 g a menos de 10 000 g | `2kg - 10kg` | 10 |
+  | 10 000 g o más | `10kg o más` | 10 |
+  | Peso nulo (incluye los ceros convertidos) | `Sin peso` | 8 |
 
 ---
 
