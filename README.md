@@ -36,9 +36,13 @@ Oracle Database 21c XE, PDB `XEPDB1`. Las tres etapas son tres esquemas del mism
 
 | Esquema | Qué tiene |
 |---|---|
-| `OLIST_SRC` | Los CSV tal cual, sin limpiar |
+| `OLIST_SRC` | Los CSV tal cual, sin limpiar, y las vistas de extracción |
 | `OLIST_STG` | Lo que limpió Glue |
 | `OLIST_DW` | El modelo estrella |
+
+Antes de cada tabla del DW se hizo una vista en `OLIST_SRC` con su forma (`v_dim_cliente`,
+`v_dim_vendedor`, `v_dim_producto` y `v_fact_ventas`), para revisar cómo iba a quedar. Los jobs
+leen de esas vistas.
 
 El ETL corre en AWS Glue (Spark) y los reportes son tablas dinámicas de Excel sobre `OLIST_DW`.
 
@@ -59,6 +63,7 @@ igual, con `glue_etl`.
 olist-carga/            Carga de OLIST_SRC con SQL*Loader
 calidad-datos/          Consultas de calidad sobre OLIST_SRC
 sql/esquemas.sql        Crea OLIST_STG y OLIST_DW y los proxys
+sql/src/vistas.sql      Vistas de extracción: una por tabla del DW, con su forma
 sql/dw/01_tablas.sql    Tablas del modelo estrella
 glue/                   Jobs de Glue (plantilla.py es la base de todos)
 docs/                   Preguntas de negocio, modelo dimensional y calidad de datos
