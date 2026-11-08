@@ -16,3 +16,4 @@ CREATE TABLE stg_vendedor (
     estado      CHAR(2),
     CONSTRAINT pk_stg_vendedor PRIMARY KEY (seller_id)
 );
+
