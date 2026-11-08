@@ -66,13 +66,6 @@ CREATE TABLE dim_vendedor (
 );
 
 
--- ---------------------------------------------------------------------
--- INDICES BITMAP sobre las llaves foraneas
--- ---------------------------------------------------------------------
-CREATE BITMAP INDEX ix_fact_fecha    ON fact_ventas (fecha_key);
-CREATE BITMAP INDEX ix_fact_cliente  ON fact_ventas (cliente_key);
-CREATE BITMAP INDEX ix_fact_producto ON fact_ventas (producto_key);
-CREATE BITMAP INDEX ix_fact_vendedor ON fact_ventas (vendedor_key);
 
 -- ---------------------------------------------------------------------
 -- TABLA DE HECHOS: VENTAS
@@ -111,6 +104,15 @@ CREATE TABLE fact_ventas (
 );
 
 
+-- ---------------------------------------------------------------------
+-- INDICES BITMAP sobre las llaves foraneas
+-- ---------------------------------------------------------------------
+CREATE BITMAP INDEX ix_fact_fecha    ON fact_ventas (fecha_key);
+CREATE BITMAP INDEX ix_fact_cliente  ON fact_ventas (cliente_key);
+CREATE BITMAP INDEX ix_fact_producto ON fact_ventas (producto_key);
+CREATE BITMAP INDEX ix_fact_vendedor ON fact_ventas (vendedor_key);
+
+
 -- =====================================================================
 -- CARGA DE DIM_FECHA
 -- =====================================================================
@@ -118,7 +120,7 @@ CREATE TABLE fact_ventas (
 --   Llena la tabla dim_fecha con un día por fila, desde el 01/01/2016
 --   hasta el 31/12/2018 (1 096 filas).
 --   El CREATE TABLE solo crea la tabla vacía, por eso se necesita
---   este INSERT. Sin esto el, fact_ventas no tendria con que unirse
+--   este INSERT. Sin esto, fact_ventas no tendria con que unirse
 --   por fecha_key.
 --
 -- Para que sirve?
@@ -148,8 +150,6 @@ FROM (
     SELECT DATE '2016-01-01' + LEVEL - 1 AS d
     FROM dual
     CONNECT BY LEVEL <= DATE '2018-12-31' - DATE '2016-01-01' + 1
-)
+);
 
-COMMIT -- Es una linea que se ejecuta despues del insert
-
-
+COMMIT; -- Es una linea que se ejecuta despues del insert
