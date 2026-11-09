@@ -12,6 +12,8 @@ grant create session, create table, create view, create sequence,
 
 -- staging lee de la fuente
 grant olist_lector to olist_stg;
+-- el DW la lee para sql/validacion.sql
+grant olist_lector to olist_dw;
 
 -- proxy
 alter user olist_stg grant connect through josue;
