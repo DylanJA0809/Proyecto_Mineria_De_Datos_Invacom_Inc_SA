@@ -7,11 +7,23 @@ SQL, los jobs de ETL y la documentación.
 
 **Integrantes:** Josué, Karol, Katherine y Dylan.
 
+## Documentos
+
+| Documento | Qué tiene |
+|---|---|
+| [Preguntas de negocio](docs/preguntas-de-negocio.md) | Las 5 preguntas que responde el DW |
+| [Modelo dimensional](docs/modelo-dimensional.md) | El modelo estrella, la granularidad y las medidas |
+| [Calidad de datos](docs/calidad-datos.md) | Los problemas de la fuente y la regla de limpieza de cada uno |
+| [Vistas de extracción](sql/src/vistas.sql) | Una vista por tabla del DW, con su forma |
+
 ## La base: Olist
 
 *Brazilian E-Commerce Public Dataset by Olist*: compras reales de un marketplace brasileño entre
 2016 y 2018. Son 9 CSV (121 MB) que no se suben al repo; se descargan de
 [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
+<details>
+<summary>Las 9 tablas y sus filas</summary>
 
 | Tabla | Filas |
 |---|---|
@@ -25,11 +37,16 @@ SQL, los jobs de ETL y la documentación.
 | `olist_geolocation_dataset` | 1 000 163 |
 | `product_category_name_translation` | 71 |
 
+</details>
+
 ## Arquitectura
 
-```
-CSV de Kaggle ──► OLIST_SRC ──► AWS Glue ──► OLIST_STG ──► AWS Glue ──► OLIST_DW ──► Excel
-                  (fuente)      (limpia)     (staging)     (carga)      (estrella)   (tablas dinámicas)
+```mermaid
+flowchart LR
+    CSV["CSV de Kaggle"] --> SRC["OLIST_SRC<br/>fuente y vistas"]
+    SRC -- "Glue: limpia" --> STG["OLIST_STG<br/>staging"]
+    STG -- "Glue: carga" --> DW["OLIST_DW<br/>modelo estrella"]
+    DW --> XLS["Excel<br/>tablas dinámicas"]
 ```
 
 Oracle Database 21c XE, PDB `XEPDB1`. Las tres etapas son tres esquemas del mismo Oracle:
@@ -44,7 +61,12 @@ Antes de cada tabla del DW se hizo una vista en `OLIST_SRC` con su forma (`v_dim
 `v_dim_vendedor`, `v_dim_producto` y `v_fact_ventas`), para revisar cómo iba a quedar. Los jobs
 leen de esas vistas.
 
-El ETL corre en AWS Glue (Spark) y los reportes son tablas dinámicas de Excel sobre `OLIST_DW`.
+## El modelo
+
+Una tabla de hechos, `fact_ventas` (un ítem de pedido por fila), y cuatro dimensiones: fecha,
+cliente, producto y vendedor. El detalle está en [modelo-dimensional.md](docs/modelo-dimensional.md).
+
+![Modelo estrella](docs/modelo-dimensional.png)
 
 ## Acceso
 
@@ -64,12 +86,16 @@ olist-carga/            Carga de OLIST_SRC con SQL*Loader
 calidad-datos/          Consultas de calidad sobre OLIST_SRC
 sql/esquemas.sql        Crea OLIST_STG y OLIST_DW y los proxys
 sql/src/vistas.sql      Vistas de extracción: una por tabla del DW, con su forma
-sql/dw/01_tablas.sql    Tablas del modelo estrella
+sql/stg/                Tablas de staging, una por job stg_*
+sql/dw/01_tablas.sql    Tablas del modelo estrella y carga de dim_fecha
 glue/                   Jobs de Glue (plantilla.py es la base de todos)
+  stg_*.py              De OLIST_SRC a OLIST_STG: extraen y limpian
+  dim_*.py, fact_*.py   De OLIST_STG a OLIST_DW: cargan el modelo estrella
 docs/                   Preguntas de negocio, modelo dimensional y calidad de datos
 ```
 
-## Cómo se cargó `OLIST_SRC`
+<details>
+<summary>Cómo se cargó <code>OLIST_SRC</code></summary>
 
 Con SQL\*Loader: un `.ctl` por CSV, y `cargar.sh` los corre todos y muestra filas cargadas y
 rechazadas.
@@ -86,6 +112,8 @@ limpiar, porque la limpieza es parte del ETL.
 - La FK de productos a la traducción de categorías está en `DISABLE NOVALIDATE`, porque 13
   productos tienen una categoría sin traducción.
 - Para recargar hay que desactivar antes las FK, o el `TRUNCATE` falla (`ORA-02266`).
+
+</details>
 
 ## Forma de trabajo
 
