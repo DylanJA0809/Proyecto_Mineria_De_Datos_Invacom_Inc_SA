@@ -27,13 +27,13 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 
 **Leyenda de pasos:**
 - **STG** → la regla se aplica al cargar de `OLIST_SRC` a `OLIST_STG` (limpieza técnica y estandarización).
-- **DW** → la regla se aplica al estructurar los datos para el modelo final (reglas analíticas y flags).
-- **N/A** → no requiere acción (la tabla fue descartada o la prueba arrojó 0 errores).
+- **DW** → la regla se aplica al estructurar los datos para el modelo final (reglas analíticas y medidas calculadas).
+- **N/A** → no requiere acción (la tabla fue descartada, el campo no entra al DW o la prueba arrojó 0 errores).
 
 | # | Problema detectado | Filas afectadas | Regla de Limpieza / ETL | Paso | Pregunta de Negocio protegida |
 |---|---|---|---|---|---|
-| 1 | Pedidos sin fecha de aprobación | 160 | Carga con `NULL`; excluir de cálculo de días de aprobación | STG | **P2** (entregas, atrasos y reseñas) |
-| 2 | Pedidos sin fecha de entrega al transportista | 1 783 | Carga con `NULL`; excluir de cálculo de tiempos en ruta | STG | **P2** (entregas, atrasos y reseñas) |
+| 1 | Pedidos sin fecha de aprobación | 160 | Sin impacto en el DW: la fecha de aprobación no entra al modelo (el DW solo mide entrega total al cliente) | N/A | **P2** (entregas, atrasos y reseñas) |
+| 2 | Pedidos sin fecha de entrega al transportista | 1 783 | Sin impacto en el DW: la fecha de despacho no entra al modelo (no se modelan etapas intermedias) | N/A | **P2** (entregas, atrasos y reseñas) |
 | 3 | Pedidos sin fecha de entrega al cliente | 2 965 | Carga con `NULL`; pedidos no entregados o cancelados | STG | **P2** (entregas, atrasos y reseñas) |
 | 4 | Productos sin categoría y sin metadatos | 610 | Homologar nombre a `'sin_categoria'` | STG | **P1, P2, P5** (ventas, reseñas y flete por categoría)|
 | 5 | Categorías sin traducción al inglés | 13 productos (2 categorías) | Insertar traducciones oficiales: `pc_gamer` y `portable_kitchen_and_food_preparers` | STG | **P1, P2** (ventas y reseñas por categoría) |
@@ -46,11 +46,11 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 | 11 | Pedido `delivered` con 3 ítems sin pagos | 1 pedido | **Conservar en ventas** (los productos se vendieron y entregaron). Dejar monto cobrado en `NULL` y reportar en log de excepciones | DW | **P1, P5** (ventas totales y flete) |
 | 12 | Pedidos sin reseña registrada | 768 pedidos | Carga con `review_score = NULL`. No incluir en el denominador al promediar satisfacción | STG / DW | **P2, P3** (promedio de estrellas) |
 | 13 | Monto cobrado no cuadra con ítems + flete | 249 pedidos | Conservar montos originales de ítems y pagos sin alterar. Registrar diferencia explicada por intereses de cuotas y cupones | DW | **Fuera del DW** (pagos no entra al DW) |
-| 14 | Despacho a transportista antes de aprobación | 1 359 pedidos | Dejar tiempo de aprobación en `NULL` y marcar con bandera `flag_transp_antes_aprobacion = 'S'` | DW | **P2** (cuellos de botella logísticos) |
-| 15 | Entrega al cliente antes del despacho | 23 pedidos | Dejar tiempo en ruta en `NULL` y marcar con bandera `flag_cliente_antes_transp = 'S'` | DW | **P2** (tiempos de entrega) |
+| 14 | Despacho a transportista antes de aprobación | 1 359 pedidos | Sin impacto en el DW: no se modelan etapas intermedias ni banderas; solo se mide compra a entrega al cliente | N/A | **P2** (tiempos de entrega) |
+| 15 | Entrega al cliente antes del despacho | 23 pedidos | Sin impacto en el DW: no se modelan etapas intermedias; `dias_entrega` (compra a entrega al cliente) es positivo y válido | N/A | **P2** (tiempos de entrega) |
 | 16 | Pedidos `delivered` sin fecha de entrega | 8 pedidos (subconjunto del #3) | Conservar estado `delivered`, fecha en `NULL`; excluir de cálculo de días reales de entrega | STG / DW | **P2** (atrasos en entregas) |
-| 17 | Pedidos no `delivered` con fecha de entrega | 6 pedidos | Conservar datos originales; marcar bandera `flag_no_entregado_con_fecha = 'S'` | DW | **P2** (auditoría de entregas) |
-| 18 | Reseña registrada antes de la fecha de compra | 64 pedidos | Cargar normalmente; excluir de análisis de atraso usando `review_creation_date >= TRUNC(order_purchase_timestamp)` | DW | **P2** (atrasos vs. puntaje) |
+| 17 | Pedidos no `delivered` con fecha de entrega | 6 pedidos | Conservar datos originales; auditable por consulta (`estado_pedido <> 'delivered'`) sin requerir columna bandera | DW | **P2** (auditoría de entregas) |
+| 18 | Reseña registrada antes de la fecha de compra | 64 pedidos | Conservar la reseña más reciente según regla 9a; representa el 0.06 % y no distorsiona el promedio de satisfacción | DW | **P2** (atrasos vs. puntaje) |
 | 19 | Pagos con medio de pago `not_defined` | 3 registros | Homologar como `'no_definido'`. Corresponden a los 3 pedidos cancelados con monto 0 | STG | **Fuera del DW** (pagos no entra al DW) |
 | 20 | Pagos con valor cero | 9 registros | Conservar sin modificar (6 son cupones de descuento 100 % y 3 son cancelados) | STG | **Fuera del DW** (pagos no entra al DW) |
 | 21 | Ítems con costo de flete en cero | 383 ítems | Conservar en 0 (representan envíos gratuitos válidos de la plataforma) | STG | **P5** (porcentaje de flete sobre precio) |
@@ -78,7 +78,8 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 - **Consultas asociadas:** 2.1, 2.2, 6.3
 - **Qué pasa en los datos:** 160 pedidos no tienen fecha de aprobación, 1 783 no tienen fecha de despacho y 2 965 no tienen fecha de entrega al cliente.
 - **Por qué no se imputan fechas falsas:** Estos nulos son esperables en el ciclo de vida de un pedido: si un cliente cancela antes de que la orden sea aprobada o despachada, ese evento nunca ocurrió. Poner una fecha inventada distorsionaría por completo la **Pregunta 2** (*¿Cómo cambian el tiempo de entrega, los atrasos y el puntaje de las reseñas?*) inflando o reduciendo los días reales de entrega.
-- **Caso especial 16 (8 pedidos `delivered` sin fecha de entrega):** Son un subconjunto de los 2 965 pedidos. El estado dice "entregado" pero se omitió registrar la fecha final. Se conservan como válidos para ventas, pero se excluyen del cálculo de tiempos de la **Pregunta 2** para no generar errores matemáticos.
+- **Alcance en el modelo dimensional:** En `fact_ventas` **no se incluyen fechas ni tiempos de etapas intermedias** (`order_approved_at` ni `order_delivered_carrier_date`), ya que el análisis de negocio evalúa únicamente la entrega total al cliente (`order_delivered_customer_date` vs. `order_purchase_timestamp`). Por tanto, los nulos de aprobación y despacho (problemas 1 y 2) no entran ni afectan al DW.
+- **Caso especial 16 (8 pedidos `delivered` sin fecha de entrega):** Son un subconjunto de los 2 965 pedidos. El estado dice "entregado" pero se omitió registrar la fecha final. Se conservan como válidos para ventas, pero sus métricas de tiempo (`dias_entrega`, `dias_atraso`, `a_tiempo`) quedan en `NULL`, excluyéndose automáticamente de los cálculos de promedios de la **Pregunta 2** sin generar errores matemáticos.
 
 ---
 
@@ -156,11 +157,10 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
   - 23 pedidos aparecen entregados al cliente antes de salir con el transportista (problema 15).
   - 6 pedidos no entregados tienen fecha de entrega (problema 17).
   - 64 reseñas tienen fecha de creación anterior a la fecha de compra (problema 18).
-- **Justificación de negocio:** Restar fechas en desorden produciría "días negativos" en la **Pregunta 2** (*tiempo de entrega y atrasos*) arruinando los promedios.
-- **Regla aplicada:**
-  - Los pedidos se conservan para no alterar montos vendidos.
-  - Para los problemas 14 y 15, se deja el tiempo de esa etapa en `NULL` y se agregan banderas descriptivas (`flag_transp_antes_aprobacion = 'S'`, `flag_cliente_antes_transp = 'S'`) para que los analistas puedan filtrar los tiempos limpios.
-  - Para el problema 18: como la fecha de reseña no tiene hora, se aplica `review_creation_date >= TRUNC(order_purchase_timestamp)` para no descartar opiniones hechas el mismo día de la compra en la **Pregunta 2** (*atrasos vs. puntaje de reseñas*).
+- **Decisión de diseño en el DW (sin banderas innecesarias):**
+  - **Problemas 14 y 15 (etapas intermedias fuera de orden):** El modelo dimensional de `OLIST_DW` mide únicamente el tiempo total de entrega (`dias_entrega = trunc(order_delivered_customer_date) - trunc(order_purchase_timestamp)`) y el atraso frente a la estimación (`dias_atraso`). Al **no almacenar fechas ni calcular tiempos intermedios** (aprobación y despacho al transportista no entran a `fact_ventas`), estas inconsistencias de la fuente no generan días negativos ni distorsionan las métricas del DW. Por tanto, no se requieren columnas de bandera (`flags`) en la tabla de hechos.
+  - **Problema 17 (pedidos no delivered con fecha de entrega):** Se cargan conservando el `estado_pedido` original y su fecha de entrega. No se agrega una columna bandera en `fact_ventas`; si se requiere auditar estos 6 casos, se filtran directamente por consulta (`WHERE estado_pedido <> 'delivered' AND dias_entrega IS NOT NULL`).
+  - **Problema 18 (reseñas creadas antes de la compra):** Son únicamente 64 de 99 224 reseñas (0.06 %). Se procesan con la regla estándar 9a (tomando la reseña más reciente del pedido). No se excluyen mediante filtros adicionales en el ETL, ya que la calificación de satisfacción sigue siendo válida y su peso en los promedios de la **Pregunta 2** es estadísticamente imperceptible.
 
 ---
 
@@ -209,6 +209,7 @@ Conteo de filas por tabla en `OLIST_SRC` como línea base para verificar cuadres
 | Tabla en OLIST_SRC | Campo fuente | Tabla en OLIST_DW | Campo destino |
 |---|---|---|---|
 | `olist_customers_dataset` | `customer_unique_id` | `dim_cliente` | `customer_unique_id` |
+| `olist_customers_dataset` | `customer_unique_id` | `fact_ventas` | `cliente_key` (lookup) |
 | `olist_customers_dataset` | `customer_city` | `dim_cliente` | `ciudad` |
 | `olist_customers_dataset` | `customer_state` | `dim_cliente` | `estado` |
 | `olist_sellers_dataset` | `seller_id` | `dim_vendedor` | `seller_id` |
