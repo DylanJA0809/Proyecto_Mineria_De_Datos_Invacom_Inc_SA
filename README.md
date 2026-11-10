@@ -68,6 +68,36 @@ cliente, producto y vendedor. El detalle está en [modelo-dimensional.md](docs/m
 
 ![Modelo estrella](docs/modelo-dimensional.png)
 
+## Cómo se corre el ETL
+
+El ETL completo es el workflow `olist_etl` de AWS Glue, en la región **us-east-2 (Ohio)**. Corre
+los 8 jobs de `glue/` en orden:
+
+```mermaid
+flowchart LR
+    I(["inicio<br/>a demanda"]) --> SC[stg_cliente] --> DC[dim_cliente]
+    I --> SP[stg_producto] --> DP[dim_producto]
+    I --> SV[stg_vendedor] --> DV[dim_vendedor]
+    I --> SPE[stg_pedidos]
+    DC & DP & DV & SPE --> F[fact_ventas]
+```
+
+- Los 4 `stg_*` corren a la vez.
+- Cada `dim_*` arranca cuando su `stg_*` termina bien.
+- `fact_ventas` espera a las 3 dimensiones y a `stg_pedidos` (trigger con *ALL*).
+- `dim_fecha` no tiene job: se carga una sola vez con `sql/dw/01_tablas.sql`.
+
+Para correrlo: Glue → *Workflows (orchestration)* → `olist_etl` → *Run workflow*. En *History* se
+ve cada job. Tarda unos 6 minutos.
+
+Se puede correr las veces que haga falta: las dimensiones y `fact_ventas` se cargan con `MERGE`, y
+cada job se cae si los datos no cuadran con la fuente. Después de una corrida, `sql/validacion.sql`
+tiene que dar las 26 pruebas en OK.
+
+Cada job necesita estos parámetros: `--ORA_URL` (termina en `/XEPDB1`), `--ORA_USER` (`glue_etl`)
+y `--ORA_PASSWORD`. Además usa el rol `glue-olist-rol` y el JAR
+`s3://mineria-olist-g01-glue/jars/ojdbc8-21.9.0.0.jar`.
+
 ## Acceso
 
 Cada uno entra con su usuario, que puede leer `OLIST_SRC`. Para trabajar en staging o en el DW se
