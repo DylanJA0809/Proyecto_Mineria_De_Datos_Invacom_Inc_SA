@@ -59,7 +59,7 @@ en el ETL. Se eligió la estrella porque responde las 5 preguntas con una sola t
 | `dias_entrega` | Medida del pedido | Días desde la compra hasta la entrega al cliente |
 | `dias_atraso` | Medida del pedido | Días de diferencia entre la entrega real y la fecha prometida |
 | `a_tiempo` | Medida del pedido | `S` si llegó en la fecha prometida o antes, `N` si no |
-| `puntaje_resena` | Medida del pedido | Puntaje de la reseña (1 a 5); si el pedido tiene varias, el promedio |
+| `puntaje_resena` | Medida del pedido | Puntaje de la reseña (1 a 5); si el pedido tiene varias, la más reciente |
 
 **Dimensiones degeneradas.** `order_id`, `order_item_id` y `estado_pedido` describen la venta, pero no
 tienen más atributos que justifiquen una tabla propia, así que se quedan en el hecho. `order_id`

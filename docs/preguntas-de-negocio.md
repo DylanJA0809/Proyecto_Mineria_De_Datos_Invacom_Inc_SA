@@ -30,7 +30,7 @@ según la consulta 6.8 de `calidad-datos/consultas.sql`.
 - **Tamaño:** 621 rutas × 20 meses ≈ 12 400 combinaciones, por categoría.
 - **Ojo:** 8 pedidos `delivered` no tienen fecha de entrega, y hay fechas fuera de orden (1 359
   pedidos pasan a la transportista antes de aprobarse y 23 llegan antes de salir; consultas 6.1 a
-  6.3). Si un pedido tiene varias reseñas, se usa el promedio (547 pedidos); 768 no tienen ninguna.
+  6.3). Si un pedido tiene varias reseñas, se usa la más reciente (547 pedidos, regla 9a); 768 no tienen ninguna.
 
 ## 3. ¿Qué vendedores rinden mejor y peor en ventas, puntualidad y satisfacción, por estado y categoría?
 
