@@ -154,6 +154,13 @@ with pruebas as (
                               where r.order_id = i.order_id)),
            (select count(*) from fact_ventas where puntaje_resena is null)
     from dual
+    union all
+    select 27, 'regla 22: ciudades de vendedor que no existen en la geolocalizacion', 0,
+           (select count(*) from dim_vendedor d
+            where not exists (select 1 from olist_src.olist_geolocation_dataset g
+                              where nlssort(g.geolocation_city, 'NLS_SORT=BINARY_AI')
+                                  = nlssort(d.ciudad, 'NLS_SORT=BINARY_AI')))
+    from dual
 )
 select n, prueba, esperado, obtenido,
        case when esperado = obtenido then 'OK' else 'FALLA' end as resultado
