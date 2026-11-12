@@ -120,9 +120,88 @@ def cargar_dimension(df, tabla, llave, columnas):
 def normalizar_ciudad(col):
     # regla 22 de docs/calidad-datos.md: minusculas, sin espacios de mas y sin acentos
     # (translate cambia cada letra con acento por su version sin acento)
-    con_acento = "áàâãäéèêëíìîïóòôõöúùûüçñ"
-    sin_acento = "aaaaaeeeeiiiiooooouuuucn"
-    return F.translate(F.lower(F.trim(col)), con_acento, sin_acento)
+    con_acento = "áàâãäéèêëíìîïóòôõöúùûüçñ´"
+    sin_acento = "aaaaaeeeeiiiiooooouuuucn'"
+    col = F.lower(F.trim(col))
+    col = F.regexp_replace(col, r"\p{M}", "")  # tildes sueltas, como en "são paulo"
+    col = F.translate(col, con_acento, sin_acento)
+    return F.regexp_replace(col, " +", " ")
+
+
+# Aun con la normalizacion quedan ciudades que no son correctas, por ejemplo:
+CORRECCIONES = {
+    # con el estado pegado
+    "andira-pr": "andira",
+    "angra dos reis rj": "angra dos reis",
+    "auriflama/sp": "auriflama",
+    "barbacena/ minas gerais": "barbacena",
+    "brasilia df": "brasilia",
+    "carapicuiba / sao paulo": "carapicuiba",
+    "cariacica / es": "cariacica",
+    "jacarei / sao paulo": "jacarei",
+    "lages - sc": "lages",
+    "maua/sao paulo": "maua",
+    "mogi das cruzes / sp": "mogi das cruzes",
+    "novo hamburgo, rio grande do sul, brasil": "novo hamburgo",
+    "pinhais/pr": "pinhais",
+    "ribeirao preto / sao paulo": "ribeirao preto",
+    "rio de janeiro / rio de janeiro": "rio de janeiro",
+    "rio de janeiro \\rio de janeiro": "rio de janeiro",
+    "rio de janeiro, rio de janeiro, brasil": "rio de janeiro",
+    "santo andre/sao paulo": "santo andre",
+    "sao paulo - sp": "sao paulo",
+    "sao paulo / sao paulo": "sao paulo",
+    "sao paulo sp": "sao paulo",
+    "sao sebastiao da grama/sp": "sao sebastiao da grama",
+    "sbc/sp": "sao bernardo do campo",
+    "sp / sp": "sao paulo",
+    # mal escritas
+    "ao bernardo do campo": "sao bernardo do campo",
+    "balenario camboriu": "balneario camboriu",
+    "belo horizont": "belo horizonte",
+    "cascavael": "cascavel",
+    "floranopolis": "florianopolis",
+    "garulhos": "guarulhos",
+    "ji parana": "ji-parana",
+    "juzeiro do norte": "juazeiro do norte",
+    "mogi das cruses": "mogi das cruzes",
+    "paincandu": "paicandu",
+    "portoferreira": "porto ferreira",
+    "ribeirao pretp": "ribeirao preto",
+    "riberao preto": "ribeirao preto",
+    "robeirao preto": "ribeirao preto",
+    "s jose do rio preto": "sao jose do rio preto",
+    "sando andre": "santo andre",
+    "sao bernardo do capo": "sao bernardo do campo",
+    "sao jose do rio pret": "sao jose do rio preto",
+    "sao jose dos pinhas": "sao jose dos pinhais",
+    "sao miguel d'oeste": "sao miguel do oeste",
+    "sao paluo": "sao paulo",
+    "sao paulop": "sao paulo",
+    "sao pauo": "sao paulo",
+    "sbc": "sao bernardo do campo",
+    "scao jose do rio pardo": "sao jose do rio pardo",
+    "tabao da serra": "taboao da serra",
+    # barrio o distrito: va el municipio
+    "aguas claras df": "brasilia",
+    "arraial d'ajuda (porto seguro)": "porto seguro",
+    "castro pires": "teofilo otoni",
+    "centro": "para de minas",
+    "pirituba": "sao paulo",
+    "vicente de carvalho": "guaruja",
+    # no es una ciudad: sale del codigo postal
+    "04482255": "rio de janeiro",
+    "bahia": "paulo afonso",
+    "minas gerais": "campo do meio",
+    "parana": "maringa",
+    "santa catarina": "palhoca",
+    "vendas@creditparts.com.br": "maringa",
+}
+
+
+def corregir_ciudad(col):
+    mapa = F.create_map(*[F.lit(x) for par in CORRECCIONES.items() for x in par])
+    return F.coalesce(mapa[col], col)
 
 
 # ---------- A. v_dim_vendedor (OLIST_SRC) -> stg_vendedor (OLIST_STG) ----------
@@ -133,13 +212,13 @@ df = leer("""
 """)
 
 # ciudades normalizadas
-df = df.withColumn("CIUDAD", normalizar_ciudad(F.col("CIUDAD")))
+df = df.withColumn("CIUDAD", corregir_ciudad(normalizar_ciudad(F.col("CIUDAD"))))
 
 # una fila por seller_id, ninguna fuera
 if df.count() != df.select("SELLER_ID").distinct().count():
     raise Exception("seller_id viene repetida, tiene que ser una fila por seller_id")
 
-# columnas en mayuscula, como las crea Oracle
+# columnas en mayuscula, asi como las crea Oracle
 df = df.toDF(*[c.upper() for c in df.columns])
 
 escribir(df, "stg_vendedor")
