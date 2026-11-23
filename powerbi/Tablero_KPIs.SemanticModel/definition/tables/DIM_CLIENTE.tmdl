@@ -1,0 +1,57 @@
+table DIM_CLIENTE
+	lineageTag: dfc8da1a-8e1d-456a-9954-614dabb2d163
+
+	column CLIENTE_KEY
+		dataType: double
+		lineageTag: fd5d109a-47e3-4070-909f-badbe09151f2
+		summarizeBy: none
+		sourceColumn: CLIENTE_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CUSTOMER_UNIQUE_ID
+		dataType: string
+		lineageTag: 4cc665b3-e8e1-4513-a56c-1a307462b501
+		summarizeBy: none
+		sourceColumn: CUSTOMER_UNIQUE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIUDAD
+		dataType: string
+		lineageTag: ee6796d6-a103-47db-afda-9e7739c10450
+		summarizeBy: none
+		sourceColumn: CIUDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTADO
+		dataType: string
+		lineageTag: 44aa8a36-33ac-4bdd-8c10-e496f106b32e
+		summarizeBy: none
+		sourceColumn: ESTADO
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECOMPRA
+		dataType: string
+		lineageTag: fa24a135-9223-4e7e-83f4-adb63d48f963
+		summarizeBy: none
+		sourceColumn: RECOMPRA
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_CLIENTE = m
+		mode: import
+		source =
+				let
+				    Source = Oracle.Database("salvatandas:1521/XEPDB1", [HierarchicalNavigation=true]),
+				    OLIST_DW = Source{[Schema="OLIST_DW"]}[Data],
+				    DIM_CLIENTE1 = OLIST_DW{[Name="DIM_CLIENTE"]}[Data]
+				in
+				    DIM_CLIENTE1
+
+	annotation PBI_ResultType = Table
+

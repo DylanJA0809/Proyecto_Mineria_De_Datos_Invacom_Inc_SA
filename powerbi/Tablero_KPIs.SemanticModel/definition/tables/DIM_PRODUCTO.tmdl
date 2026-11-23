@@ -1,0 +1,59 @@
+table DIM_PRODUCTO
+	lineageTag: fb30d398-aa65-447d-8de9-e6efccc9c948
+
+	column PRODUCTO_KEY
+		dataType: double
+		lineageTag: 356d8745-91db-4715-aad0-3c95838b9da4
+		summarizeBy: none
+		sourceColumn: PRODUCTO_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PRODUCT_ID
+		dataType: string
+		lineageTag: c5b5a0d4-3a79-4c2e-9f17-31bd23d3450f
+		summarizeBy: none
+		sourceColumn: PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORIA
+		dataType: string
+		lineageTag: 8c878b47-096b-48dd-a8a7-fe13910c1ee1
+		summarizeBy: none
+		sourceColumn: CATEGORIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column PESO_G
+		dataType: double
+		lineageTag: dfea1127-4c70-4642-a8b0-92e01d1f3d6c
+		summarizeBy: none
+		sourceColumn: PESO_G
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RANGO_PESO
+		dataType: string
+		lineageTag: 9c513a5b-ad51-4a00-b27d-1e033e08663d
+		summarizeBy: none
+		sourceColumn: RANGO_PESO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_PRODUCTO = m
+		mode: import
+		source =
+				let
+				    Source = Oracle.Database("salvatandas:1521/XEPDB1", [HierarchicalNavigation=true]),
+				    OLIST_DW = Source{[Schema="OLIST_DW"]}[Data],
+				    DIM_PRODUCTO1 = OLIST_DW{[Name="DIM_PRODUCTO"]}[Data]
+				in
+				    DIM_PRODUCTO1
+
+	annotation PBI_ResultType = Table
+

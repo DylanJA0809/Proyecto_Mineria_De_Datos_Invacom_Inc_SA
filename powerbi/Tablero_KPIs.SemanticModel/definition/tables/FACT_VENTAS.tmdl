@@ -1,0 +1,149 @@
+table FACT_VENTAS
+	lineageTag: 927fff56-d64b-4c1d-ad7e-3d2692ceaacd
+
+	column FECHA_KEY
+		dataType: double
+		lineageTag: 989e9aed-6e3c-4b31-9f52-f25ed45ea61e
+		summarizeBy: none
+		sourceColumn: FECHA_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLIENTE_KEY
+		dataType: double
+		lineageTag: 80ab779d-56b5-4b4d-86c5-a299be24900c
+		summarizeBy: none
+		sourceColumn: CLIENTE_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PRODUCTO_KEY
+		dataType: double
+		lineageTag: d7f76d37-66df-4475-8980-9042b9505245
+		summarizeBy: none
+		sourceColumn: PRODUCTO_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VENDEDOR_KEY
+		dataType: double
+		lineageTag: 2589fa61-e1b5-4daf-835c-7d4a19a22f8f
+		summarizeBy: none
+		sourceColumn: VENDEDOR_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ORDER_ID
+		dataType: string
+		lineageTag: 5e622c63-7071-4604-ab56-a3375e1f232a
+		summarizeBy: none
+		sourceColumn: ORDER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDER_ITEM_ID
+		dataType: double
+		lineageTag: a6de4cf1-a872-474e-9b72-ac335ecfc7ab
+		summarizeBy: count
+		sourceColumn: ORDER_ITEM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ESTADO_PEDIDO
+		dataType: string
+		lineageTag: e641979e-8b3e-4191-9c63-2ed0f9a7cb37
+		summarizeBy: none
+		sourceColumn: ESTADO_PEDIDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRECIO
+		dataType: double
+		lineageTag: a6f730ba-e7f5-42e4-afd7-7f5fc40f908f
+		summarizeBy: sum
+		sourceColumn: PRECIO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FLETE
+		dataType: double
+		lineageTag: 610af711-9fb5-467f-833a-093d1272de99
+		summarizeBy: sum
+		sourceColumn: FLETE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HORA_COMPRA
+		dataType: double
+		lineageTag: 3f5fdebf-9eba-470f-b63f-b5aead00cece
+		summarizeBy: sum
+		sourceColumn: HORA_COMPRA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DIAS_ENTREGA
+		dataType: double
+		lineageTag: 0128aa93-c879-4ed6-8df8-c84fd2b81868
+		summarizeBy: sum
+		sourceColumn: DIAS_ENTREGA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DIAS_ATRASO
+		dataType: double
+		lineageTag: 00939153-ab93-4b07-a74e-8fd18d45cb1a
+		summarizeBy: sum
+		sourceColumn: DIAS_ATRASO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column A_TIEMPO
+		dataType: string
+		lineageTag: 8d3488ce-e538-4816-a633-d3798330985c
+		summarizeBy: none
+		sourceColumn: A_TIEMPO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUNTAJE_RESENA
+		dataType: double
+		lineageTag: 2ac0e96a-d03a-43cc-83e4-8e36eadc83f8
+		summarizeBy: sum
+		sourceColumn: PUNTAJE_RESENA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FACT_VENTAS = m
+		mode: import
+		source =
+				let
+				    Source = Oracle.Database("salvatandas:1521/XEPDB1", [HierarchicalNavigation=true]),
+				    OLIST_DW = Source{[Schema="OLIST_DW"]}[Data],
+				    FACT_VENTAS1 = OLIST_DW{[Name="FACT_VENTAS"]}[Data]
+				in
+				    FACT_VENTAS1
+
+	annotation PBI_ResultType = Table
+

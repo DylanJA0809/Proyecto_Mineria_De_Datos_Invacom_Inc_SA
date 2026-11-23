@@ -1,0 +1,24 @@
+relationship 069e8b36-9add-46f9-94f8-7a256da55ea1
+	fromColumn: FACT_VENTAS.CLIENTE_KEY
+	toColumn: DIM_CLIENTE.CLIENTE_KEY
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3e903d17-b13c-468b-9556-1ae756bdc533
+	fromColumn: FACT_VENTAS.FECHA_KEY
+	toColumn: DIM_FECHA.FECHA_KEY
+
+	annotation PBI_IsFromSource = FS
+
+relationship dc1a2b4b-374b-46fe-8ccf-93101b49d5c9
+	fromColumn: FACT_VENTAS.PRODUCTO_KEY
+	toColumn: DIM_PRODUCTO.PRODUCTO_KEY
+
+	annotation PBI_IsFromSource = FS
+
+relationship efb45177-f7d6-41ab-814d-05982d02d330
+	fromColumn: FACT_VENTAS.VENDEDOR_KEY
+	toColumn: DIM_VENDEDOR.VENDEDOR_KEY
+
+	annotation PBI_IsFromSource = FS
+

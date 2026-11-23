@@ -1,0 +1,49 @@
+table DIM_VENDEDOR
+	lineageTag: 85430322-1c65-494f-9d82-2712bdfd7f35
+
+	column VENDEDOR_KEY
+		dataType: double
+		lineageTag: 7626dae7-db87-4604-9458-a85717bced16
+		summarizeBy: none
+		sourceColumn: VENDEDOR_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SELLER_ID
+		dataType: string
+		lineageTag: 20f68308-ab5c-4dcf-8b51-8749a0f03056
+		summarizeBy: none
+		sourceColumn: SELLER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIUDAD
+		dataType: string
+		lineageTag: fcdb5d6c-e533-4d85-8403-713ca24a72f6
+		summarizeBy: none
+		sourceColumn: CIUDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTADO
+		dataType: string
+		lineageTag: e61fdebb-46c3-4077-815d-2678c1ab8cfb
+		summarizeBy: none
+		sourceColumn: ESTADO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_VENDEDOR = m
+		mode: import
+		source =
+				let
+				    Source = Oracle.Database("salvatandas:1521/XEPDB1", [HierarchicalNavigation=true]),
+				    OLIST_DW = Source{[Schema="OLIST_DW"]}[Data],
+				    DIM_VENDEDOR1 = OLIST_DW{[Name="DIM_VENDEDOR"]}[Data]
+				in
+				    DIM_VENDEDOR1
+
+	annotation PBI_ResultType = Table
+

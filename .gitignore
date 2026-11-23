@@ -12,6 +12,10 @@
 *.bad
 *.dsc
 
+# Power BI (PBIP): copia local de los datos y ajustes de cada laptop
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+
 # Python (jobs de Glue)
 __pycache__/
 *.pyc

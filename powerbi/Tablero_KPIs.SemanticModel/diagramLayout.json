@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 618.34686178062611,
+            "y": 583.06878880352019
+          },
+          "nodeIndex": "DIM_CLIENTE",
+          "nodeLineageTag": "dfc8da1a-8e1d-456a-9954-614dabb2d163",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 612.14223715311675,
+            "y": -50
+          },
+          "nodeIndex": "DIM_FECHA",
+          "nodeLineageTag": "b0be563f-0ea4-49df-9915-370cf64cede1",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 106.10829406898324
+          },
+          "nodeIndex": "DIM_PRODUCTO",
+          "nodeLineageTag": "fb30d398-aa65-447d-8de9-e6efccc9c948",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 72.421810735029112,
+            "y": 646.36185072102762
+          },
+          "nodeIndex": "DIM_VENDEDOR",
+          "nodeLineageTag": "85430322-1c65-494f-9d82-2712bdfd7f35",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.17600508015971,
+            "y": 296.18751449528037
+          },
+          "nodeIndex": "FACT_VENTAS",
+          "nodeLineageTag": "927fff56-d64b-4c1d-ad7e-3d2692ceaacd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

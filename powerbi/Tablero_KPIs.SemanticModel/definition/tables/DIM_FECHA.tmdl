@@ -1,0 +1,100 @@
+table DIM_FECHA
+	lineageTag: b0be563f-0ea4-49df-9915-370cf64cede1
+	dataCategory: Time
+
+	column FECHA_KEY
+		dataType: double
+		lineageTag: 4c9abc73-de2d-43c2-a7d5-3643b60d61d4
+		summarizeBy: none
+		sourceColumn: FECHA_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FECHA
+		dataType: dateTime
+		isKey
+		formatString: General Date
+		lineageTag: 64dda86a-4b7c-468e-8071-2b95225de7fa
+		summarizeBy: none
+		sourceColumn: FECHA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANIO
+		dataType: double
+		lineageTag: 23c0eec9-15ff-4b14-b1e4-3b03d5d36d8d
+		summarizeBy: sum
+		sourceColumn: ANIO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TRIMESTRE
+		dataType: double
+		lineageTag: e37d4619-b07d-4421-806c-cade567d2818
+		summarizeBy: sum
+		sourceColumn: TRIMESTRE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MES
+		dataType: double
+		lineageTag: bbcd61bc-ce0c-449c-b9ab-06b9649310cb
+		summarizeBy: sum
+		sourceColumn: MES
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NOMBRE_MES
+		dataType: string
+		lineageTag: 6c6f59da-4e63-468b-b7c1-9e7e55d822d6
+		summarizeBy: none
+		sourceColumn: NOMBRE_MES
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIA_SEMANA
+		dataType: double
+		lineageTag: 5f755bc3-8fc6-4c63-9354-4b0e9caa8b43
+		summarizeBy: sum
+		sourceColumn: DIA_SEMANA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NOMBRE_DIA
+		dataType: string
+		lineageTag: 2c66eb3e-f47e-4827-ac2c-25a92ca711c4
+		summarizeBy: none
+		sourceColumn: NOMBRE_DIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIN_DE_SEMANA
+		dataType: string
+		lineageTag: 0221e70a-d796-4408-ac4f-3e206fda53a3
+		summarizeBy: none
+		sourceColumn: FIN_DE_SEMANA
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_FECHA = m
+		mode: import
+		source =
+				let
+				    Source = Oracle.Database("salvatandas:1521/XEPDB1", [HierarchicalNavigation=true]),
+				    OLIST_DW = Source{[Schema="OLIST_DW"]}[Data],
+				    DIM_FECHA1 = OLIST_DW{[Name="DIM_FECHA"]}[Data]
+				in
+				    DIM_FECHA1
+
+	annotation PBI_ResultType = Table
+
