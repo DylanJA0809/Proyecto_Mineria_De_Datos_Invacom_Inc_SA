@@ -1,9 +1,10 @@
 # Data Warehouse para Invacom Inc S.A.
 
-Proyecto #1 del curso **ISW-911 Minería de Datos** (3C2026), grupo 01.
+Proyectos #1 y #2 del curso **ISW-911 Minería de Datos** (3C2026), grupo 01.
 
 Invacom quiere un data warehouse para analizar las ventas de un marketplace. Aquí están los scripts
-SQL, los jobs de ETL y la documentación.
+SQL, los jobs de ETL y la documentación (proyecto #1), y el tablero de KPIs en Power BI
+(proyecto #2).
 
 **Integrantes:** Josué, Karol, Katherine y Dylan.
 
@@ -47,6 +48,7 @@ flowchart LR
     SRC -- "Glue: limpia" --> STG["OLIST_STG<br/>staging"]
     STG -- "Glue: carga" --> DW["OLIST_DW<br/>modelo estrella"]
     DW --> XLS["Excel<br/>tablas dinámicas"]
+    DW --> PBI["Power BI<br/>tablero de KPIs"]
 ```
 
 Oracle Database 21c XE, PDB `XEPDB1`. Las tres etapas son tres esquemas del mismo Oracle:
@@ -109,6 +111,36 @@ entra por proxy, con la misma contraseña:
 En el usuario personal no se pueden crear tablas: todo va en `OLIST_STG` o `OLIST_DW`. Glue entra
 igual, con `glue_etl`.
 
+Power BI no acepta el proxy: ahí se entra con el usuario solo (`karol`, `dylan`...), que tiene
+permiso de lectura sobre las tablas de `OLIST_DW`. Hace falta Tailscale.
+
+## Tablero de KPIs (proyecto #2)
+
+El tablero está en `powerbi/Tablero_KPIs.pbip`, guardado como proyecto de Power BI (PBIP) para
+poder versionarlo. Lee `OLIST_DW` en modo importar. Una página por KPI:
+
+| KPI | Responsable |
+|---|---|
+| 1. Ticket promedio por pedido | Josué |
+| 2. Entregas a tiempo | Katherine |
+| 3. Vendedores con buen desempeño | Karol |
+| 4. Recompra | Dylan |
+| 5. Flete sobre el precio | Karol |
+| 6. Incremento de ventas | Josué |
+| 7. Pedidos con reseña positiva | Dylan |
+| 8. Días promedio de entrega | Katherine |
+
+Para abrirlo:
+
+1. `git pull` y abrir `powerbi/Tablero_KPIs.pbip`.
+2. *Inicio → Actualizar*. Los datos no se suben al repo, así que cada uno los trae de Oracle.
+3. Credenciales: servidor `salvatandas:1521/XEPDB1`, pestaña *Base de datos*, usuario solo.
+
+Si da error de contraseña, no reintentar: con 3 fallos la cuenta se bloquea por una hora, y Power BI
+abre 2 conexiones por intento.
+
+Uno a la vez en el archivo: `git pull` antes de empezar y `push` al terminar.
+
 ## Estructura del repo
 
 ```
@@ -122,6 +154,7 @@ glue/                   Jobs de Glue (plantilla.py es la base de todos)
   stg_*.py              De OLIST_SRC a OLIST_STG: extraen y limpian
   dim_*.py, fact_*.py   De OLIST_STG a OLIST_DW: cargan el modelo estrella
 docs/                   Preguntas de negocio, modelo dimensional y calidad de datos
+powerbi/                Tablero de KPIs (proyecto de Power BI)
 ```
 
 <details>
@@ -149,7 +182,7 @@ limpiar, porque la limpieza es parte del ETL.
 
 - Scrum con sprints de una semana, con el tablero en Trello.
 - Cada integrante sube sus propios commits.
-- No se suben contraseñas ni datos: el `.gitignore` deja fuera los CSV, los `.env` y las salidas de
-  SQL\*Loader.
+- No se suben contraseñas ni datos: el `.gitignore` deja fuera los CSV, los `.env`, las salidas de
+  SQL\*Loader y la copia local de los datos de Power BI (`.pbi/cache.abf`).
 - Los `.sh`, `.ctl`, `.sql` y `.py` se guardan con saltos de línea LF (lo fuerza el
   `.gitattributes`).
