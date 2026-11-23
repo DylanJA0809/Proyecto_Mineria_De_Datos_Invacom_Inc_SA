@@ -39,7 +39,7 @@ table DIM_VENDEDOR
 		mode: import
 		source =
 				let
-				    Source = Oracle.Database("salvatandas:1521/XEPDB1", [HierarchicalNavigation=true]),
+				    Source = Oracle.Database("salvatandas.tailbc2329.ts.net:1521/XEPDB1", [HierarchicalNavigation=true]),
 				    OLIST_DW = Source{[Schema="OLIST_DW"]}[Data],
 				    DIM_VENDEDOR1 = OLIST_DW{[Name="DIM_VENDEDOR"]}[Data]
 				in

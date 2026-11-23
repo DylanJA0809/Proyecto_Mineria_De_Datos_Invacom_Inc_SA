@@ -134,7 +134,7 @@ Para abrirlo:
 
 1. `git pull` y abrir `powerbi/Tablero_KPIs.pbip`.
 2. *Inicio → Actualizar*. Los datos no se suben al repo, así que cada uno los trae de Oracle.
-3. Credenciales: servidor `salvatandas:1521/XEPDB1`, pestaña *Base de datos*, usuario solo.
+3. Credenciales: servidor `salvatandas.tailbc2329.ts.net:1521/XEPDB1`, pestaña *Base de datos*, usuario solo.
 
 Si da error de contraseña, no reintentar: con 3 fallos la cuenta se bloquea por una hora, y Power BI
 abre 2 conexiones por intento.
