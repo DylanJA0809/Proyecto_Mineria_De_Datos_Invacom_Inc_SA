@@ -24,8 +24,9 @@ table DIM_FECHA
 
 	column ANIO
 		dataType: double
+		formatString: 0
 		lineageTag: 23c0eec9-15ff-4b14-b1e4-3b03d5d36d8d
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ANIO
 
 		annotation SummarizationSetBy = Automatic
@@ -35,7 +36,7 @@ table DIM_FECHA
 	column TRIMESTRE
 		dataType: double
 		lineageTag: e37d4619-b07d-4421-806c-cade567d2818
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: TRIMESTRE
 
 		annotation SummarizationSetBy = Automatic
@@ -45,7 +46,7 @@ table DIM_FECHA
 	column MES
 		dataType: double
 		lineageTag: bbcd61bc-ce0c-449c-b9ab-06b9649310cb
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: MES
 
 		annotation SummarizationSetBy = Automatic
@@ -57,6 +58,7 @@ table DIM_FECHA
 		lineageTag: 6c6f59da-4e63-468b-b7c1-9e7e55d822d6
 		summarizeBy: none
 		sourceColumn: NOMBRE_MES
+		sortByColumn: MES
 
 		annotation SummarizationSetBy = Automatic
 

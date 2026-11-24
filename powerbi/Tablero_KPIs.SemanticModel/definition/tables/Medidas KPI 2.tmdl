@@ -1,0 +1,100 @@
+/// Tabla de medidas del KPI 2 - Pedidos entregados a tiempo (KPI-ENT-02). Autosuficiente: no depende de la tabla Medidas KPI 8.
+table 'Medidas KPI 2'
+	lineageTag: 4b58defe-39e8-4a5a-b281-129a4a2133e2
+
+	/// KPI-ENT-02. Conteo distinto de ORDER_ID con ESTADO_PEDIDO = 'delivered' (cada pedido una sola vez, aunque tenga varios productos). Criterio aprobado (opción A): los 8 pedidos entregados con A_TIEMPO vacío SÍ cuentan en esta medida (denominador), pero NO cuentan como a tiempo.
+	measure 'Pedidos entregados' =
+			CALCULATE(
+			    DISTINCTCOUNT(FACT_VENTAS[ORDER_ID]),
+			    FACT_VENTAS[ESTADO_PEDIDO] = "delivered"
+			)
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: c5e5213b-de11-4d91-b924-508b6e3285e8
+
+	/// KPI-ENT-02. Conteo distinto de ORDER_ID con ESTADO_PEDIDO = 'delivered' y A_TIEMPO = 'S'. Los pedidos entregados con A_TIEMPO vacío no se cuentan como a tiempo.
+	measure 'Pedidos a tiempo' =
+			CALCULATE(
+			    DISTINCTCOUNT(FACT_VENTAS[ORDER_ID]),
+			    FACT_VENTAS[ESTADO_PEDIDO] = "delivered",
+			    FACT_VENTAS[A_TIEMPO] = "S"
+			)
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: ca69a691-ceb3-46db-acb3-ad0152ab6cfb
+
+	/// KPI-ENT-02. Pedidos a tiempo / Pedidos entregados. Criterio aprobado (opción A): los 8 pedidos entregados con A_TIEMPO vacío entran en el denominador y no cuentan como a tiempo. Respeta los filtros de DIM_FECHA, DIM_VENDEDOR (ESTADO), DIM_CLIENTE (ESTADO) y DIM_PRODUCTO (CATEGORIA).
+	measure '% Entregados a tiempo' = DIVIDE([Pedidos a tiempo], [Pedidos entregados])
+		formatString: 0.0%
+		displayFolder: 1 Valor
+		lineageTag: 4ec663c5-2cba-42bf-b07c-84597ee2f727
+
+	/// KPI-ENT-02. Meta: 95 %.
+	measure 'Meta % a tiempo' = 0.95
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: dabe2e20-03e8-438f-bc05-2d1ab30e3207
+
+	/// KPI-ENT-02. Semáforo numérico para formato condicional: 3 = Verde (>= 95 %), 2 = Amarillo (>= 90 % y < 95 %), 1 = Rojo (< 90 %). Vacío si no hay datos.
+	measure 'Semáforo % a tiempo (num)' =
+			VAR v = [% Entregados a tiempo]
+			RETURN
+			    IF(
+			        ISBLANK(v), BLANK(),
+			        IF(v >= [Meta % a tiempo], 3,
+			        IF(v >= 0.90, 2, 1))
+			    )
+		formatString: 0
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 4e35fed3-7606-4c7e-8883-05b44d493621
+
+	/// KPI-ENT-02. % Entregados a tiempo del mismo período del año anterior (DIM_FECHA). Vacío si no hay filtro de fecha activo, para no mezclar años.
+	measure '% Entregados a tiempo AA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [% Entregados a tiempo],
+			        SAMEPERIODLASTYEAR(DIM_FECHA[FECHA])
+			    ),
+			    BLANK()
+			)
+		formatString: 0.0%
+		displayFolder: 3 Año anterior
+		lineageTag: b9376c64-6a4a-4154-a418-97e5143f124f
+
+	/// KPI-ENT-02 (apoyo). Promedio de DIAS_ATRASO con un valor por ORDER_ID (no por fila), solo pedidos 'delivered'. Los pedidos sin DIAS_ATRASO no entran al promedio.
+	measure 'Días de atraso promedio por pedido' =
+			CALCULATE(
+			    AVERAGEX(
+			        VALUES(FACT_VENTAS[ORDER_ID]),
+			        CALCULATE(AVERAGE(FACT_VENTAS[DIAS_ATRASO]))
+			    ),
+			    FACT_VENTAS[ESTADO_PEDIDO] = "delivered"
+			)
+		formatString: 0.0
+		displayFolder: 4 Apoyo
+		lineageTag: 9afb9c02-e205-46ca-baf1-55287b2fc61b
+
+	/// KPI-ENT-02 (apoyo). Promedio de PUNTAJE_RESENA con un valor por ORDER_ID (no por fila), solo pedidos 'delivered'.
+	measure 'Puntaje promedio de reseñas por pedido' =
+			CALCULATE(
+			    AVERAGEX(
+			        VALUES(FACT_VENTAS[ORDER_ID]),
+			        CALCULATE(AVERAGE(FACT_VENTAS[PUNTAJE_RESENA]))
+			    ),
+			    FACT_VENTAS[ESTADO_PEDIDO] = "delivered"
+			)
+		formatString: 0.00
+		displayFolder: 4 Apoyo
+		lineageTag: c067eb47-945c-4205-a02e-b799fdfe6c9f
+
+	column 'Columna auxiliar'
+		isHidden
+		lineageTag: 711fd090-3268-4eb1-821a-b5a7420c69e1
+		isNameInferred
+		sourceColumn: [Columna auxiliar]
+
+	partition 'Medidas KPI 2' = calculated
+		mode: import
+		source = ROW("Columna auxiliar", 1)
+

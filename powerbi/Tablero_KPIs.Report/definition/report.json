@@ -26,6 +26,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "cylindricalGauge73A12A442345453EB69B593649C3A341"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",

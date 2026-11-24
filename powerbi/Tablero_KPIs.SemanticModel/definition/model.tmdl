@@ -11,13 +11,15 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["DIM_CLIENTE","DIM_FECHA","DIM_PRODUCTO","DIM_VENDEDOR","FACT_VENTAS"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
 ref table DIM_CLIENTE
 ref table DIM_FECHA
 ref table DIM_PRODUCTO
 ref table DIM_VENDEDOR
 ref table FACT_VENTAS
+ref table 'Medidas KPI 2'
+ref table 'Medidas KPI 8'
 
 ref cultureInfo en-US
 
