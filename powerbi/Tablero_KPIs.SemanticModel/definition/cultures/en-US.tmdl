@@ -600,6 +600,16 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4040,6 +4050,258 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dim_vendedor.nombre_ficticio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_VENDEDOR",
+			          "ConceptualProperty": "Nombre ficticio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Vendedor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.añomes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_FECHA",
+			          "ConceptualProperty": "Año-Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_4.clientes_que_regresan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "% Clientes que regresan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% regresan": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_4.var_regresan_vs_ma_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Var regresan vs MA (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vs mes ant.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_4.var_regresan_vs_aa_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Var regresan vs AA (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vs año ant.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_4.gasto_promedio_por_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Gasto promedio por cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gasto / cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_7.reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "% Reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% positiva": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_7.var_reseña_vs_ma_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Var reseña vs MA (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vs mes ant.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_7.var_reseña_vs_aa_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Var reseña vs AA (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vs año ant.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_7.top__posición": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Top - Posición"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_7.top__reseñas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Top - Reseñas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reseñas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_kpi_7.top___reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Top - % reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% positiva": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
