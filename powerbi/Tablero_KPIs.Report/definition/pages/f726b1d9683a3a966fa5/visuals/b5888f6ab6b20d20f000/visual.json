@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "b5888f6ab6b20d20f000",
   "position": {
-    "x": 1057.4499308268237,
-    "y": 620.10001657406508,
+    "x": 1036,
+    "y": 665,
     "z": 3000,
-    "height": 388,
-    "width": 462,
+    "height": 405,
+    "width": 874,
     "tabOrder": 3000
   },
   "visual": {
@@ -111,6 +111,46 @@
               "expr": {
                 "Literal": {
                   "Value": "'Ticket 2018 por categoría vs su propio 2017 (top 10)'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }

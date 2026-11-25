@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "8a6fd6a7033df7582cf2",
   "position": {
-    "x": 499.670707021737,
-    "y": 299.44051717318615,
+    "x": 10,
+    "y": 665,
     "z": 0,
-    "height": 320,
-    "width": 557.77777777777771,
+    "height": 405,
+    "width": 1006,
     "tabOrder": 0
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "DIM_FECHA.NOMBRE_MES",
-              "nativeQueryRef": "NOMBRE_MES",
-              "active": true
+              "nativeQueryRef": "Mes",
+              "active": true,
+              "displayName": "Mes"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "Medidas.Ticket Promedio",
-              "nativeQueryRef": "Ticket Promedio"
+              "nativeQueryRef": "Ticket 2018",
+              "displayName": "Ticket 2018"
             },
             {
               "field": {
@@ -60,7 +62,8 @@
                 }
               },
               "queryRef": "Medidas.Ticket Año Anterior",
-              "nativeQueryRef": "Ticket Año Anterior"
+              "nativeQueryRef": "Ticket 2017",
+              "displayName": "Ticket 2017"
             },
             {
               "field": {
@@ -74,7 +77,8 @@
                 }
               },
               "queryRef": "Medidas.Variación % Ticket",
-              "nativeQueryRef": "Variación % Ticket"
+              "nativeQueryRef": "Variación vs 2017",
+              "displayName": "Variación vs 2017"
             }
           ]
         }
@@ -179,6 +183,140 @@
             "metadata": "Medidas.Variación % Ticket"
           }
         }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoExpand": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "276.5149339753058D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Ticket Promedio"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "323.0107670190921D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Ticket Año Anterior"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "290.0430504600596D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Variación % Ticket"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Ticket Promedio"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Ticket Año Anterior"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Variación % Ticket"
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -242,7 +380,74 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ticket mensual 2018 vs 2017'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "19D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }

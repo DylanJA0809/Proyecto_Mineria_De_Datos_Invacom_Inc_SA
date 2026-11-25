@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "1473b908ab6b8f1893ab",
   "position": {
-    "x": 1057.3423885554885,
-    "y": 299.44051717318615,
+    "x": 1438,
+    "y": 235,
     "z": 1000,
-    "height": 320,
-    "width": 462,
+    "height": 410,
+    "width": 472,
     "tabOrder": 1000
   },
   "visual": {
@@ -121,6 +121,46 @@
               "expr": {
                 "Literal": {
                   "Value": "'Ticket promedio ene–ago 2018 vs meta'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }

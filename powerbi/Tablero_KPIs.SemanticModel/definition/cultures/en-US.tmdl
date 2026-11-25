@@ -4064,6 +4064,11 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "nombre ficticio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
 			          "Vendedor": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4075,7 +4080,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_fecha.añomes": {
+			    "dim_fecha.añome": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DIM_FECHA",
@@ -4084,6 +4089,17 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "año-me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "año me": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
 			        {
 			          "Mes": {
 			            "State": "Suggested",
@@ -4096,7 +4112,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_4.clientes_que_regresan": {
+			    "medidas_KPI_4.clientes_que_regresan1": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 4",
@@ -4105,6 +4121,31 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "% clientes que regresan": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage cliente que regresan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct cliente que regresan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
 			        {
 			          "% regresan": {
 			            "State": "Suggested",
@@ -4117,7 +4158,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_4.var_regresan_vs_ma_pp": {
+			    "medidas_KPI_4.var_regresan_vs_MA_pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 4",
@@ -4126,6 +4167,17 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "var regresan vs MA (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var regresan vs MA": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
 			        {
 			          "vs mes ant.": {
 			            "State": "Suggested",
@@ -4138,7 +4190,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_4.var_regresan_vs_aa_pp": {
+			    "medidas_KPI_4.var_regresan_vs_AA_pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 4",
@@ -4147,6 +4199,17 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "var regresan vs AA (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var regresan vs AA": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
 			        {
 			          "vs año ant.": {
 			            "State": "Suggested",
@@ -4159,7 +4222,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_4.gasto_promedio_por_cliente": {
+			    "medidas_KPI_4.gasto_promedio_por_cliente": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 4",
@@ -4168,6 +4231,11 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "gasto promedio por cliente": {
+			            "State": "Generated"
+			          }
+			        },
 			        {
 			          "Gasto / cliente": {
 			            "State": "Suggested",
@@ -4180,7 +4248,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_7.reseña_positiva": {
+			    "medidas_KPI_7.reseña_positiva": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 7",
@@ -4189,6 +4257,31 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "% reseña positiva": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
 			        {
 			          "% positiva": {
 			            "State": "Suggested",
@@ -4201,7 +4294,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_7.var_reseña_vs_ma_pp": {
+			    "medidas_KPI_7.var_reseña_vs_MA_pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 7",
@@ -4210,6 +4303,17 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "var reseña vs MA (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var reseña vs MA": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
 			        {
 			          "vs mes ant.": {
 			            "State": "Suggested",
@@ -4222,7 +4326,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_7.var_reseña_vs_aa_pp": {
+			    "medidas_KPI_7.var_reseña_vs_AA_pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 7",
@@ -4231,6 +4335,17 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "var reseña vs AA (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var reseña vs AA": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
 			        {
 			          "vs año ant.": {
 			            "State": "Suggested",
@@ -4243,7 +4358,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_7.top__posición": {
+			    "medidas_KPI_7.top__posición": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 7",
@@ -4252,6 +4367,117 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "top - posición": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top posición": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best - posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first - posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading - posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum - posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peak - posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "upper - posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "best posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum posición": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
 			        {
 			          "#": {
 			            "State": "Suggested",
@@ -4264,7 +4490,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_7.top__reseñas": {
+			    "medidas_KPI_7.top__reseñas": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 7",
@@ -4273,6 +4499,117 @@ cultureInfo en-US
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "top - reseñas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top reseñas": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best - reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first - reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading - reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum - reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peak - reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "upper - reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "best reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum reseña": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
 			        {
 			          "Reseñas": {
 			            "State": "Suggested",
@@ -4285,7 +4622,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "medidas_kpi_7.top___reseña_positiva": {
+			    "medidas_KPI_7.top___reseña_positiva": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas KPI 7",
@@ -4295,6 +4632,117 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "top - % reseña positiva": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top % reseña positiva": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "top - percentage reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "top percentage reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "best - % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "first - % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "leading - % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "maximum - % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "peak - % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "upper - % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "top - pct reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "best % reseña positiva": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
 			          "% positiva": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4302,6 +4750,1859 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.semestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_FECHA",
+			          "ConceptualProperty": "Semestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_vendedor.vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_VENDEDOR",
+			          "ConceptualProperty": "Vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vendedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.KPI1_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "KPI1 Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI1 ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.KPI1_pedidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "KPI1 Pedidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI1 pedidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ticket_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ticket Promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket promedio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ticket 2018": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ticket_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ticket Año Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket año anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ticket 2017": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variación__ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Variación % Ticket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variación % ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variación percentage ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "variación pct ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "variación % coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variación % permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "variación % voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "variación % receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "variación % marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "variación % sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "variación % label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "variación % tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Variación vs 2017": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.línea_base_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Línea Base Ticket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "línea base ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "línea base coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "línea base permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "línea base voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "línea base receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "línea base marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "línea base sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "línea base label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "línea base tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "línea base tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "línea base docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ticket_2018": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ticket 2018"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket 2018": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meta_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Meta Ticket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ticket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "meta coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "meta permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "meta voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "meta receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "meta marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "meta sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "medida.color_semáforo_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Color Semáforo Ticket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color semáforo ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color semáforo coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "color semáforo permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color semáforo voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color semáforo receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color semáforo marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "color semáforo sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "color semáforo label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "color semáforo tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "color semáforo tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "color semáforo docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas KPI 4": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida KPI 4": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.columna_auxiliar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Columna auxiliar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "columna auxiliar": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.clientes_con_compra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Clientes con compra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clientes con compra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.clientes_con_recompra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Clientes con recompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clientes con recompra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.tasa_de_recompra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Tasa de recompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa de recompra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.tasa_de_recompra_DIM_CLIENTE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Tasa de recompra (DIM_CLIENTE)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa de recompra (DIM_CLIENTE)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tasa de recompra": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.línea_base_recompra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Línea base recompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "línea base recompra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.meta_recompra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Meta recompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta recompra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.semáforo_recompra_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Semáforo recompra (num)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semáforo recompra (num)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "semáforo recompra": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "semáforo recompra ( number )": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.color_semáforo_recompra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Color semáforo recompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color semáforo recompra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.avance_a_la_meta_recompra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Avance a la meta recompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avance a la meta recompra": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.pedidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Pedidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pedidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.pedidos_por_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Pedidos por cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pedidos por cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.clientes_que_regresan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Clientes que regresan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clientes que regresan": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.clientes_que_regresan_MA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "% Clientes que regresan MA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% clientes que regresan MA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage cliente que regresan ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct cliente que regresan ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "% cliente que regresan mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan mam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% cliente que regresan mater": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.clientes_que_regresan_AA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "% Clientes que regresan AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% clientes que regresan AA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage cliente que regresan aa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct cliente que regresan aa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.color_var_regresan_vs_MA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Color var regresan vs MA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color var regresan vs MA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color var regresan vs mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mater": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var regresan vs mother": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "color var regresan vs mum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.color_var_regresan_vs_AA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Color var regresan vs AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color var regresan vs AA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.tasa_de_recompra_AA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Tasa de recompra AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa de recompra AA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.var_recompra_vs_AA_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Var recompra vs AA (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var recompra vs AA (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var recompra vs AA": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4.color_var_recompra_vs_AA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 4",
+			          "ConceptualProperty": "Color var recompra vs AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color var recompra vs AA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas KPI 7": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida KPI 7": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.columna_auxiliar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Columna auxiliar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "columna auxiliar": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.pedidos_con_reseña": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Pedidos con reseña"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pedidos con reseña": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.pedidos_con_reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Pedidos con reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pedidos con reseña positiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.puntaje_promedio_de_reseña": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Puntaje promedio de reseña"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "puntaje promedio de reseña": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.línea_base_reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Línea base reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "línea base reseña positiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.meta_reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Meta reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta reseña positiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.semáforo_reseña_positiva_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Semáforo reseña positiva (num)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semáforo reseña positiva (num)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "semáforo reseña positiva": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.color_semáforo_reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Color semáforo reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color semáforo reseña positiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.avance_a_la_meta_reseña_positiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Avance a la meta reseña positiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avance a la meta reseña positiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.reseña_positiva_MA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "% Reseña positiva MA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% reseña positiva MA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage reseña positiva ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct reseña positiva ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "% reseña positiva mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva mam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "% reseña positiva mater": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.reseña_positiva_AA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "% Reseña positiva AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% reseña positiva AA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage reseña positiva aa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct reseña positiva aa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.color_var_reseña_vs_MA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Color var reseña vs MA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color var reseña vs MA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color var reseña vs mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mater": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "color var reseña vs mother": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "color var reseña vs mum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.color_var_reseña_vs_AA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Color var reseña vs AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color var reseña vs AA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.mínimo_de_reseñas_por_vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Mínimo de reseñas por vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mínimo de reseñas por vendedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.puntaje_de_orden_vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Puntaje de orden vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "puntaje de orden vendedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7.posición_vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 7",
+			          "ConceptualProperty": "Posición vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "posición vendedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_vendedore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top vendedores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top vendedore": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "best vendedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first vendedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading vendedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum vendedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "peak vendedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "upper vendedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "top_vendedore.mostrar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top vendedores",
+			          "ConceptualProperty": "Mostrar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mostrar": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_vendedore.orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top vendedores",
+			          "ConceptualProperty": "Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "orden": {
+			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -4443,6 +6744,2778 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_clientes_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "top_vendedore_has_mostrar": {
+			      "Binding": {
+			        "ConceptualEntity": "Top vendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_vendedore": {
+			          "Target": {
+			            "Entity": "top_vendedore"
+			          }
+			        },
+			        "top_vendedore.mostrar": {
+			          "Target": {
+			            "Entity": "top_vendedore.mostrar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_vendedore"
+			            },
+			            "Object": {
+			              "Role": "top_vendedore.mostrar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_vendedores_have_mostrars"
+			        }
+			      ]
+			    },
+			    "top_vendedore_has_medidas_KPI_7_posición_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "Top vendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_vendedore": {
+			          "Target": {
+			            "Entity": "top_vendedore"
+			          }
+			        },
+			        "medidas_KPI_7.posición_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.posición_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_vendedore"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.posición_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_vendedores_have_posición_vendedor"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_posición_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.posición_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.posición_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.posición_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_posición_vendedor"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_7_posición_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_7.posición_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.posición_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.posición_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_posición_vendedor"
+			        }
+			      ]
+			    },
+			    "top_vendedore_has_medidas_KPI_7_puntaje_de_orden_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "Top vendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_vendedore": {
+			          "Target": {
+			            "Entity": "top_vendedore"
+			          }
+			        },
+			        "medidas_KPI_7.puntaje_de_orden_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.puntaje_de_orden_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_vendedore"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.puntaje_de_orden_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_vendedores_have_puntaje_de_orden_vendedor"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_puntaje_de_orden_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.puntaje_de_orden_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.puntaje_de_orden_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.puntaje_de_orden_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_puntaje_de_orden_vendedor"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_7_puntaje_de_orden_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_7.puntaje_de_orden_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.puntaje_de_orden_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.puntaje_de_orden_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_puntaje_de_orden_vendedor"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7_has_mínimo_de_reseñas_por_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 7"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_7": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7"
+			          }
+			        },
+			        "medidas_KPI_7.mínimo_de_reseñas_por_vendedor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.mínimo_de_reseñas_por_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_7"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.mínimo_de_reseñas_por_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_7_have_mínimo_de_reseñas_por_vendedor"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_color_var_reseña_vs_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.color_var_reseña_vs_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.color_var_reseña_vs_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.color_var_reseña_vs_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_var_reseña_vs_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_7_color_var_reseña_vs_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_7.color_var_reseña_vs_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.color_var_reseña_vs_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.color_var_reseña_vs_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_color_var_reseña_vs_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_color_var_reseña_vs_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.color_var_reseña_vs_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.color_var_reseña_vs_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.color_var_reseña_vs_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_var_reseña_vs_MA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_7_color_var_reseña_vs_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_7.color_var_reseña_vs_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.color_var_reseña_vs_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.color_var_reseña_vs_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_color_var_reseña_vs_MA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_reseña_positiva_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.reseña_positiva_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.reseña_positiva_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.reseña_positiva_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__reseña_positiva_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_7_reseña_positiva_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_7.reseña_positiva_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.reseña_positiva_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.reseña_positiva_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have__reseña_positiva_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_reseña_positiva_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.reseña_positiva_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.reseña_positiva_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.reseña_positiva_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__reseña_positiva_MA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_7_reseña_positiva_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_7.reseña_positiva_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.reseña_positiva_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.reseña_positiva_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have__reseña_positiva_MA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_avance_a_la_meta_reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.avance_a_la_meta_reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.avance_a_la_meta_reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.avance_a_la_meta_reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_avance_a_la_meta_reseña_positiva"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_color_semáforo_reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.color_semáforo_reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.color_semáforo_reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.color_semáforo_reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_semáforo_reseña_positiva"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_semáforo_reseña_positiva_num": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.semáforo_reseña_positiva_num": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.semáforo_reseña_positiva_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.semáforo_reseña_positiva_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_semáforo_reseña_positiva_num"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7_has_meta_reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 7"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_7": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7"
+			          }
+			        },
+			        "medidas_KPI_7.meta_reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.meta_reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_7"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.meta_reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_7_have_meta_reseña_positiva"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_7_has_línea_base_reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 7"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_7": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7"
+			          }
+			        },
+			        "medidas_KPI_7.línea_base_reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.línea_base_reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_7"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.línea_base_reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_7_have_línea_base_reseña_positiva"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_puntaje_promedio_de_reseña": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.puntaje_promedio_de_reseña": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.puntaje_promedio_de_reseña"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.puntaje_promedio_de_reseña"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_puntaje_promedio_de_reseña"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_pedidos_con_reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.pedidos_con_reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.pedidos_con_reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.pedidos_con_reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_pedidos_con_reseña_positiva"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_pedidos_con_reseña": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.pedidos_con_reseña": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.pedidos_con_reseña"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.pedidos_con_reseña"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_pedidos_con_reseña"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_color_var_recompra_vs_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.color_var_recompra_vs_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_var_recompra_vs_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_var_recompra_vs_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_var_recompra_vs_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_color_var_recompra_vs_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.color_var_recompra_vs_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_var_recompra_vs_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_var_recompra_vs_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_color_var_recompra_vs_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_var_recompra_vs_AA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.var_recompra_vs_AA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.var_recompra_vs_AA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.var_recompra_vs_AA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_var_recompra_vs_AA_pp"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_var_recompra_vs_AA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.var_recompra_vs_AA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.var_recompra_vs_AA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.var_recompra_vs_AA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_var_recompra_vs_AA_pp"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_tasa_de_recompra_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.tasa_de_recompra_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.tasa_de_recompra_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.tasa_de_recompra_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_tasa_de_recompra_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_tasa_de_recompra_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.tasa_de_recompra_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.tasa_de_recompra_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.tasa_de_recompra_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_tasa_de_recompra_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_color_var_regresan_vs_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.color_var_regresan_vs_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_var_regresan_vs_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_var_regresan_vs_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_var_regresan_vs_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_color_var_regresan_vs_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.color_var_regresan_vs_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_var_regresan_vs_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_var_regresan_vs_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_color_var_regresan_vs_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_color_var_regresan_vs_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.color_var_regresan_vs_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_var_regresan_vs_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_var_regresan_vs_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_var_regresan_vs_MA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_color_var_regresan_vs_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.color_var_regresan_vs_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_var_regresan_vs_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_var_regresan_vs_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_color_var_regresan_vs_MA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_clientes_que_regresan_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_que_regresan_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_que_regresan_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_que_regresan_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__clientes_que_regresan_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_clientes_que_regresan_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_que_regresan_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_que_regresan_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_que_regresan_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have__clientes_que_regresan_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_clientes_que_regresan_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_que_regresan_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_que_regresan_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_que_regresan_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__clientes_que_regresan_MA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_clientes_que_regresan_MA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_que_regresan_MA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_que_regresan_MA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_que_regresan_MA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have__clientes_que_regresan_MA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_clientes_que_regresan": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_que_regresan": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_que_regresan"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_que_regresan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_clientes_que_regresan"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_pedidos_por_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.pedidos_por_cliente": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.pedidos_por_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.pedidos_por_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_pedidos_por_cliente"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_pedidos": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.pedidos": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.pedidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.pedidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_pedidos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.ventas": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_avance_a_la_meta_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.avance_a_la_meta_recompra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.avance_a_la_meta_recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.avance_a_la_meta_recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_avance_a_la_meta_recompra"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_color_semáforo_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.color_semáforo_recompra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.color_semáforo_recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.color_semáforo_recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_semáforo_recompra"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_semáforo_recompra_num": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.semáforo_recompra_num": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.semáforo_recompra_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.semáforo_recompra_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_semáforo_recompra_num"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4_has_meta_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 4"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_4": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4"
+			          }
+			        },
+			        "medidas_KPI_4.meta_recompra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.meta_recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_4"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.meta_recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_4_have_meta_recompra"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_4_has_línea_base_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 4"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_4": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4"
+			          }
+			        },
+			        "medidas_KPI_4.línea_base_recompra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.línea_base_recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_4"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.línea_base_recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_4_have_línea_base_recompra"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_medidas_KPI_4_tasa_de_recompra_DIM_CLIENTE": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "medidas_KPI_4.tasa_de_recompra_DIM_CLIENTE": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.tasa_de_recompra_DIM_CLIENTE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.tasa_de_recompra_DIM_CLIENTE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_tasa_de_recompra_DIM_CLIENTE"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_tasa_de_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.tasa_de_recompra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.tasa_de_recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.tasa_de_recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_tasa_de_recompra"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_clientes_con_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_con_recompra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_con_recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_con_recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_clientes_con_recompra"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_clientes_con_compra": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_con_compra": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_con_compra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_con_compra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_clientes_con_compra"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_color_semáforo_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.color_semáforo_ticket": {
+			          "Target": {
+			            "Entity": "medida.color_semáforo_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.color_semáforo_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_semáforo_ticket"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_meta_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.meta_ticket": {
+			          "Target": {
+			            "Entity": "medida.meta_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_meta_ticket"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_ticket_2018": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.ticket_2018": {
+			          "Target": {
+			            "Entity": "medida.ticket_2018"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.ticket_2018"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_ticket_2018"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_línea_base_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.línea_base_ticket": {
+			          "Target": {
+			            "Entity": "medida.línea_base_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.línea_base_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_línea_base_ticket"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_variación__ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.variación__ticket": {
+			          "Target": {
+			            "Entity": "medida.variación__ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.variación__ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_variación__ticket"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_ticket_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.ticket_año_anterior": {
+			          "Target": {
+			            "Entity": "medida.ticket_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.ticket_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_ticket_año_anterior"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_ticket_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.ticket_promedio": {
+			          "Target": {
+			            "Entity": "medida.ticket_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.ticket_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_ticket_promedio"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_KPI1_pedidos": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.KPI1_pedidos": {
+			          "Target": {
+			            "Entity": "medida.KPI1_pedidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI1_pedidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI1_pedidos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_KPI1_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.KPI1_ventas": {
+			          "Target": {
+			            "Entity": "medida.KPI1_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI1_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI1_ventas"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "dim_vendedor.vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor.vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor.vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_vendedors"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_semestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.semestre": {
+			          "Target": {
+			            "Entity": "dim_fecha.semestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.semestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_semestres"
+			        }
+			      ]
+			    },
+			    "top_vendedore_has_medidas_KPI_7_top___reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "Top vendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_vendedore": {
+			          "Target": {
+			            "Entity": "top_vendedore"
+			          }
+			        },
+			        "medidas_KPI_7.top___reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top___reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_vendedore"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top___reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_vendedores_have_top___reseña_positiva"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_top___reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.top___reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top___reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top___reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_top___reseña_positiva"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_7_top___reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_7.top___reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top___reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top___reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_top___reseña_positiva"
+			        }
+			      ]
+			    },
+			    "top_vendedore_has_medidas_KPI_7_top__reseñas": {
+			      "Binding": {
+			        "ConceptualEntity": "Top vendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_vendedore": {
+			          "Target": {
+			            "Entity": "top_vendedore"
+			          }
+			        },
+			        "medidas_KPI_7.top__reseñas": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top__reseñas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_vendedore"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top__reseñas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_vendedores_have_top__reseñas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_top__reseñas": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.top__reseñas": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top__reseñas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top__reseñas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_top__reseñas"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_7_top__reseñas": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_7.top__reseñas": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top__reseñas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top__reseñas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_top__reseñas"
+			        }
+			      ]
+			    },
+			    "top_vendedore_has_medidas_KPI_7_top__posición": {
+			      "Binding": {
+			        "ConceptualEntity": "Top vendedores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_vendedore": {
+			          "Target": {
+			            "Entity": "top_vendedore"
+			          }
+			        },
+			        "medidas_KPI_7.top__posición": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top__posición"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_vendedore"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top__posición"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_vendedores_have_top__posición"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_top__posición": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.top__posición": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top__posición"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top__posición"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_top__posición"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_7_top__posición": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_7.top__posición": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.top__posición"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.top__posición"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_top__posición"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_var_reseña_vs_AA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.var_reseña_vs_AA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.var_reseña_vs_AA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.var_reseña_vs_AA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_var_reseña_vs_AA_pp"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_7_var_reseña_vs_AA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_7.var_reseña_vs_AA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.var_reseña_vs_AA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.var_reseña_vs_AA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_var_reseña_vs_AA_pp"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_var_reseña_vs_MA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.var_reseña_vs_MA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.var_reseña_vs_MA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.var_reseña_vs_MA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_var_reseña_vs_MA_pp"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_7_var_reseña_vs_MA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_7.var_reseña_vs_MA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.var_reseña_vs_MA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.var_reseña_vs_MA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_var_reseña_vs_MA_pp"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_7_reseña_positiva": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_7.reseña_positiva": {
+			          "Target": {
+			            "Entity": "medidas_KPI_7.reseña_positiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_7.reseña_positiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__reseña_positiva"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_gasto_promedio_por_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.gasto_promedio_por_cliente": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.gasto_promedio_por_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.gasto_promedio_por_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_gasto_promedio_por_cliente"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_var_regresan_vs_AA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.var_regresan_vs_AA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.var_regresan_vs_AA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.var_regresan_vs_AA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_var_regresan_vs_AA_pp"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_var_regresan_vs_AA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.var_regresan_vs_AA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.var_regresan_vs_AA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.var_regresan_vs_AA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_var_regresan_vs_AA_pp"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_var_regresan_vs_MA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.var_regresan_vs_MA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.var_regresan_vs_MA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.var_regresan_vs_MA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_var_regresan_vs_MA_pp"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_4_var_regresan_vs_MA_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_4.var_regresan_vs_MA_pp": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.var_regresan_vs_MA_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.var_regresan_vs_MA_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_var_regresan_vs_MA_pp"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_4_clientes_que_regresan1": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_4.clientes_que_regresan1": {
+			          "Target": {
+			            "Entity": "medidas_KPI_4.clientes_que_regresan1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_4.clientes_que_regresan1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__clientes_que_regresan"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_añome": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.añome": {
+			          "Target": {
+			            "Entity": "dim_fecha.añome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.añome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_añome"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_nombre_ficticio": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "dim_vendedor.nombre_ficticio": {
+			          "Target": {
+			            "Entity": "dim_vendedor.nombre_ficticio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor.nombre_ficticio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_nombre_ficticios"
 			        }
 			      ]
 			    },

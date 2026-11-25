@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "f726b1d9683a3a966fa5",
-  "displayName": "KPI 1 · Ticket promedio",
+  "displayName": "KPI 1: Ticket promedio por pedido",
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920,
@@ -163,6 +163,32 @@
           ]
         },
         "howCreated": "User"
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#EEF2F7'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
       }
     ]
   }
