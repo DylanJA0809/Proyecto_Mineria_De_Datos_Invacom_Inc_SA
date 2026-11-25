@@ -57,6 +57,9 @@ table DIM_FECHA
 		lineageTag: 6c6f59da-4e63-468b-b7c1-9e7e55d822d6
 		summarizeBy: none
 		sourceColumn: NOMBRE_MES
+		sortByColumn: MES
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

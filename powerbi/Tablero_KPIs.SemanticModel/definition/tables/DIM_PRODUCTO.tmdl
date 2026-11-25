@@ -55,5 +55,5 @@ table DIM_PRODUCTO
 				in
 				    DIM_PRODUCTO1
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 
