@@ -35,6 +35,36 @@ table DIM_VENDEDOR
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Nombre descriptivo del vendedor para los reportes (Olist no publica nombres): número corto + ciudad + estado. Reemplaza al SELLER_ID, que no es legible.
+	column Vendedor =
+			VAR ciudad = DIM_VENDEDOR[CIUDAD]
+			RETURN
+			    "Vendedor " & FORMAT(DIM_VENDEDOR[VENDEDOR_KEY], "0")
+			        & " · " & UPPER(LEFT(ciudad, 1)) & MID(ciudad, 2, 100)
+			        & " (" & DIM_VENDEDOR[ESTADO] & ")"
+		lineageTag: e748f351-ea33-51e9-aa68-4cde5a4623c5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre FICTICIO del vendedor, solo para presentar el top 10 (Olist no publica nombres de vendedores). Se arma con la llave: 60 nombres x 60 apellidos = 3.600 combinaciones, así que cada vendedor tiene un nombre único y siempre el mismo. Se le agrega la ciudad y el estado reales.
+	column 'Nombre ficticio' =
+			VAR k = DIM_VENDEDOR[VENDEDOR_KEY] - 1
+			VAR nombres = "Ana|Bruno|Camila|Diego|Eduarda|Felipe|Gabriela|Henrique|Isabela|João|Juliana|Lucas|Mariana|Mateus|Natália|Otávio|Patrícia|Rafael|Sabrina|Thiago|Vitória|André|Beatriz|Caio|Daniela|Enzo|Fernanda|Gustavo|Helena|Igor|Larissa|Leonardo|Letícia|Marcelo|Bianca|Paulo|Renata|Rodrigo|Sofia|Vinícius|Aline|Bernardo|Carolina|Davi|Elisa|Fábio|Giovana|Heitor|Lívia|Murilo|Clara|Pedro|Raquel|Samuel|Tânia|Arthur|Luana|Ricardo|Yasmin|Miguel"
+			VAR apellidos = "Silva|Santos|Oliveira|Souza|Rodrigues|Ferreira|Alves|Pereira|Lima|Gomes|Costa|Ribeiro|Martins|Carvalho|Almeida|Lopes|Soares|Fernandes|Vieira|Barbosa|Rocha|Dias|Nascimento|Andrade|Moreira|Nunes|Marques|Machado|Mendes|Freitas|Cardoso|Ramos|Gonçalves|Santana|Teixeira|Araújo|Pinto|Correia|Moura|Cavalcanti|Monteiro|Barros|Campos|Rezende|Batista|Farias|Duarte|Fonseca|Castro|Miranda|Pires|Tavares|Coelho|Medeiros|Brandão|Siqueira|Peixoto|Queiroz|Xavier|Bezerra"
+			VAR nombre = PATHITEM(nombres, MOD(k, 60) + 1)
+			VAR apellido = PATHITEM(apellidos, MOD(INT(k / 60), 60) + 1)
+			VAR ciudad = DIM_VENDEDOR[CIUDAD]
+			RETURN
+			    nombre & " " & apellido
+			        & IF(k >= 3600, " " & FORMAT(k + 1, "0"))
+			        & " · " & UPPER(LEFT(ciudad, 1)) & MID(ciudad, 2, 100)
+			        & " (" & DIM_VENDEDOR[ESTADO] & ")"
+		lineageTag: 1e2279fc-db3d-5e4e-841f-5f621dc6bd80
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DIM_VENDEDOR = m
 		mode: import
 		source =

@@ -1,0 +1,224 @@
+/// Tabla de medidas del KPI 7 - Pedidos con reseña positiva (KPI-RES-07). Autosuficiente: no depende de las tablas de medidas de otros KPIs.
+table 'Medidas KPI 7'
+	lineageTag: 8d3e8db0-cfac-58c0-88d4-2343b76fa3f9
+
+	/// KPI-RES-07. Pedidos distintos (ORDER_ID) que tienen reseña (PUNTAJE_RESENA de 1 a 5). Se cuentan pedidos, no productos. Los pedidos sin reseña no entran.
+	measure 'Pedidos con reseña' =
+			CALCULATE(
+			    DISTINCTCOUNT(FACT_VENTAS[ORDER_ID]),
+			    FACT_VENTAS[PUNTAJE_RESENA] >= 1
+			)
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: a31e0ced-3f41-5669-b567-abba1e96f051
+
+	/// KPI-RES-07. Pedidos distintos con reseña de 4 o 5 estrellas.
+	measure 'Pedidos con reseña positiva' =
+			CALCULATE(
+			    DISTINCTCOUNT(FACT_VENTAS[ORDER_ID]),
+			    FACT_VENTAS[PUNTAJE_RESENA] >= 4
+			)
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: d98253d3-ad11-58fa-9ec9-860e1b930c44
+
+	/// KPI-RES-07. Pedidos con reseña positiva / Pedidos con reseña. Respeta los filtros de DIM_FECHA, DIM_PRODUCTO (categoría), DIM_VENDEDOR y DIM_CLIENTE (estado).
+	measure '% Reseña positiva' = DIVIDE([Pedidos con reseña positiva], [Pedidos con reseña])
+		formatString: 0.0%
+		displayFolder: 1 Valor
+		lineageTag: 644a2272-2bf6-5471-8f83-37f6659fb3d7
+
+	/// KPI-RES-07 (apoyo). Puntaje promedio con un valor por pedido (no por fila). Los pedidos sin reseña no entran al promedio.
+	measure 'Puntaje promedio de reseña' =
+			AVERAGEX(
+			    VALUES(FACT_VENTAS[ORDER_ID]),
+			    CALCULATE(AVERAGE(FACT_VENTAS[PUNTAJE_RESENA]))
+			)
+		formatString: 0.00
+		displayFolder: 1 Valor
+		lineageTag: a5445863-ca15-5dce-b6db-3ba33dd044b6
+
+	/// KPI-RES-07. Línea base: 77,8 % (2017).
+	measure 'Línea base reseña positiva' = 0.778
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: c9a13bbe-2263-5c66-936b-44c242560981
+
+	/// KPI-RES-07. Meta: 82 %.
+	measure 'Meta reseña positiva' = 0.82
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: de221a1e-5e97-598d-9b19-3018b5f34772
+
+	/// KPI-RES-07. Semáforo numérico: 3 = Verde (>= 82 %), 2 = Amarillo (>= 77,8 % y < 82 %), 1 = Rojo (< 77,8 %). Vacío si no hay datos.
+	measure 'Semáforo reseña positiva (num)' =
+			VAR v = [% Reseña positiva]
+			RETURN
+			    IF(
+			        ISBLANK(v), BLANK(),
+			        IF(v >= [Meta reseña positiva], 3,
+			        IF(v >= [Línea base reseña positiva], 2, 1))
+			    )
+		formatString: 0
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 1ea33a76-390d-5c34-b5fb-5c357797a4ae
+
+	/// KPI-RES-07. Color en hexadecimal según el semáforo: verde (#2E9E5B), ámbar (#F5A623), rojo (#E24B4A) y gris (#8795AA) si no hay datos.
+	measure 'Color semáforo reseña positiva' =
+			SWITCH(
+			    [Semáforo reseña positiva (num)],
+			    3, "#2E9E5B",
+			    2, "#F5A623",
+			    1, "#E24B4A",
+			    "#8795AA"
+			)
+		displayFolder: 2 Meta y semáforo
+		lineageTag: a0268d1b-4942-5486-854e-2517c60efa3f
+
+	/// KPI-RES-07. Avance = (valor actual - línea base) / (meta - línea base). 100 % = meta cumplida; negativo = por debajo de la línea base.
+	measure 'Avance a la meta reseña positiva' = DIVIDE([% Reseña positiva] - [Línea base reseña positiva], [Meta reseña positiva] - [Línea base reseña positiva])
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: da5c010f-d977-52ce-93c1-50f862a4ae49
+
+	/// KPI-RES-07. % Reseña positiva del mes anterior (DATEADD -1 mes). Vacío si no hay filtro de fecha activo.
+	measure '% Reseña positiva MA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [% Reseña positiva],
+			        DATEADD(DIM_FECHA[FECHA], -1, MONTH)
+			    ),
+			    BLANK()
+			)
+		formatString: 0.0%
+		displayFolder: 3 Comparación mensual
+		lineageTag: e21eb24a-f0e4-53af-88a3-e6f24b0f1336
+
+	/// KPI-RES-07. % Reseña positiva del mismo período del año anterior. Vacío si no hay filtro de fecha activo.
+	measure '% Reseña positiva AA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [% Reseña positiva],
+			        SAMEPERIODLASTYEAR(DIM_FECHA[FECHA])
+			    ),
+			    BLANK()
+			)
+		formatString: 0.0%
+		displayFolder: 3 Comparación mensual
+		lineageTag: f7a4f086-7573-5fa6-b131-5d8111c85d76
+
+	/// KPI-RES-07. Variación en puntos porcentuales contra el mes anterior. Positivo = mejora.
+	measure 'Var reseña vs MA (pp)' =
+			VAR actual = [% Reseña positiva]
+			VAR anterior = [% Reseña positiva MA]
+			RETURN
+			    IF(
+			        ISBLANK(actual) || ISBLANK(anterior), BLANK(),
+			        (actual - anterior) * 100
+			    )
+		formatString: +0.0" pp";-0.0" pp";0.0" pp"
+		displayFolder: 3 Comparación mensual
+		lineageTag: 83f54105-7312-5d2e-8cfc-9a303dae2543
+
+	/// KPI-RES-07. Variación en puntos porcentuales contra el mismo mes del año anterior. Positivo = mejora.
+	measure 'Var reseña vs AA (pp)' =
+			VAR actual = [% Reseña positiva]
+			VAR anterior = [% Reseña positiva AA]
+			RETURN
+			    IF(
+			        ISBLANK(actual) || ISBLANK(anterior), BLANK(),
+			        (actual - anterior) * 100
+			    )
+		formatString: +0.0" pp";-0.0" pp";0.0" pp"
+		displayFolder: 3 Comparación mensual
+		lineageTag: 2581c71e-169e-58ff-91b5-41e48b994c86
+
+	/// KPI-RES-07. Verde (#2E9E5B) si sube, rojo (#E24B4A) si baja, gris (#8795AA) si no cambia o no hay dato.
+	measure 'Color var reseña vs MA' =
+			VAR v = [Var reseña vs MA (pp)]
+			RETURN
+			    IF(ISBLANK(v) || v = 0, "#8795AA",
+			    IF(v > 0, "#2E9E5B", "#E24B4A"))
+		displayFolder: 3 Comparación mensual
+		lineageTag: a7ae5119-cc5b-586d-bf03-6191530a017b
+
+	/// KPI-RES-07. Verde (#2E9E5B) si sube, rojo (#E24B4A) si baja, gris (#8795AA) si no cambia o no hay dato.
+	measure 'Color var reseña vs AA' =
+			VAR v = [Var reseña vs AA (pp)]
+			RETURN
+			    IF(ISBLANK(v) || v = 0, "#8795AA",
+			    IF(v > 0, "#2E9E5B", "#E24B4A"))
+		displayFolder: 3 Comparación mensual
+		lineageTag: f43fe8d7-27c0-54a1-a62e-e100167f9d1b
+
+	/// KPI-RES-07. Mínimo de pedidos con reseña para comparar vendedores (el mismo mínimo de 30 que usa el KPI 3).
+	measure 'Mínimo de reseñas por vendedor' = 30
+		formatString: 0
+		displayFolder: 4 Vendedores
+		lineageTag: f45ad6b7-15ca-5d1e-ac36-99a5241290b5
+
+	/// KPI-RES-07. Puntaje interno para ordenar vendedores según el selector 'Top vendedores': primero el % de reseña positiva (mayor en 'mejores', menor en 'peores'), luego más reseñas, y la llave para desempatar. Vacío si el vendedor no llega al mínimo.
+	measure 'Puntaje de orden vendedor' =
+			VAR n = [Pedidos con reseña]
+			VAR pct = [% Reseña positiva]
+			VAR k = MAX(DIM_VENDEDOR[VENDEDOR_KEY])
+			VAR modo = SELECTEDVALUE('Top vendedores'[Mostrar], "10 mejores")
+			RETURN
+			    IF(
+			        n >= [Mínimo de reseñas por vendedor],
+			        IF(modo = "10 peores", 1 - ROUND(pct, 4), ROUND(pct, 4)) * 1E12
+			            + n * 1E4
+			            + k
+			    )
+		formatString: 0
+		displayFolder: 4 Vendedores
+		lineageTag: 008df4e5-33ee-51a2-9b78-36f4dea3a8e1
+
+	/// KPI-RES-07. Posición del vendedor en el top elegido (1 = el mejor en '10 mejores', el peor en '10 peores'). Solo vendedores con el mínimo de reseñas.
+	measure 'Posición vendedor' =
+			IF(
+			    ISINSCOPE(DIM_VENDEDOR[Nombre ficticio])
+			        && NOT ISBLANK([Puntaje de orden vendedor]),
+			    RANKX(
+			        ALLSELECTED(DIM_VENDEDOR[Nombre ficticio]),
+			        [Puntaje de orden vendedor],
+			        ,
+			        DESC
+			    )
+			)
+		formatString: 0
+		displayFolder: 4 Vendedores
+		lineageTag: 0801d397-0a03-5c9a-8684-540148bfe8fa
+
+	/// KPI-RES-07. Posición, solo si el vendedor está en el top 10 elegido. Vacío para el resto, así la tabla muestra 10 filas.
+	measure 'Top - Posición' =
+			VAR pos = [Posición vendedor]
+			RETURN IF(pos <= 10, pos)
+		formatString: 0
+		displayFolder: 4 Vendedores
+		lineageTag: 2f14d894-eca5-5ee9-83f8-21502b91384e
+
+	/// KPI-RES-07. Pedidos con reseña del vendedor, solo para el top 10 elegido.
+	measure 'Top - Reseñas' = IF(NOT ISBLANK([Top - Posición]), [Pedidos con reseña])
+		formatString: #,0
+		displayFolder: 4 Vendedores
+		lineageTag: 6b0ca409-cb6e-515a-88a2-7c82ca7dcba1
+
+	/// KPI-RES-07. % de reseña positiva del vendedor, solo para el top 10 elegido.
+	measure 'Top - % reseña positiva' = IF(NOT ISBLANK([Top - Posición]), [% Reseña positiva])
+		formatString: 0.0%
+		displayFolder: 4 Vendedores
+		lineageTag: fecccece-688d-55ab-86ac-73b5df2d5524
+
+	column 'Columna auxiliar'
+		isHidden
+		lineageTag: 1a1e20df-ca3e-5233-b369-83927bd82087
+		isNameInferred
+		sourceColumn: [Columna auxiliar]
+
+	partition 'Medidas KPI 7' = calculated
+		mode: import
+		source = ROW("Columna auxiliar", 1)
+

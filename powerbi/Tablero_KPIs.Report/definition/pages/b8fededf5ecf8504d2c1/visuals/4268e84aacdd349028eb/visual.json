@@ -1,0 +1,298 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "4268e84aacdd349028eb",
+  "position": {
+    "x": 1040.5,
+    "y": 645.5,
+    "z": 8,
+    "height": 413.6,
+    "width": 430,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 7"
+                    }
+                  },
+                  "Property": "Top - Posición"
+                }
+              },
+              "queryRef": "Medidas KPI 7.Top - Posición",
+              "nativeQueryRef": "#",
+              "displayName": "#"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_VENDEDOR"
+                    }
+                  },
+                  "Property": "Nombre ficticio"
+                }
+              },
+              "queryRef": "DIM_VENDEDOR.Nombre ficticio",
+              "nativeQueryRef": "Vendedor",
+              "displayName": "Vendedor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 7"
+                    }
+                  },
+                  "Property": "Top - Reseñas"
+                }
+              },
+              "queryRef": "Medidas KPI 7.Top - Reseñas",
+              "nativeQueryRef": "Reseñas",
+              "displayName": "Reseñas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 7"
+                    }
+                  },
+                  "Property": "Top - % reseña positiva"
+                }
+              },
+              "queryRef": "Medidas KPI 7.Top - % reseña positiva",
+              "nativeQueryRef": "% positiva",
+              "displayName": "% positiva"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas KPI 7"
+                  }
+                },
+                "Property": "Top - Posición"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F3A5F'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas KPI 7"
+                        }
+                      },
+                      "Property": "Color semáforo reseña positiva"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas KPI 7.Top - % reseña positiva"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 vendedores (30+ reseñas) · nombres ficticios'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c1f4db181cb013fcfb36",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 7"
+              }
+            },
+            "Property": "Top - Posición"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "77dd04b52b1cd2333161",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_VENDEDOR"
+              }
+            },
+            "Property": "Nombre ficticio"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "009f75679a30fa2ff6af",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 7"
+              }
+            },
+            "Property": "Top - Reseñas"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6b40ad26b4238d3bcc4d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 7"
+              }
+            },
+            "Property": "Top - % reseña positiva"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

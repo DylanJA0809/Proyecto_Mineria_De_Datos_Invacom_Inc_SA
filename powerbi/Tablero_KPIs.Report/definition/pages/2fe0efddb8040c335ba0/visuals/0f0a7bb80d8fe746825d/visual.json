@@ -1,0 +1,223 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "0f0a7bb80d8fe746825d",
+  "position": {
+    "x": 607.85780162656158,
+    "y": 119.51102540454431,
+    "z": 6,
+    "height": 541.92068416198538,
+    "width": 607.85780162656158,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CLIENTE"
+                    }
+                  },
+                  "Property": "Estado completo"
+                }
+              },
+              "queryRef": "DIM_CLIENTE.Estado completo",
+              "nativeQueryRef": "Estado completo",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 4"
+                    }
+                  },
+                  "Property": "Clientes con compra"
+                }
+              },
+              "queryRef": "Medidas KPI 4.Clientes con compra",
+              "nativeQueryRef": "Clientes con compra"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 4"
+                    }
+                  },
+                  "Property": "Tasa de recompra"
+                }
+              },
+              "queryRef": "Medidas KPI 4.Tasa de recompra",
+              "nativeQueryRef": "Tasa de recompra"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 4"
+                    }
+                  },
+                  "Property": "Gasto promedio por cliente"
+                }
+              },
+              "queryRef": "Medidas KPI 4.Gasto promedio por cliente",
+              "nativeQueryRef": "Gasto promedio por cliente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 4"
+                    }
+                  },
+                  "Property": "Pedidos por cliente"
+                }
+              },
+              "queryRef": "Medidas KPI 4.Pedidos por cliente",
+              "nativeQueryRef": "Pedidos por cliente"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas KPI 4"
+                        }
+                      },
+                      "Property": "Color semáforo recompra"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Clientes por estado (color = semáforo de recompra)'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "dfcdaac0aac7e5ba0092",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_CLIENTE"
+              }
+            },
+            "Property": "Estado completo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6f92021355d64e59c21b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 4"
+              }
+            },
+            "Property": "Clientes con compra"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
