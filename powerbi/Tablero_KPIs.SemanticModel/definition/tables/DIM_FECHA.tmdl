@@ -88,6 +88,20 @@ table DIM_FECHA
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Año y mes como texto AAAA-MM (ordena solo). Lo usan las páginas KPI 4 y KPI 7 para ver los meses de varios años sin mezclarlos.
+	column Año-Mes = FORMAT(DIM_FECHA[FECHA], "yyyy-MM")
+		lineageTag: 1dda0ee1-693b-56d7-a80a-ea533bcd1a54
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Semestre como texto AAAA-S1 / AAAA-S2. La ficha del KPI 4 pide revisión semestral.
+	column Semestre = DIM_FECHA[ANIO] & "-S" & IF(DIM_FECHA[MES] <= 6, 1, 2)
+		lineageTag: 5715203b-f03b-5b35-81f1-d15b07282521
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DIM_FECHA = m
 		mode: import
 		source =
