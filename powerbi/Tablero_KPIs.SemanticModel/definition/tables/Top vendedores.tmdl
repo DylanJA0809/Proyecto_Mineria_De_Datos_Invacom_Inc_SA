@@ -1,0 +1,32 @@
+/// Tabla desconectada para el selector de la página KPI 7: elegir si la tabla de vendedores muestra los 10 mejores o los 10 peores.
+table 'Top vendedores'
+	lineageTag: a939062f-b555-571d-88bc-2eed0c3df684
+
+	column Mostrar
+		dataType: string
+		lineageTag: 215bea77-8786-52b8-95af-b79aba28c15a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mostrar]
+		sortByColumn: Orden
+
+	column Orden
+		dataType: int64
+		isHidden
+		lineageTag: 2ca2b365-ee7f-54d1-b3aa-01a9f5d6fe14
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Orden]
+
+	partition 'Top vendedores' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "Mostrar", STRING,
+				    "Orden", INTEGER,
+				    {
+				        {"10 mejores", 1},
+				        {"10 peores", 2}
+				    }
+				)
+
