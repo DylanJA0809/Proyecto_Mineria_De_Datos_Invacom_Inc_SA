@@ -4,10 +4,10 @@
   "position": {
     "x": 1232.1998826192673,
     "y": 119.51102540454431,
-    "z": 8,
+    "z": 8000,
     "height": 541.92068416198538,
     "width": 673.79491909113779,
-    "tabOrder": 8
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "decompositionTreeVisual",
@@ -53,6 +53,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "DIM_FECHA"
+                    }
+                  },
+                  "Property": "NOMBRE_MES"
+                }
+              },
+              "queryRef": "DIM_FECHA.NOMBRE_MES",
+              "nativeQueryRef": "NOMBRE_MES",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "DIM_VENDEDOR"
                     }
                   },
@@ -79,21 +94,6 @@
               "nativeQueryRef": "Estado del cliente",
               "active": false,
               "displayName": "Estado del cliente"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DIM_FECHA"
-                    }
-                  },
-                  "Property": "NOMBRE_MES"
-                }
-              },
-              "queryRef": "DIM_FECHA.NOMBRE_MES",
-              "nativeQueryRef": "NOMBRE_MES",
-              "active": false
             }
           ]
         }
@@ -110,6 +110,25 @@
               "DIM_PRODUCTO.CATEGORIA"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_PRODUCTO"
+                    }
+                  },
+                  "Property": "CATEGORIA"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DIM_FECHA.NOMBRE_MES"
+            ],
+            "isCollapsed": true,
             "isPinned": true
           },
           {
@@ -123,15 +142,22 @@
               "DIM_CLIENTE.ESTADO"
             ],
             "isCollapsed": true
-          },
-          {
-            "queryRefs": [
-              "DIM_FECHA.NOMBRE_MES"
-            ],
-            "isCollapsed": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'bed_bath_table'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {

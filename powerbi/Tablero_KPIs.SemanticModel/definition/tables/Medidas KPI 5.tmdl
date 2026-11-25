@@ -1,0 +1,107 @@
+/// Tabla de medidas del KPI 5 - Peso del flete sobre el precio (KPI-FLE-05). Responsable: Karol Miranda Mora. Autosuficiente: no depende de otras tablas de medidas.
+table 'Medidas KPI 5'
+	lineageTag: d8dcafdb-78c6-41e1-8164-64905453372c
+
+	/// KPI-FLE-05. Suma del flete de los productos vendidos.
+	measure 'KPI5 Flete' = SUM(FACT_VENTAS[FLETE])
+		formatString: "R$" #,0.00
+		displayFolder: 1 Valor
+		lineageTag: 53ec8edd-cdb4-44bc-91fa-97c19854c44a
+
+	/// KPI-FLE-05. Suma del precio de los productos vendidos (sin flete).
+	measure 'KPI5 Precio' = SUM(FACT_VENTAS[PRECIO])
+		formatString: "R$" #,0.00
+		displayFolder: 1 Valor
+		lineageTag: 3ade6c1a-debc-4464-8e44-998c043d9195
+
+	/// KPI-FLE-05. SUM(flete) / SUM(precio). 2017 = 16,03 % (línea base). Menos es mejor.
+	measure 'KPI5 % flete sobre precio' = DIVIDE([KPI5 Flete], [KPI5 Precio])
+		formatString: 0.00%
+		displayFolder: 1 Valor
+		lineageTag: f2a406cf-14b5-4745-b5d6-e7623eb014ee
+
+	/// KPI-FLE-05. Línea base: 16,03 % (año 2017). Vacía donde el KPI no tiene datos.
+	measure 'KPI5 Línea base' = IF(NOT ISBLANK([KPI5 % flete sobre precio]), 0.1603)
+		formatString: 0.00%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: a4488456-aefd-4ead-b32f-c8eaff717c24
+
+	/// KPI-FLE-05. Meta: línea base x 0,90 = 14,43 % (reducción del 10 %).
+	measure 'KPI5 Meta' = IF(NOT ISBLANK([KPI5 % flete sobre precio]), 0.1443)
+		formatString: 0.00%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: cfd22c37-43cf-4563-a85b-73623ae4db2c
+
+	/// KPI-FLE-05. Color para formato condicional (indicador de reducción): verde si es <= 14,43 % (meta), ámbar si está entre 14,43 % y 16,03 %, rojo si es > 16,03 % (línea base), gris si no hay datos.
+	measure 'KPI5 Color semáforo' =
+			VAR v = [KPI5 % flete sobre precio]
+			RETURN SWITCH(TRUE(),
+			    ISBLANK(v), "#98A5B6",
+			    v <= 0.1443, "#4FAF75",
+			    v <= 0.1603, "#F4B345",
+			    "#E76C6B")
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 35126d0b-507d-43e6-8aa8-a8bea2e1a5ce
+
+	/// KPI-FLE-05. % flete sobre precio del mes anterior (PREVIOUSMONTH). Vacío si no hay un solo año y mes seleccionados, y en enero 2017, porque diciembre 2016 casi no tiene pedidos.
+	measure 'KPI5 Mes anterior' =
+			VAR unMes = HASONEVALUE(DIM_FECHA[ANIO]) && HASONEVALUE(DIM_FECHA[MES])
+			VAR inicio = MIN(DIM_FECHA[FECHA])
+			RETURN IF(
+			    unMes && inicio > DATE(2017, 1, 31),
+			    CALCULATE([KPI5 % flete sobre precio],
+			        PREVIOUSMONTH(DIM_FECHA[FECHA]),
+			        ALL(DIM_FECHA)))
+		formatString: 0.00%
+		displayFolder: 3 Mes anterior
+		lineageTag: 12539f3e-78a4-41fa-a16a-ecf0ec482a45
+
+	/// KPI-FLE-05. Diferencia en puntos porcentuales contra el mes anterior. Negativo = mejora (el flete pesa menos).
+	measure 'KPI5 Variación vs mes anterior' =
+			VAR actual = [KPI5 % flete sobre precio]
+			VAR anterior = [KPI5 Mes anterior]
+			RETURN IF(NOT ISBLANK(actual) && NOT ISBLANK(anterior), actual - anterior)
+		formatString: +0.00%;-0.00%;0.00%
+		displayFolder: 3 Mes anterior
+		lineageTag: 406c8079-a75b-42a3-8e28-17a80fe65734
+
+	/// KPI-FLE-05. % flete sobre precio en escala 0 a 25, para la aguja del gauge.
+	measure 'KPI5 Gauge valor' = ROUND([KPI5 % flete sobre precio] * 100, 2)
+		formatString: 0.00
+		displayFolder: 5 Gauge
+		lineageTag: 6e7053de-d34d-4fef-9d29-599908de6f31
+
+	/// KPI-FLE-05. Inicio del arco del gauge.
+	measure 'KPI5 Gauge mínimo' = 0
+		formatString: 0
+		displayFolder: 5 Gauge
+		lineageTag: 45e39338-7ba7-4b75-b96a-1b5f2ca02be4
+
+	/// KPI-FLE-05. Final del arco del gauge (25 %).
+	measure 'KPI5 Gauge máximo' = 25
+		formatString: 0
+		displayFolder: 5 Gauge
+		lineageTag: 9f18381d-1a13-4806-90ed-eb55062b3c17
+
+	/// KPI-FLE-05. Meta en escala del gauge: fin de la zona verde.
+	measure 'KPI5 Gauge meta' = 14.43
+		formatString: 0.00
+		displayFolder: 5 Gauge
+		lineageTag: 295545fa-2241-49ce-a57f-214bf936bbef
+
+	/// KPI-FLE-05. Línea base en escala del gauge: fin de la zona ámbar e inicio de la roja.
+	measure 'KPI5 Gauge base' = 16.03
+		formatString: 0.00
+		displayFolder: 5 Gauge
+		lineageTag: ddd4a067-55b6-4829-8368-e9382db8a5c6
+
+	column Columna
+		isHidden
+		lineageTag: 420f08df-b46e-4379-81a3-e5a7c04bdb80
+		isNameInferred
+		sourceColumn: [Columna]
+
+	partition 'Medidas KPI 5' = calculated
+		mode: import
+		source = ROW("Columna", BLANK())
+

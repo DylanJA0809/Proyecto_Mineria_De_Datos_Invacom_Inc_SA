@@ -24,10 +24,25 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "publicCustomVisuals": [
-    "cylindricalGauge73A12A442345453EB69B593649C3A341"
+    "cylindricalGauge73A12A442345453EB69B593649C3A341",
+    "dg5AAA90EFEFE747CB9357C4FC19B85A58",
+    "Tachometer1474636471549"
   ],
   "resourcePackages": [
     {

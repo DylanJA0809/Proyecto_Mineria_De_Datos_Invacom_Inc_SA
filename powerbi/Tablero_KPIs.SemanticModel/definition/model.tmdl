@@ -20,6 +20,8 @@ ref table DIM_VENDEDOR
 ref table FACT_VENTAS
 ref table 'Medidas KPI 2'
 ref table 'Medidas KPI 8'
+ref table 'Medidas KPI 3'
+ref table 'Medidas KPI 5'
 
 ref cultureInfo en-US
 

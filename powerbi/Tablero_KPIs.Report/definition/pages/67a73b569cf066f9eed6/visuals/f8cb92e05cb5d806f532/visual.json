@@ -1,0 +1,268 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f8cb92e05cb5d806f532",
+  "position": {
+    "x": 977.21691320853517,
+    "y": 665.95522974211281,
+    "z": 8000,
+    "height": 394.50608718418641,
+    "width": 917.49810184579133,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "Tachometer1474636471549",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 5"
+                    }
+                  },
+                  "Property": "KPI5 Gauge valor"
+                }
+              },
+              "queryRef": "Medidas KPI 5.KPI5 Gauge valor",
+              "nativeQueryRef": "KPI5 Gauge valor"
+            }
+          ]
+        },
+        "StartValue": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 5"
+                    }
+                  },
+                  "Property": "KPI5 Gauge mínimo"
+                }
+              },
+              "queryRef": "Medidas KPI 5.KPI5 Gauge mínimo",
+              "nativeQueryRef": "KPI5 Gauge mínimo"
+            }
+          ]
+        },
+        "EndValue": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 5"
+                    }
+                  },
+                  "Property": "KPI5 Gauge máximo"
+                }
+              },
+              "queryRef": "Medidas KPI 5.KPI5 Gauge máximo",
+              "nativeQueryRef": "KPI5 Gauge máximo"
+            }
+          ]
+        },
+        "TargetValue": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 5"
+                    }
+                  },
+                  "Property": "KPI5 Gauge meta"
+                }
+              },
+              "queryRef": "Medidas KPI 5.KPI5 Gauge meta",
+              "nativeQueryRef": "KPI5 Gauge meta"
+            }
+          ]
+        },
+        "Range2StartValue": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 5"
+                    }
+                  },
+                  "Property": "KPI5 Gauge meta"
+                }
+              },
+              "queryRef": "Medidas KPI 5.KPI5 Gauge meta",
+              "nativeQueryRef": "KPI5 Gauge meta"
+            }
+          ]
+        },
+        "Range3StartValue": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas KPI 5"
+                    }
+                  },
+                  "Property": "KPI5 Gauge base"
+                }
+              },
+              "queryRef": "Medidas KPI 5.KPI5 Gauge base",
+              "nativeQueryRef": "KPI5 Gauge base"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas KPI 5"
+                  }
+                },
+                "Property": "KPI5 Gauge valor"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "range1": [
+        {
+          "properties": {
+            "rangeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2B9E5B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "range2": [
+        {
+          "properties": {
+            "rangeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F5A623'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "range3": [
+        {
+          "properties": {
+            "rangeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distancia a la meta (14,43 %)'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distancia a la meta (14,43 %)'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

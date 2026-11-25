@@ -535,6 +535,16 @@ cultureInfo en-US
 			          "anio": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "AÑO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2701,1912 +2711,1384 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "medidas_KPI_3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas KPI 3": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida KPI 3": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.columna": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "Columna"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "columna": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_pedidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Pedidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 pedidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_pedidos_entregados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Pedidos entregados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 pedidos entregados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_puntaje_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Puntaje promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 puntaje promedio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3__a_tiempo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 % a tiempo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 % a tiempo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi3 percentage a tiempo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "kpi3 pct a tiempo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_vendedores_evaluados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Vendedores evaluados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 vendedores evaluados": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Vendedores evaluados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_vendedores_que_cumplen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Vendedores que cumplen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 vendedores que cumplen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Vendedores que cumplen": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3__buen_desempeño": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 % buen desempeño"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 % buen desempeño": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi3 percentage buen desempeño": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "kpi3 pct buen desempeño": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "% buen desempeño": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_línea_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Línea base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 línea base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi3 línea headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 línea center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 línea seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 línea station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 línea pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "Línea base": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "meta": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_color_semáforo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Color semáforo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 color semáforo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_trimestre_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Trimestre anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 trimestre anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Variación vs trimestre anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 variación vs trimestre anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Variación vs trimestre anterior": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_gauge_mínimo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Gauge mínimo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 gauge mínimo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_gauge_máximo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Gauge máximo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 gauge máximo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_gauge_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Gauge meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 gauge meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "meta": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gauge meta": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_gauge_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Gauge base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 gauge base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "base": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gauge base": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kpi3 gauge headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 gauge center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 gauge seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi3 gauge station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "gauge headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gauge center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gauge seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gauge station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "kpi3 gauge pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3.KPI3_gauge_valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 3",
+			          "ConceptualProperty": "KPI3 Gauge valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI3 gauge valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gauge valor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kpi3 gauge courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi3 gauge bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi3 gauge heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi3 gauge fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi3 gauge boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi3 gauge gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi3 gauge lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "gauge courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gauge bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gauge heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "dim_producto.orden_rango_peso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_PRODUCTO",
+			          "ConceptualProperty": "ORDEN_RANGO_PESO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "orden rango peso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ORDEN_RANGO_PESO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas KPI 5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida KPI 5": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.columna": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "Columna"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "columna": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_flete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Flete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 flete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Flete": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_precio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Precio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 precio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Precio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5__flete_sobre_precio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 % flete sobre precio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 % flete sobre precio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi5 percentage flete sobre precio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "kpi5 pct flete sobre precio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "% flete sobre precio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_línea_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Línea base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 línea base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi5 línea headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 línea center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 línea seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 línea station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 línea pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "Línea base": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "meta": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_color_semáforo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Color semáforo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 color semáforo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Mes anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_variación_vs_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Variación vs mes anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 variación vs mes anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Variación vs mes anterior": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_gauge_valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Gauge valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 gauge valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gauge valor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kpi5 gauge courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi5 gauge bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi5 gauge heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi5 gauge fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi5 gauge boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi5 gauge gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi5 gauge lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "gauge courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gauge bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gauge heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_gauge_mínimo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Gauge mínimo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 gauge mínimo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_gauge_máximo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Gauge máximo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 gauge máximo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_gauge_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Gauge meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 gauge meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "meta": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gauge meta": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5.KPI5_gauge_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas KPI 5",
+			          "ConceptualProperty": "KPI5 Gauge base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI5 gauge base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "base": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gauge base": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kpi5 gauge headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 gauge center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 gauge seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "kpi5 gauge station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "gauge headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gauge center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gauge seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gauge station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "kpi5 gauge pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dim_vendedor_seller_id_sell_dim_vendedor": {
+			    "fact_venta_has_dim_producto": {
 			      "Binding": {
-			        "ConceptualEntity": "DIM_VENDEDOR"
+			        "ConceptualEntity": "FACT_VENTAS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_vendedor.seller_id": {
+			        "fact_venta": {
 			          "Target": {
-			            "Entity": "dim_vendedor.seller_id"
+			            "Entity": "fact_venta"
 			          }
 			        },
-			        "dim_vendedor": {
-			          "Target": {
-			            "Entity": "dim_vendedor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Verb": {
-			            "Subject": {
-			              "Role": "dim_vendedor.seller_id"
-			            },
-			            "Verbs": [
-			              {
-			                "sell": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_vendedor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.75,
-			          "ID": "seller_ids_sell_dim_vendedors"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_vendedor.seller_id"
-			            },
-			            "Object": {
-			              "Role": "dim_vendedor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "seller_ids_have_dim_vendedors"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_vendedor"
-			            },
-			            "Object": {
-			              "Role": "dim_vendedor.seller_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_vendedors_have_seller_ids"
-			        }
-			      ]
-			    },
-			    "dim_cliente_in_estado_completo": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.estado_completo": {
-			          "Target": {
-			            "Entity": "dim_cliente.estado_completo"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "dim_cliente.estado_completo"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_cliente.estado_completo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_are_in_estado_completos"
-			        }
-			      ]
-			    },
-			    "dim_cliente_has_cliente_key": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.cliente_key": {
-			          "Target": {
-			            "Entity": "dim_cliente.cliente_key"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente.cliente_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_cliente_keys"
-			        }
-			      ]
-			    },
-			    "dim_cliente_has_customer_unique_id": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.customer_unique_id": {
-			          "Target": {
-			            "Entity": "dim_cliente.customer_unique_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente.customer_unique_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_customer_unique_ids"
-			        }
-			      ]
-			    },
-			    "dim_cliente_has_ciudad": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.ciudad": {
-			          "Target": {
-			            "Entity": "dim_cliente.ciudad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente.ciudad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_ciudad"
-			        }
-			      ]
-			    },
-			    "dim_cliente_has_estado": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.estado": {
-			          "Target": {
-			            "Entity": "dim_cliente.estado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente.estado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_estado"
-			        }
-			      ]
-			    },
-			    "dim_cliente_has_recompra": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.recompra": {
-			          "Target": {
-			            "Entity": "dim_cliente.recompra"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente.recompra"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_recompras"
-			        }
-			      ]
-			    },
-			    "dim_cliente_has_estado_completo": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        },
-			        "dim_cliente.estado_completo": {
-			          "Target": {
-			            "Entity": "dim_cliente.estado_completo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente.estado_completo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_estado_completos"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_fecha_key": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.fecha_key": {
-			          "Target": {
-			            "Entity": "dim_fecha.fecha_key"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.fecha_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_fecha_keys"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha.fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_fechas"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_anio": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.anio": {
-			          "Target": {
-			            "Entity": "dim_fecha.anio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.anio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_anios"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.trimestre": {
-			          "Target": {
-			            "Entity": "dim_fecha.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_trimestres"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_me": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.me": {
-			          "Target": {
-			            "Entity": "dim_fecha.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_me"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_nombre_me": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.nombre_me": {
-			          "Target": {
-			            "Entity": "dim_fecha.nombre_me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.nombre_me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_nombre_me"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_dia_semana": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.dia_semana": {
-			          "Target": {
-			            "Entity": "dim_fecha.dia_semana"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.dia_semana"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_dia_semanas"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_nombre_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.nombre_dia": {
-			          "Target": {
-			            "Entity": "dim_fecha.nombre_dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.nombre_dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_nombre_dias"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_fin_de_semana": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "dim_fecha.fin_de_semana": {
-			          "Target": {
-			            "Entity": "dim_fecha.fin_de_semana"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "dim_fecha.fin_de_semana"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_fin_de_semanas"
-			        }
-			      ]
-			    },
-			    "dim_producto_has_producto_key": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_PRODUCTO"
-			      },
-			      "State": "Generated",
-			      "Roles": {
 			        "dim_producto": {
 			          "Target": {
 			            "Entity": "dim_producto"
 			          }
-			        },
-			        "dim_producto.producto_key": {
-			          "Target": {
-			            "Entity": "dim_producto.producto_key"
-			          }
 			        }
 			      },
 			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_producto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_dim_productos"
+			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "dim_producto"
 			            },
 			            "Object": {
-			              "Role": "dim_producto.producto_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_productos_have_producto_keys"
-			        }
-			      ]
-			    },
-			    "dim_producto_has_product_id": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_PRODUCTO"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_producto": {
-			          "Target": {
-			            "Entity": "dim_producto"
-			          }
-			        },
-			        "dim_producto.product_id": {
-			          "Target": {
-			            "Entity": "dim_producto.product_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_producto"
-			            },
-			            "Object": {
-			              "Role": "dim_producto.product_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_productos_have_product_ids"
-			        }
-			      ]
-			    },
-			    "dim_producto_has_categoria": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_PRODUCTO"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_producto": {
-			          "Target": {
-			            "Entity": "dim_producto"
-			          }
-			        },
-			        "dim_producto.categoria": {
-			          "Target": {
-			            "Entity": "dim_producto.categoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_producto"
-			            },
-			            "Object": {
-			              "Role": "dim_producto.categoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_productos_have_categorias"
-			        }
-			      ]
-			    },
-			    "dim_producto_has_peso_g": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_PRODUCTO"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_producto": {
-			          "Target": {
-			            "Entity": "dim_producto"
-			          }
-			        },
-			        "dim_producto.peso_g": {
-			          "Target": {
-			            "Entity": "dim_producto.peso_g"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_producto"
-			            },
-			            "Object": {
-			              "Role": "dim_producto.peso_g"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_productos_have_peso_g"
-			        }
-			      ]
-			    },
-			    "dim_producto_has_rango_peso": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_PRODUCTO"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_producto": {
-			          "Target": {
-			            "Entity": "dim_producto"
-			          }
-			        },
-			        "dim_producto.rango_peso": {
-			          "Target": {
-			            "Entity": "dim_producto.rango_peso"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_producto"
-			            },
-			            "Object": {
-			              "Role": "dim_producto.rango_peso"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_productos_have_rango_pesos"
-			        }
-			      ]
-			    },
-			    "dim_vendedor_has_vendedor_key": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_VENDEDOR"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_vendedor": {
-			          "Target": {
-			            "Entity": "dim_vendedor"
-			          }
-			        },
-			        "dim_vendedor.vendedor_key": {
-			          "Target": {
-			            "Entity": "dim_vendedor.vendedor_key"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_vendedor"
-			            },
-			            "Object": {
-			              "Role": "dim_vendedor.vendedor_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_vendedors_have_vendedor_keys"
-			        }
-			      ]
-			    },
-			    "dim_vendedor_has_ciudad": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_VENDEDOR"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_vendedor": {
-			          "Target": {
-			            "Entity": "dim_vendedor"
-			          }
-			        },
-			        "dim_vendedor.ciudad": {
-			          "Target": {
-			            "Entity": "dim_vendedor.ciudad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_vendedor"
-			            },
-			            "Object": {
-			              "Role": "dim_vendedor.ciudad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_vendedors_have_ciudad"
-			        }
-			      ]
-			    },
-			    "dim_vendedor_has_estado": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_VENDEDOR"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_vendedor": {
-			          "Target": {
-			            "Entity": "dim_vendedor"
-			          }
-			        },
-			        "dim_vendedor.estado": {
-			          "Target": {
-			            "Entity": "dim_vendedor.estado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_vendedor"
-			            },
-			            "Object": {
-			              "Role": "dim_vendedor.estado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_vendedors_have_estado"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_order_id": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.order_id": {
-			          "Target": {
-			            "Entity": "fact_venta.order_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.order_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_order_ids"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_order_item_id": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.order_item_id": {
-			          "Target": {
-			            "Entity": "fact_venta.order_item_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.order_item_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_order_item_ids"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_estado_pedido": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.estado_pedido": {
-			          "Target": {
-			            "Entity": "fact_venta.estado_pedido"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.estado_pedido"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_estado_pedidos"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_precio": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.precio": {
-			          "Target": {
-			            "Entity": "fact_venta.precio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.precio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_precios"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_flete": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.flete": {
-			          "Target": {
-			            "Entity": "fact_venta.flete"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.flete"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_fletes"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_hora_compra": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.hora_compra": {
-			          "Target": {
-			            "Entity": "fact_venta.hora_compra"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.hora_compra"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_hora_compras"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_dias_entrega": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.dias_entrega": {
-			          "Target": {
-			            "Entity": "fact_venta.dias_entrega"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.dias_entrega"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dias_entregas"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_dias_atraso": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.dias_atraso": {
-			          "Target": {
-			            "Entity": "fact_venta.dias_atraso"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.dias_atraso"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dias_atrasos"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_a_tiempo": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.a_tiempo": {
-			          "Target": {
-			            "Entity": "fact_venta.a_tiempo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.a_tiempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_a_tiempo"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_puntaje_resena": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "fact_venta.puntaje_resena": {
-			          "Target": {
-			            "Entity": "fact_venta.puntaje_resena"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "fact_venta.puntaje_resena"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_puntaje_resenas"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_pedidos_entregados": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.pedidos_entregados": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.pedidos_entregados"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.pedidos_entregados"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_pedidos_entregados"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_pedidos_a_tiempo": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.pedidos_a_tiempo": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.pedidos_a_tiempo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.pedidos_a_tiempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_pedidos_a_tiempo"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_entregados_a_tiempo": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.entregados_a_tiempo": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.entregados_a_tiempo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.entregados_a_tiempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have__entregados_a_tiempo"
-			        }
-			      ]
-			    },
-			    "medidas_KPI_2_has_meta__a_tiempo": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas KPI 2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medidas_KPI_2": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2"
-			          }
-			        },
-			        "medidas_KPI_2.meta__a_tiempo": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.meta__a_tiempo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medidas_KPI_2"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.meta__a_tiempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_KPI_2_have_meta__a_tiempo"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_semáforo__a_tiempo_num": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.semáforo__a_tiempo_num": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.semáforo__a_tiempo_num"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.semáforo__a_tiempo_num"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_semáforo__a_tiempo_num"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_medidas_KPI_2_entregados_a_tiempo_AA": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "medidas_KPI_2.entregados_a_tiempo_AA": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.entregados_a_tiempo_AA"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.entregados_a_tiempo_AA"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have__entregados_a_tiempo_AA"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_entregados_a_tiempo_AA": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.entregados_a_tiempo_AA": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.entregados_a_tiempo_AA"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.entregados_a_tiempo_AA"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have__entregados_a_tiempo_AA"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_días_de_atraso_promedio_por_pedido": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.días_de_atraso_promedio_por_pedido": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.días_de_atraso_promedio_por_pedido"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.días_de_atraso_promedio_por_pedido"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_días_de_atraso_promedio_por_pedido"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_2_puntaje_promedio_de_reseñas_por_pedido": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_2.puntaje_promedio_de_reseñas_por_pedido": {
-			          "Target": {
-			            "Entity": "medidas_KPI_2.puntaje_promedio_de_reseñas_por_pedido"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_2.puntaje_promedio_de_reseñas_por_pedido"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_puntaje_promedio_de_reseñas_por_pedido"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_8_días_promedio_de_entrega": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_8.días_promedio_de_entrega": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.días_promedio_de_entrega"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.días_promedio_de_entrega"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_días_promedio_de_entrega"
-			        }
-			      ]
-			    },
-			    "medidas_KPI_8_has_línea_base_días_de_entrega": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas KPI 8"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medidas_KPI_8": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8"
-			          }
-			        },
-			        "medidas_KPI_8.línea_base_días_de_entrega": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.línea_base_días_de_entrega"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medidas_KPI_8"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.línea_base_días_de_entrega"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_KPI_8_have_línea_base_días_de_entrega"
-			        }
-			      ]
-			    },
-			    "medidas_KPI_8_has_meta_días_de_entrega": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas KPI 8"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medidas_KPI_8": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8"
-			          }
-			        },
-			        "medidas_KPI_8.meta_días_de_entrega": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.meta_días_de_entrega"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medidas_KPI_8"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.meta_días_de_entrega"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_KPI_8_have_meta_días_de_entrega"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_8_semáforo_días_de_entrega_num": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_8.semáforo_días_de_entrega_num": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.semáforo_días_de_entrega_num"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.semáforo_días_de_entrega_num"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_semáforo_días_de_entrega_num"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_medidas_KPI_8_días_promedio_de_entrega_AA": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "medidas_KPI_8.días_promedio_de_entrega_AA": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.días_promedio_de_entrega_AA"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.días_promedio_de_entrega_AA"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_días_promedio_de_entrega_AA"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_8_días_promedio_de_entrega_AA": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_8.días_promedio_de_entrega_AA": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.días_promedio_de_entrega_AA"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.días_promedio_de_entrega_AA"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_días_promedio_de_entrega_AA"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_medidas_KPI_8_variación_días_de_entrega_vs_AA_días": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "medidas_KPI_8.variación_días_de_entrega_vs_AA_días": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_variación_días_de_entrega_vs_AA_días"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_8_variación_días_de_entrega_vs_AA_días": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_8.variación_días_de_entrega_vs_AA_días": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_variación_días_de_entrega_vs_AA_días"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_8_color_semáforo_días_de_entrega": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_8.color_semáforo_días_de_entrega": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.color_semáforo_días_de_entrega"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.color_semáforo_días_de_entrega"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_color_semáforo_días_de_entrega"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_medidas_KPI_8_color_variación_días": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_FECHA"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "medidas_KPI_8.color_variación_días": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.color_variación_días"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.color_variación_días"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_color_variación_días"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_medidas_KPI_8_color_variación_días": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "medidas_KPI_8.color_variación_días": {
-			          "Target": {
-			            "Entity": "medidas_KPI_8.color_variación_días"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "medidas_KPI_8.color_variación_días"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_color_variación_días"
-			        }
-			      ]
-			    },
-			    "fact_venta_has_dim_cliente": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_VENTAS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_venta": {
-			          "Target": {
-			            "Entity": "fact_venta"
-			          }
-			        },
-			        "dim_cliente": {
-			          "Target": {
-			            "Entity": "dim_cliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_venta"
-			            },
-			            "Object": {
-			              "Role": "dim_cliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dim_clientes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
 			              "Role": "fact_venta"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_fact_ventas"
+			          "ID": "dim_productos_have_fact_ventas"
 			        }
 			      ]
 			    },
@@ -4656,7 +4138,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_venta_has_dim_producto": {
+			    "fact_venta_has_dim_cliente": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_VENTAS"
 			      },
@@ -4667,9 +4149,9 @@ cultureInfo en-US
 			            "Entity": "fact_venta"
 			          }
 			        },
-			        "dim_producto": {
+			        "dim_cliente": {
 			          "Target": {
-			            "Entity": "dim_producto"
+			            "Entity": "dim_cliente"
 			          }
 			        }
 			      },
@@ -4680,17 +4162,17 @@ cultureInfo en-US
 			              "Role": "fact_venta"
 			            },
 			            "Object": {
-			              "Role": "dim_producto"
+			              "Role": "dim_cliente"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dim_productos"
+			          "ID": "fact_ventas_have_dim_clientes"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_producto"
+			              "Role": "dim_cliente"
 			            },
 			            "Object": {
 			              "Role": "fact_venta"
@@ -4698,7 +4180,2989 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_productos_have_fact_ventas"
+			          "ID": "dim_clientes_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5_has_KPI5_gauge_base": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_5": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_gauge_base": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_gauge_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_5"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_gauge_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_5_have_KPI5_gauge_base"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5_has_KPI5_gauge_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_5": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_gauge_meta": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_gauge_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_5"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_gauge_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_5_have_KPI5_gauge_meta"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5_has_KPI5_gauge_máximo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_5": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_gauge_máximo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_gauge_máximo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_5"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_gauge_máximo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_5_have_KPI5_gauge_máximo"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_5_has_KPI5_gauge_mínimo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 5"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_5": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_gauge_mínimo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_gauge_mínimo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_5"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_gauge_mínimo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_5_have_KPI5_gauge_mínimo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_gauge_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_gauge_valor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_gauge_valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_gauge_valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_gauge_valor"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_variación_vs_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_variación_vs_mes_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_variación_vs_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_variación_vs_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_variación_vs_mes_anterior"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_5_KPI5_variación_vs_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_variación_vs_mes_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_variación_vs_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_variación_vs_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_KPI5_variación_vs_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_mes_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_mes_anterior"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_5_KPI5_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_mes_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_KPI5_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_color_semáforo": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_color_semáforo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_color_semáforo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_color_semáforo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_color_semáforo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_meta": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_meta"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_línea_base": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_línea_base": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_línea_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_línea_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_línea_base"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5__flete_sobre_precio": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5__flete_sobre_precio": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5__flete_sobre_precio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5__flete_sobre_precio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5__flete_sobre_precio"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_precio": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_precio": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_precio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_precio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_precio"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_5_KPI5_flete": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_5.KPI5_flete": {
+			          "Target": {
+			            "Entity": "medidas_KPI_5.KPI5_flete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_5.KPI5_flete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI5_flete"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_gauge_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_gauge_valor": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_gauge_valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_gauge_valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_gauge_valor"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3_has_KPI3_gauge_base": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 3"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_3": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_gauge_base": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_gauge_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_3"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_gauge_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_3_have_KPI3_gauge_base"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3_has_KPI3_gauge_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 3"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_3": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_gauge_meta": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_gauge_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_3"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_gauge_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_3_have_KPI3_gauge_meta"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3_has_KPI3_gauge_máximo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 3"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_3": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_gauge_máximo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_gauge_máximo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_3"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_gauge_máximo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_3_have_KPI3_gauge_máximo"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_3_has_KPI3_gauge_mínimo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 3"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_3": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_gauge_mínimo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_gauge_mínimo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_3"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_gauge_mínimo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_3_have_KPI3_gauge_mínimo"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_variación_vs_trimestre_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_variación_vs_trimestre_anterior"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_3_KPI3_variación_vs_trimestre_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_variación_vs_trimestre_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_KPI3_variación_vs_trimestre_anterior"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_trimestre_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_trimestre_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_trimestre_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_trimestre_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_trimestre_anterior"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_3_KPI3_trimestre_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_trimestre_anterior": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_trimestre_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_trimestre_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_KPI3_trimestre_anterior"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_color_semáforo": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_color_semáforo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_color_semáforo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_color_semáforo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_color_semáforo"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_meta": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_meta"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_línea_base": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_línea_base": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_línea_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_línea_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_línea_base"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3__buen_desempeño": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3__buen_desempeño": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3__buen_desempeño"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3__buen_desempeño"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3__buen_desempeño"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_vendedores_que_cumplen": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_vendedores_que_cumplen": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_vendedores_que_cumplen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_vendedores_que_cumplen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_vendedores_que_cumplen"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_medidas_KPI_3_KPI3_vendedores_evaluados": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_vendedores_evaluados": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_vendedores_evaluados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_vendedores_evaluados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_KPI3_vendedores_evaluados"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_3_KPI3__a_tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3__a_tiempo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3__a_tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3__a_tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI3__a_tiempo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_3_KPI3_puntaje_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_puntaje_promedio": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_puntaje_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_puntaje_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI3_puntaje_promedio"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_3_KPI3_pedidos_entregados": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_pedidos_entregados": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_pedidos_entregados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_pedidos_entregados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI3_pedidos_entregados"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_3_KPI3_pedidos": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_3.KPI3_pedidos": {
+			          "Target": {
+			            "Entity": "medidas_KPI_3.KPI3_pedidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_3.KPI3_pedidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_KPI3_pedidos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_8_color_variación_días": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_8.color_variación_días": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.color_variación_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.color_variación_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_variación_días"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_8_color_variación_días": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_8.color_variación_días": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.color_variación_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.color_variación_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_color_variación_días"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_8_color_semáforo_días_de_entrega": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_8.color_semáforo_días_de_entrega": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.color_semáforo_días_de_entrega"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.color_semáforo_días_de_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_semáforo_días_de_entrega"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_8_variación_días_de_entrega_vs_AA_días": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_8.variación_días_de_entrega_vs_AA_días": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_variación_días_de_entrega_vs_AA_días"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_8_variación_días_de_entrega_vs_AA_días": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_8.variación_días_de_entrega_vs_AA_días": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.variación_días_de_entrega_vs_AA_días"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_variación_días_de_entrega_vs_AA_días"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_8_días_promedio_de_entrega_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_8.días_promedio_de_entrega_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.días_promedio_de_entrega_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.días_promedio_de_entrega_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_días_promedio_de_entrega_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_8_días_promedio_de_entrega_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_8.días_promedio_de_entrega_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.días_promedio_de_entrega_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.días_promedio_de_entrega_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_días_promedio_de_entrega_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_8_semáforo_días_de_entrega_num": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_8.semáforo_días_de_entrega_num": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.semáforo_días_de_entrega_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.semáforo_días_de_entrega_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_semáforo_días_de_entrega_num"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_8_has_meta_días_de_entrega": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 8"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_8": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8"
+			          }
+			        },
+			        "medidas_KPI_8.meta_días_de_entrega": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.meta_días_de_entrega"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_8"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.meta_días_de_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_8_have_meta_días_de_entrega"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_8_has_línea_base_días_de_entrega": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 8"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_8": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8"
+			          }
+			        },
+			        "medidas_KPI_8.línea_base_días_de_entrega": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.línea_base_días_de_entrega"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_8"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.línea_base_días_de_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_8_have_línea_base_días_de_entrega"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_8_días_promedio_de_entrega": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_8.días_promedio_de_entrega": {
+			          "Target": {
+			            "Entity": "medidas_KPI_8.días_promedio_de_entrega"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_8.días_promedio_de_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_días_promedio_de_entrega"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_puntaje_promedio_de_reseñas_por_pedido": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.puntaje_promedio_de_reseñas_por_pedido": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.puntaje_promedio_de_reseñas_por_pedido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.puntaje_promedio_de_reseñas_por_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_puntaje_promedio_de_reseñas_por_pedido"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_días_de_atraso_promedio_por_pedido": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.días_de_atraso_promedio_por_pedido": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.días_de_atraso_promedio_por_pedido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.días_de_atraso_promedio_por_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_días_de_atraso_promedio_por_pedido"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_entregados_a_tiempo_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.entregados_a_tiempo_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.entregados_a_tiempo_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.entregados_a_tiempo_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__entregados_a_tiempo_AA"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_medidas_KPI_2_entregados_a_tiempo_AA": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "medidas_KPI_2.entregados_a_tiempo_AA": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.entregados_a_tiempo_AA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.entregados_a_tiempo_AA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have__entregados_a_tiempo_AA"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_semáforo__a_tiempo_num": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.semáforo__a_tiempo_num": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.semáforo__a_tiempo_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.semáforo__a_tiempo_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_semáforo__a_tiempo_num"
+			        }
+			      ]
+			    },
+			    "medidas_KPI_2_has_meta__a_tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas KPI 2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_KPI_2": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2"
+			          }
+			        },
+			        "medidas_KPI_2.meta__a_tiempo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.meta__a_tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_KPI_2"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.meta__a_tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_KPI_2_have_meta__a_tiempo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_entregados_a_tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.entregados_a_tiempo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.entregados_a_tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.entregados_a_tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__entregados_a_tiempo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_pedidos_a_tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.pedidos_a_tiempo": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.pedidos_a_tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.pedidos_a_tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_pedidos_a_tiempo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medidas_KPI_2_pedidos_entregados": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medidas_KPI_2.pedidos_entregados": {
+			          "Target": {
+			            "Entity": "medidas_KPI_2.pedidos_entregados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medidas_KPI_2.pedidos_entregados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_pedidos_entregados"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_puntaje_resena": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.puntaje_resena": {
+			          "Target": {
+			            "Entity": "fact_venta.puntaje_resena"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.puntaje_resena"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_puntaje_resenas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_a_tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.a_tiempo": {
+			          "Target": {
+			            "Entity": "fact_venta.a_tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.a_tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_a_tiempo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dias_atraso": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.dias_atraso": {
+			          "Target": {
+			            "Entity": "fact_venta.dias_atraso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.dias_atraso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_dias_atrasos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dias_entrega": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.dias_entrega": {
+			          "Target": {
+			            "Entity": "fact_venta.dias_entrega"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.dias_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_dias_entregas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_hora_compra": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.hora_compra": {
+			          "Target": {
+			            "Entity": "fact_venta.hora_compra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.hora_compra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_hora_compras"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_flete": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.flete": {
+			          "Target": {
+			            "Entity": "fact_venta.flete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.flete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_fletes"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_precio": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.precio": {
+			          "Target": {
+			            "Entity": "fact_venta.precio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.precio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_precios"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_estado_pedido": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.estado_pedido": {
+			          "Target": {
+			            "Entity": "fact_venta.estado_pedido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.estado_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_estado_pedidos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_order_item_id": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.order_item_id": {
+			          "Target": {
+			            "Entity": "fact_venta.order_item_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.order_item_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_order_item_ids"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_order_id": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.order_id": {
+			          "Target": {
+			            "Entity": "fact_venta.order_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.order_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_order_ids"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_estado": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "dim_vendedor.estado": {
+			          "Target": {
+			            "Entity": "dim_vendedor.estado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor.estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_estado"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_ciudad": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "dim_vendedor.ciudad": {
+			          "Target": {
+			            "Entity": "dim_vendedor.ciudad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor.ciudad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_ciudad"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_seller_id": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "dim_vendedor.seller_id": {
+			          "Target": {
+			            "Entity": "dim_vendedor.seller_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor.seller_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_seller_ids"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "dim_vendedor.seller_id"
+			            },
+			            "Verbs": [
+			              {
+			                "sell": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "seller_ids_sell_dim_vendedors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor.seller_id"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "seller_ids_have_dim_vendedors"
+			        }
+			      ]
+			    },
+			    "dim_vendedor_has_vendedor_key": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_VENDEDOR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_vendedor": {
+			          "Target": {
+			            "Entity": "dim_vendedor"
+			          }
+			        },
+			        "dim_vendedor.vendedor_key": {
+			          "Target": {
+			            "Entity": "dim_vendedor.vendedor_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "dim_vendedor.vendedor_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_vendedors_have_vendedor_keys"
+			        }
+			      ]
+			    },
+			    "dim_producto_has_rango_peso": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_PRODUCTO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_producto": {
+			          "Target": {
+			            "Entity": "dim_producto"
+			          }
+			        },
+			        "dim_producto.rango_peso": {
+			          "Target": {
+			            "Entity": "dim_producto.rango_peso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_producto"
+			            },
+			            "Object": {
+			              "Role": "dim_producto.rango_peso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_productos_have_rango_pesos"
+			        }
+			      ]
+			    },
+			    "dim_producto_has_peso_g": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_PRODUCTO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_producto": {
+			          "Target": {
+			            "Entity": "dim_producto"
+			          }
+			        },
+			        "dim_producto.peso_g": {
+			          "Target": {
+			            "Entity": "dim_producto.peso_g"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_producto"
+			            },
+			            "Object": {
+			              "Role": "dim_producto.peso_g"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_productos_have_peso_g"
+			        }
+			      ]
+			    },
+			    "dim_producto_has_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_PRODUCTO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_producto": {
+			          "Target": {
+			            "Entity": "dim_producto"
+			          }
+			        },
+			        "dim_producto.categoria": {
+			          "Target": {
+			            "Entity": "dim_producto.categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_producto"
+			            },
+			            "Object": {
+			              "Role": "dim_producto.categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_productos_have_categorias"
+			        }
+			      ]
+			    },
+			    "dim_producto_has_product_id": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_PRODUCTO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_producto": {
+			          "Target": {
+			            "Entity": "dim_producto"
+			          }
+			        },
+			        "dim_producto.product_id": {
+			          "Target": {
+			            "Entity": "dim_producto.product_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_producto"
+			            },
+			            "Object": {
+			              "Role": "dim_producto.product_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_productos_have_product_ids"
+			        }
+			      ]
+			    },
+			    "dim_producto_has_producto_key": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_PRODUCTO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_producto": {
+			          "Target": {
+			            "Entity": "dim_producto"
+			          }
+			        },
+			        "dim_producto.producto_key": {
+			          "Target": {
+			            "Entity": "dim_producto.producto_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_producto"
+			            },
+			            "Object": {
+			              "Role": "dim_producto.producto_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_productos_have_producto_keys"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_fin_de_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.fin_de_semana": {
+			          "Target": {
+			            "Entity": "dim_fecha.fin_de_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fin_de_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fin_de_semanas"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_nombre_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.nombre_dia": {
+			          "Target": {
+			            "Entity": "dim_fecha.nombre_dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.nombre_dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_nombre_dias"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_dia_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.dia_semana": {
+			          "Target": {
+			            "Entity": "dim_fecha.dia_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.dia_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_dia_semanas"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_nombre_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.nombre_me": {
+			          "Target": {
+			            "Entity": "dim_fecha.nombre_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.nombre_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_nombre_me"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.me": {
+			          "Target": {
+			            "Entity": "dim_fecha.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.trimestre": {
+			          "Target": {
+			            "Entity": "dim_fecha.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_anio": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.anio": {
+			          "Target": {
+			            "Entity": "dim_fecha.anio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.anio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_anios"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fechas"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_fecha_key": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_FECHA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.fecha_key": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fecha_keys"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_estado_completo": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.estado_completo": {
+			          "Target": {
+			            "Entity": "dim_cliente.estado_completo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.estado_completo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_estado_completos"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_recompra": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.recompra": {
+			          "Target": {
+			            "Entity": "dim_cliente.recompra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.recompra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_recompras"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_estado": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.estado": {
+			          "Target": {
+			            "Entity": "dim_cliente.estado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_estado"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_ciudad": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.ciudad": {
+			          "Target": {
+			            "Entity": "dim_cliente.ciudad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.ciudad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_ciudad"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_customer_unique_id": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.customer_unique_id": {
+			          "Target": {
+			            "Entity": "dim_cliente.customer_unique_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.customer_unique_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_customer_unique_ids"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_cliente_key": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.cliente_key": {
+			          "Target": {
+			            "Entity": "dim_cliente.cliente_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.cliente_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_cliente_keys"
+			        }
+			      ]
+			    },
+			    "dim_cliente_in_estado_completo": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.estado_completo": {
+			          "Target": {
+			            "Entity": "dim_cliente.estado_completo"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_cliente.estado_completo"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_cliente.estado_completo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_are_in_estado_completos"
 			        }
 			      ]
 			    },

@@ -42,8 +42,23 @@ table DIM_PRODUCTO
 		lineageTag: 9c513a5b-ad51-4a00-b27d-1e033e08663d
 		summarizeBy: none
 		sourceColumn: RANGO_PESO
+		sortByColumn: ORDEN_RANGO_PESO
 
 		annotation SummarizationSetBy = Automatic
+
+	/// Orden de RANGO_PESO de menor a mayor peso (para ordenar los gráficos). Lo usa el KPI 5.
+	column ORDEN_RANGO_PESO =
+			VAR p = DIM_PRODUCTO[PESO_G]
+			RETURN SWITCH(TRUE(),
+			    ISBLANK(p), 5,
+			    p < 500, 1,
+			    p < 2000, 2,
+			    p < 10000, 3,
+			    4)
+		dataType: int64
+		isHidden
+		lineageTag: 6a5e0b21-8380-4ce0-8b9c-10eb92573a0b
+		summarizeBy: none
 
 	partition DIM_PRODUCTO = m
 		mode: import

@@ -56,20 +56,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "92aecb554b77a9a4305f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_FECHA"
-              }
-            },
-            "Property": "FECHA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "7c05a93fc1138a61e2b1",
         "field": {
           "Column": {

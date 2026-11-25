@@ -35,6 +35,7 @@ table DIM_FECHA
 
 	column TRIMESTRE
 		dataType: double
+		formatString: 0
 		lineageTag: e37d4619-b07d-4421-806c-cade567d2818
 		summarizeBy: none
 		sourceColumn: TRIMESTRE
@@ -45,6 +46,7 @@ table DIM_FECHA
 
 	column MES
 		dataType: double
+		formatString: 0
 		lineageTag: bbcd61bc-ce0c-449c-b9ab-06b9649310cb
 		summarizeBy: none
 		sourceColumn: MES

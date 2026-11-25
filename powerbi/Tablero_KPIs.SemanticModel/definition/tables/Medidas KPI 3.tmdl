@@ -1,0 +1,150 @@
+/// Tabla de medidas del KPI 3 - Vendedores con buen desempeño (KPI-VEN-03). Responsable: Karol Miranda Mora. Autosuficiente: no depende de otras tablas de medidas.
+table 'Medidas KPI 3'
+	lineageTag: dfbbe8fe-3673-4943-92e8-7967108f5618
+
+	/// KPI-VEN-03 (apoyo). Pedidos distintos: un pedido se cuenta una vez aunque traiga varios productos.
+	measure 'KPI3 Pedidos' = DISTINCTCOUNT(FACT_VENTAS[ORDER_ID])
+		formatString: #,0
+		displayFolder: 4 Apoyo
+		lineageTag: 67ada349-70b4-4040-8c1a-b7c8a9f1f8a9
+
+	/// KPI-VEN-03 (apoyo). Pedidos distintos con ESTADO_PEDIDO = 'delivered'. Se usa para el mínimo de 30 pedidos por vendedor.
+	measure 'KPI3 Pedidos entregados' = CALCULATE([KPI3 Pedidos], FACT_VENTAS[ESTADO_PEDIDO] = "delivered")
+		formatString: #,0
+		displayFolder: 4 Apoyo
+		lineageTag: ef14fd26-dfb3-494f-9920-d2bf8263fbca
+
+	/// KPI-VEN-03 (apoyo). Promedio de PUNTAJE_RESENA por fila (producto) en pedidos entregados. Así se calculó la línea base del documento (380 de 627).
+	measure 'KPI3 Puntaje promedio' = CALCULATE(AVERAGE(FACT_VENTAS[PUNTAJE_RESENA]), FACT_VENTAS[ESTADO_PEDIDO] = "delivered")
+		formatString: 0.00
+		displayFolder: 4 Apoyo
+		lineageTag: 439852fc-d38c-4723-8b2b-0ffb5f2d24a9
+
+	/// KPI-VEN-03 (apoyo). Pedidos entregados a tiempo / pedidos entregados con A_TIEMPO lleno, contando cada pedido una vez.
+	measure 'KPI3 % a tiempo' =
+			VAR atiempo =
+			    CALCULATE([KPI3 Pedidos],
+			        FACT_VENTAS[ESTADO_PEDIDO] = "delivered",
+			        FACT_VENTAS[A_TIEMPO] = "S")
+			VAR entregados =
+			    CALCULATE([KPI3 Pedidos],
+			        FACT_VENTAS[ESTADO_PEDIDO] = "delivered",
+			        NOT ISBLANK(FACT_VENTAS[A_TIEMPO]))
+			RETURN DIVIDE(atiempo, entregados)
+		formatString: 0.0%
+		displayFolder: 4 Apoyo
+		lineageTag: 46eb10e7-724c-4532-a080-78ae51311b46
+
+	/// KPI-VEN-03. Vendedores con 30 o más pedidos entregados en el periodo filtrado.
+	measure 'KPI3 Vendedores evaluados' =
+			COUNTROWS(
+			    FILTER(VALUES(DIM_VENDEDOR[VENDEDOR_KEY]),
+			        [KPI3 Pedidos entregados] >= 30))
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: 1b3e04f5-75fb-4637-aa62-63533ff3cd1a
+
+	/// KPI-VEN-03. Vendedores evaluados con puntaje promedio >= 4 y 90 % o más de pedidos a tiempo. Da 0 (no vacío) si hay evaluados pero ninguno cumple.
+	measure 'KPI3 Vendedores que cumplen' =
+			VAR cumplen =
+			    COUNTROWS(
+			        FILTER(VALUES(DIM_VENDEDOR[VENDEDOR_KEY]),
+			            [KPI3 Pedidos entregados] >= 30
+			                && [KPI3 Puntaje promedio] >= 4
+			                && [KPI3 % a tiempo] >= 0.9))
+			RETURN IF([KPI3 Vendedores evaluados] > 0, cumplen + 0)
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: ebecf0e7-ae97-44f8-a41c-31de4e812228
+
+	/// KPI-VEN-03. Vendedores que cumplen / vendedores evaluados. Enero 2017 a agosto 2018: 381 / 625 = 61,0 %.
+	measure 'KPI3 % buen desempeño' = DIVIDE([KPI3 Vendedores que cumplen], [KPI3 Vendedores evaluados])
+		formatString: 0.0%
+		displayFolder: 1 Valor
+		lineageTag: 48727b70-15cd-47e2-9c27-b5abf1a3bcbd
+
+	/// KPI-VEN-03. Línea base: 381 / 625 = 61,0 % (enero 2017 a agosto 2018). Vacía donde el KPI no tiene datos.
+	measure 'KPI3 Línea base' = IF(NOT ISBLANK([KPI3 % buen desempeño]), DIVIDE(381, 625))
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 1aa0b6fb-596b-4a4a-ab38-37f72e198034
+
+	/// KPI-VEN-03. Meta: línea base + 10 puntos = 71,0 %.
+	measure 'KPI3 Meta' = IF(NOT ISBLANK([KPI3 % buen desempeño]), DIVIDE(381, 625) + 0.10)
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 75843eeb-d14e-4403-9a28-f5e0549382cf
+
+	/// KPI-VEN-03. Color para formato condicional: verde si es >= 71,0 % (meta), ámbar si está entre 61,0 % y 71,0 %, rojo si es < 61,0 % (línea base), gris si no hay datos.
+	measure 'KPI3 Color semáforo' =
+			VAR v = [KPI3 % buen desempeño]
+			VAR base = DIVIDE(381, 625)
+			VAR meta = base + 0.10
+			RETURN SWITCH(TRUE(),
+			    ISBLANK(v), "#98A5B6",
+			    v >= meta, "#4FAF75",
+			    v >= base, "#F4B345",
+			    "#E76C6B")
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 0256e7f2-9fd4-4948-9e90-a58ca635601c
+
+	/// KPI-VEN-03. % buen desempeño del trimestre anterior (DATEADD). Vacío si no hay un solo año y trimestre seleccionados.
+	measure 'KPI3 Trimestre anterior' =
+			IF(
+			    HASONEVALUE(DIM_FECHA[ANIO]) && HASONEVALUE(DIM_FECHA[TRIMESTRE]),
+			    CALCULATE([KPI3 % buen desempeño],
+			        DATEADD(DIM_FECHA[FECHA], -1, QUARTER),
+			        ALL(DIM_FECHA)))
+		formatString: 0.0%
+		displayFolder: 3 Trimestre anterior
+		lineageTag: a71dae3d-d48f-41a3-b3f2-1ad47069eb62
+
+	/// KPI-VEN-03. Diferencia en puntos porcentuales contra el trimestre anterior. Positivo = mejora.
+	measure 'KPI3 Variación vs trimestre anterior' =
+			VAR actual = [KPI3 % buen desempeño]
+			VAR anterior = [KPI3 Trimestre anterior]
+			RETURN IF(NOT ISBLANK(actual) && NOT ISBLANK(anterior), actual - anterior)
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 3 Trimestre anterior
+		lineageTag: 78cc4f8c-8e48-4b7d-9b1f-8a0d48e8b517
+
+	/// KPI-VEN-03. Inicio del arco del gauge en escala 0 a 100.
+	measure 'KPI3 Gauge mínimo' = 0
+		formatString: 0
+		displayFolder: 5 Gauge
+		lineageTag: 5f850c83-beec-424f-a9d9-2829ae71965e
+
+	/// KPI-VEN-03. Final del arco del gauge en escala 0 a 100.
+	measure 'KPI3 Gauge máximo' = 100
+		formatString: 0
+		displayFolder: 5 Gauge
+		lineageTag: c5ac7a74-67dc-4695-acf7-67b8fd0f3438
+
+	/// KPI-VEN-03. % buen desempeño en escala 0 a 100, para la aguja del gauge.
+	measure 'KPI3 Gauge valor' = ROUND([KPI3 % buen desempeño] * 100, 1)
+		formatString: 0.0
+		displayFolder: 5 Gauge
+		lineageTag: de28e9ad-2c0d-4337-bc21-ced5ddeb3481
+
+	/// KPI-VEN-03. Línea base en escala 0 a 100 (61,0).
+	measure 'KPI3 Gauge base' = 60.96
+		formatString: 0.0
+		displayFolder: 5 Gauge
+		lineageTag: 18f56905-f439-4503-a24f-06f51ddb8b17
+
+	/// KPI-VEN-03. Meta en escala 0 a 100 (71,0).
+	measure 'KPI3 Gauge meta' = 70.96
+		formatString: 0.0
+		displayFolder: 5 Gauge
+		lineageTag: b968e849-b09d-45ea-af7b-adab6c87a42e
+
+	column Columna
+		isHidden
+		lineageTag: 3f73e628-8657-4504-934b-02a5134bb2ea
+		isNameInferred
+		sourceColumn: [Columna]
+
+	partition 'Medidas KPI 3' = calculated
+		mode: import
+		source = ROW("Columna", BLANK())
+

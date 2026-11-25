@@ -4,10 +4,10 @@
   "position": {
     "x": 10.291629675538953,
     "y": 524.87311345248668,
-    "z": 5,
+    "z": 5000,
     "height": 535.16474312802563,
     "width": 580.447913700397,
-    "tabOrder": 5
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cylindricalGauge73A12A442345453EB69B593649C3A341",
