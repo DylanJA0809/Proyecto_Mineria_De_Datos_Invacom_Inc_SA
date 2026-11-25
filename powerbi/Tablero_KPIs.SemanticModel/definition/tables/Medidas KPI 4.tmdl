@@ -1,0 +1,246 @@
+/// Tabla de medidas del KPI 4 - Tasa de recompra de clientes (KPI-CLI-04). Autosuficiente: no depende de las tablas de medidas de otros KPIs.
+table 'Medidas KPI 4'
+	lineageTag: dc9be6ac-9e9f-5263-bfdf-23cf33c9c24d
+
+	/// KPI-CLI-04. Clientes únicos (CLIENTE_KEY = customer_unique_id) con al menos un pedido en el período elegido. Denominador de la tasa.
+	measure 'Clientes con compra' = DISTINCTCOUNT(FACT_VENTAS[CLIENTE_KEY])
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: 39ea9d88-d8bb-5e1e-b271-42732b0ecd0d
+
+	/// KPI-CLI-04. Clientes con más de un pedido distinto (ORDER_ID) dentro del período elegido. Se calcula desde FACT_VENTAS para poder verlo por año o semestre, como pide la ficha.
+	measure 'Clientes con recompra' =
+			COUNTROWS(
+			    FILTER(
+			        VALUES(FACT_VENTAS[CLIENTE_KEY]),
+			        CALCULATE(DISTINCTCOUNT(FACT_VENTAS[ORDER_ID])) > 1
+			    )
+			)
+		formatString: #,0
+		displayFolder: 1 Valor
+		lineageTag: 805122e9-1a8b-5e3a-88d7-3a3b0b2a2473
+
+	/// KPI-CLI-04. Clientes con recompra / Clientes con compra. Respeta los filtros de DIM_FECHA (año, semestre, mes), DIM_CLIENTE (estado, ciudad) y DIM_PRODUCTO.
+	measure 'Tasa de recompra' = DIVIDE([Clientes con recompra], [Clientes con compra])
+		formatString: 0.00%
+		displayFolder: 1 Valor
+		lineageTag: 7a3c6dfb-c898-5045-9537-73d3de8fffcb
+
+	/// KPI-CLI-04. Valor de referencia de la línea base (3,12 %): marca RECOMPRA de DIM_CLIENTE, calculada por el ETL sobre todo el período. Filtra por estado y ciudad, pero no por fecha.
+	measure 'Tasa de recompra (DIM_CLIENTE)' =
+			DIVIDE(
+			    CALCULATE(COUNTROWS(DIM_CLIENTE), DIM_CLIENTE[RECOMPRA] = "S"),
+			    COUNTROWS(DIM_CLIENTE)
+			)
+		formatString: 0.00%
+		displayFolder: 1 Valor
+		lineageTag: 5859a33d-5a79-573d-b80b-6a09f1386fb1
+
+	/// KPI-CLI-04. Línea base: 3,12 % (2.997 de 96.096 clientes únicos).
+	measure 'Línea base recompra' = 0.0312
+		formatString: 0.00%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 88afd3d8-1913-50e1-b372-f10ce461bff8
+
+	/// KPI-CLI-04. Meta: 5 %.
+	measure 'Meta recompra' = 0.05
+		formatString: 0.00%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: b24098ea-e531-51b7-9f82-688bade5743d
+
+	/// KPI-CLI-04. Semáforo numérico para formato condicional: 3 = Verde (>= 5 %), 2 = Amarillo (>= 3 % y < 5 %), 1 = Rojo (< 3 %). Vacío si no hay datos.
+	measure 'Semáforo recompra (num)' =
+			VAR v = [Tasa de recompra]
+			RETURN
+			    IF(
+			        ISBLANK(v), BLANK(),
+			        IF(v >= [Meta recompra], 3,
+			        IF(v >= 0.03, 2, 1))
+			    )
+		formatString: 0
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 39ee0b4b-74d1-5285-b7b4-eb3e08c90716
+
+	/// KPI-CLI-04. Color en hexadecimal según el semáforo: verde (#2E9E5B), ámbar (#F5A623), rojo (#E24B4A) y gris (#8795AA) si no hay datos.
+	measure 'Color semáforo recompra' =
+			SWITCH(
+			    [Semáforo recompra (num)],
+			    3, "#2E9E5B",
+			    2, "#F5A623",
+			    1, "#E24B4A",
+			    "#8795AA"
+			)
+		displayFolder: 2 Meta y semáforo
+		lineageTag: be12670c-f22e-5287-ad00-2b6acf4c903d
+
+	/// KPI-CLI-04. Avance = (valor actual - línea base) / (meta - línea base). 100 % = meta cumplida; negativo = por debajo de la línea base.
+	measure 'Avance a la meta recompra' = DIVIDE([Tasa de recompra] - [Línea base recompra], [Meta recompra] - [Línea base recompra])
+		formatString: 0.0%
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 8afb38e2-6dee-5ad3-9a6b-509a65b6f8a0
+
+	/// KPI-CLI-04 (apoyo P4). Suma del precio de los productos, sin flete.
+	measure Ventas = SUM(FACT_VENTAS[PRECIO])
+		formatString: \R$ #,0.00
+		displayFolder: 3 Gasto por cliente
+		lineageTag: 65d6ca10-a933-50a0-983f-920bac06e490
+
+	/// KPI-CLI-04 (apoyo P4). Pedidos distintos (ORDER_ID).
+	measure Pedidos = DISTINCTCOUNT(FACT_VENTAS[ORDER_ID])
+		formatString: #,0
+		displayFolder: 3 Gasto por cliente
+		lineageTag: 7f60daa8-2b08-5b55-85cc-692e6fac6a25
+
+	/// KPI-CLI-04 (apoyo P4). Cuánto gasta en promedio cada cliente en el período: Ventas / Clientes con compra.
+	measure 'Gasto promedio por cliente' = DIVIDE([Ventas], [Clientes con compra])
+		formatString: \R$ #,0.00
+		displayFolder: 3 Gasto por cliente
+		lineageTag: e9c99683-cc72-5938-b3ff-c2b798ee735e
+
+	/// KPI-CLI-04 (apoyo P4). Pedidos promedio por cliente en el período.
+	measure 'Pedidos por cliente' = DIVIDE([Pedidos], [Clientes con compra])
+		formatString: 0.00
+		displayFolder: 3 Gasto por cliente
+		lineageTag: 02ead46a-bd43-5b56-892b-41d33674f378
+
+	/// KPI-CLI-04. Clientes que compraron en el período y que ya habían comprado antes de que empezara (su primera compra es anterior). Se usa para la comparación mes a mes, porque casi nadie compra dos veces dentro del mismo mes.
+	measure 'Clientes que regresan' =
+			VAR inicio = MIN(DIM_FECHA[FECHA_KEY])
+			RETURN
+			    COUNTROWS(
+			        FILTER(
+			            VALUES(FACT_VENTAS[CLIENTE_KEY]),
+			            CALCULATE(
+			                MIN(FACT_VENTAS[FECHA_KEY]),
+			                REMOVEFILTERS(DIM_FECHA)
+			            ) < inicio
+			        )
+			    )
+		formatString: #,0
+		displayFolder: 4 Comparación mensual
+		lineageTag: 2c398629-196e-5b9c-bb49-f7abd5513b7b
+
+	/// KPI-CLI-04. Clientes que regresan / Clientes con compra del período.
+	measure '% Clientes que regresan' = DIVIDE([Clientes que regresan], [Clientes con compra])
+		formatString: 0.00%
+		displayFolder: 4 Comparación mensual
+		lineageTag: c990e111-8c21-5076-870b-6e1be94f5467
+
+	/// KPI-CLI-04. % Clientes que regresan del mes anterior (DATEADD -1 mes). Vacío si no hay filtro de fecha activo.
+	measure '% Clientes que regresan MA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [% Clientes que regresan],
+			        DATEADD(DIM_FECHA[FECHA], -1, MONTH)
+			    ),
+			    BLANK()
+			)
+		formatString: 0.00%
+		displayFolder: 4 Comparación mensual
+		lineageTag: ea6b8d17-3719-5396-9343-51552bbce55b
+
+	/// KPI-CLI-04. % Clientes que regresan del mismo período del año anterior. Vacío si no hay filtro de fecha activo.
+	measure '% Clientes que regresan AA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [% Clientes que regresan],
+			        SAMEPERIODLASTYEAR(DIM_FECHA[FECHA])
+			    ),
+			    BLANK()
+			)
+		formatString: 0.00%
+		displayFolder: 4 Comparación mensual
+		lineageTag: 50fab135-1d9c-5106-a275-c433dcf7e2d0
+
+	/// KPI-CLI-04. Variación en puntos porcentuales contra el mes anterior. Positivo = mejora.
+	measure 'Var regresan vs MA (pp)' =
+			VAR actual = [% Clientes que regresan]
+			VAR anterior = [% Clientes que regresan MA]
+			RETURN
+			    IF(
+			        ISBLANK(actual) || ISBLANK(anterior), BLANK(),
+			        (actual - anterior) * 100
+			    )
+		formatString: +0.00" pp";-0.00" pp";0.00" pp"
+		displayFolder: 4 Comparación mensual
+		lineageTag: 07bdadc1-e49c-5e23-adb8-70e944f5a175
+
+	/// KPI-CLI-04. Variación en puntos porcentuales contra el mismo mes del año anterior. Positivo = mejora.
+	measure 'Var regresan vs AA (pp)' =
+			VAR actual = [% Clientes que regresan]
+			VAR anterior = [% Clientes que regresan AA]
+			RETURN
+			    IF(
+			        ISBLANK(actual) || ISBLANK(anterior), BLANK(),
+			        (actual - anterior) * 100
+			    )
+		formatString: +0.00" pp";-0.00" pp";0.00" pp"
+		displayFolder: 4 Comparación mensual
+		lineageTag: c715ea58-6318-5818-9beb-79e22a5f1e4c
+
+	/// KPI-CLI-04. Verde (#2E9E5B) si sube, rojo (#E24B4A) si baja, gris (#8795AA) si no cambia o no hay dato.
+	measure 'Color var regresan vs MA' =
+			VAR v = [Var regresan vs MA (pp)]
+			RETURN
+			    IF(ISBLANK(v) || v = 0, "#8795AA",
+			    IF(v > 0, "#2E9E5B", "#E24B4A"))
+		displayFolder: 4 Comparación mensual
+		lineageTag: fc9a14b3-1c1d-5b70-8bb1-16916baebf6d
+
+	/// KPI-CLI-04. Verde (#2E9E5B) si sube, rojo (#E24B4A) si baja, gris (#8795AA) si no cambia o no hay dato.
+	measure 'Color var regresan vs AA' =
+			VAR v = [Var regresan vs AA (pp)]
+			RETURN
+			    IF(ISBLANK(v) || v = 0, "#8795AA",
+			    IF(v > 0, "#2E9E5B", "#E24B4A"))
+		displayFolder: 4 Comparación mensual
+		lineageTag: e01ec38b-b73b-51c9-841e-8b378482172c
+
+	/// KPI-CLI-04. Tasa de recompra del mismo período del año anterior. Vacío si no hay filtro de fecha activo.
+	measure 'Tasa de recompra AA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [Tasa de recompra],
+			        SAMEPERIODLASTYEAR(DIM_FECHA[FECHA])
+			    ),
+			    BLANK()
+			)
+		formatString: 0.00%
+		displayFolder: 5 Año anterior
+		lineageTag: e84c6742-9238-5ee9-b529-6ed7a36a3e59
+
+	/// KPI-CLI-04. Variación de la tasa de recompra contra el año anterior, en puntos porcentuales. Positivo = mejora.
+	measure 'Var recompra vs AA (pp)' =
+			VAR actual = [Tasa de recompra]
+			VAR anterior = [Tasa de recompra AA]
+			RETURN
+			    IF(
+			        ISBLANK(actual) || ISBLANK(anterior), BLANK(),
+			        (actual - anterior) * 100
+			    )
+		formatString: +0.00" pp";-0.00" pp";0.00" pp"
+		displayFolder: 5 Año anterior
+		lineageTag: 3c5c897e-3465-5962-8963-e64723daf2cb
+
+	/// KPI-CLI-04. Verde (#2E9E5B) si sube, rojo (#E24B4A) si baja, gris (#8795AA) si no cambia o no hay dato.
+	measure 'Color var recompra vs AA' =
+			VAR v = [Var recompra vs AA (pp)]
+			RETURN
+			    IF(ISBLANK(v) || v = 0, "#8795AA",
+			    IF(v > 0, "#2E9E5B", "#E24B4A"))
+		displayFolder: 5 Año anterior
+		lineageTag: 534225c2-9c16-53aa-abf7-75a2122eed85
+
+	column 'Columna auxiliar'
+		isHidden
+		lineageTag: 2535bedc-c6ea-58a0-a57c-08d32a30a3e2
+		isNameInferred
+		sourceColumn: [Columna auxiliar]
+
+	partition 'Medidas KPI 4' = calculated
+		mode: import
+		source = ROW("Columna auxiliar", 1)
+

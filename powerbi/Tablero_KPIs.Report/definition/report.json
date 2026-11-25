@@ -48,6 +48,11 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "cylindricalGauge73A12A442345453EB69B593649C3A341",
+    "dg5AAA90EFEFE747CB9357C4FC19B85A58",
+    "Tachometer1474636471549"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",

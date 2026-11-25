@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "b5888f6ab6b20d20f000",
   "position": {
-    "x": 1184,
-    "y": 410,
-    "z": 2001,
+    "x": 1057.4499308268237,
+    "y": 620.10001657406508,
+    "z": 3000,
     "height": 388,
     "width": 462,
-    "tabOrder": 2001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -222,20 +222,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "af479e3c9547776e3ecc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Ticket Promedio"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

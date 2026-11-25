@@ -4,13 +4,13 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 167.34686178062611,
+        "x": 167.19999694824219,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 618.34686178062611,
+            "x": 2606.3468617806261,
             "y": 583.06878880352019
           },
           "nodeIndex": "DIM_CLIENTE",
@@ -23,7 +23,7 @@
         },
         {
           "location": {
-            "x": 612.14223715311675,
+            "x": 2600.1422371531166,
             "y": -50
           },
           "nodeIndex": "DIM_FECHA",
@@ -36,7 +36,7 @@
         },
         {
           "location": {
-            "x": 50,
+            "x": 2038,
             "y": 106.10829406898324
           },
           "nodeIndex": "DIM_PRODUCTO",
@@ -49,7 +49,7 @@
         },
         {
           "location": {
-            "x": 72.421810735029112,
+            "x": 2060.4218107350289,
             "y": 646.36185072102762
           },
           "nodeIndex": "DIM_VENDEDOR",
@@ -62,7 +62,7 @@
         },
         {
           "location": {
-            "x": 334.17600508015971,
+            "x": 2322.1760050801595,
             "y": 296.18751449528037
           },
           "nodeIndex": "FACT_VENTAS",
@@ -75,13 +75,104 @@
         },
         {
           "location": {
-            "x": 852.34686178062611,
+            "x": 2840.3468617806261,
             "y": 384.18092536051381
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "81e293fa-0620-42e1-9802-7ae5c6d68ca0",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 286.18092536051381
+          },
+          "nodeIndex": "Medidas KPI 2",
+          "nodeLineageTag": "4b58defe-39e8-4a5a-b281-129a4a2133e2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 286.18092536051381
+          },
+          "nodeIndex": "Medidas KPI 3",
+          "nodeLineageTag": "dfbbe8fe-3673-4943-92e8-7967108f5618",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 286.18092536051381
+          },
+          "nodeIndex": "Medidas KPI 4",
+          "nodeLineageTag": "dc9be6ac-9e9f-5263-bfdf-23cf33c9c24d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 286.18092536051381
+          },
+          "nodeIndex": "Medidas KPI 5",
+          "nodeLineageTag": "d8dcafdb-78c6-41e1-8164-64905453372c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 286.18092536051381
+          },
+          "nodeIndex": "Medidas KPI 7",
+          "nodeLineageTag": "8d3e8db0-cfac-58c0-88d4-2343b76fa3f9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 286.18092536051381
+          },
+          "nodeIndex": "Medidas KPI 8",
+          "nodeLineageTag": "1ac0ca64-6e17-4426-a69a-20d6c7330777",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 372.18092536051381
+          },
+          "nodeIndex": "Top vendedores",
+          "nodeLineageTag": "a939062f-b555-571d-88bc-2eed0c3df684",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0

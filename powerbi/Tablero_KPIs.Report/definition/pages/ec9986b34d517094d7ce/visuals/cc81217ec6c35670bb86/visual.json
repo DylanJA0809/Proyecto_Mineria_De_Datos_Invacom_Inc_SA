@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "cc81217ec6c35670bb86",
+  "position": {
+    "x": 10.291629675538953,
+    "y": 24.69991122129349,
+    "z": 1000,
+    "height": 80.274711469203837,
+    "width": 1708.4105261394664,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "KPI 8: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial Black",
+                      "fontSize": "32pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": "Días",
+                    "textStyle": {
+                      "fontFamily": "Arial Black",
+                      "fontSize": "32pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": " promedio de entrega",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial Black",
+                      "fontSize": "32pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

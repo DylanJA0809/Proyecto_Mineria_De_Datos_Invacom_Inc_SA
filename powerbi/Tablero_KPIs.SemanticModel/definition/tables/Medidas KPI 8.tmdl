@@ -1,0 +1,100 @@
+/// Tabla de medidas del KPI 8 - Días promedio de entrega (KPI-DIA-08). Autosuficiente: no depende de la tabla Medidas KPI 2.
+table 'Medidas KPI 8'
+	lineageTag: 1ac0ca64-6e17-4426-a69a-20d6c7330777
+
+	/// KPI-DIA-08. Promedio de DIAS_ENTREGA con un valor por ORDER_ID (no por fila), solo pedidos con ESTADO_PEDIDO = 'delivered'. Los 8 pedidos entregados sin DIAS_ENTREGA no entran al promedio. Respeta los filtros de DIM_FECHA, DIM_VENDEDOR (ESTADO), DIM_CLIENTE (ESTADO) y DIM_PRODUCTO (CATEGORIA).
+	measure 'Días promedio de entrega' =
+			CALCULATE(
+			    AVERAGEX(
+			        VALUES(FACT_VENTAS[ORDER_ID]),
+			        CALCULATE(AVERAGE(FACT_VENTAS[DIAS_ENTREGA]))
+			    ),
+			    FACT_VENTAS[ESTADO_PEDIDO] = "delivered"
+			)
+		formatString: 0.0
+		displayFolder: 1 Valor
+		lineageTag: 5e99c4e5-8bff-45aa-acf1-e603f8f36978
+
+	/// KPI-DIA-08. Línea base: 13,0 días.
+	measure 'Línea base días de entrega' = 13.0
+		formatString: 0.0
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 139e2af4-ab87-41ff-b176-91cce90ddc4e
+
+	/// KPI-DIA-08. Meta: 11,7 días.
+	measure 'Meta días de entrega' = 11.7
+		formatString: 0.0
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 60106fd9-bc98-4087-a187-9b52432f8fbc
+
+	/// KPI-DIA-08. Semáforo numérico para formato condicional: 3 = Verde (<= 11,7), 2 = Amarillo (> 11,7 y <= 13,0), 1 = Rojo (> 13,0). Vacío si no hay datos. Menos días es mejor.
+	measure 'Semáforo días de entrega (num)' =
+			VAR v = [Días promedio de entrega]
+			RETURN
+			    IF(
+			        ISBLANK(v), BLANK(),
+			        IF(v <= [Meta días de entrega], 3,
+			        IF(v <= [Línea base días de entrega], 2, 1))
+			    )
+		formatString: 0
+		displayFolder: 2 Meta y semáforo
+		lineageTag: faaba57d-0afc-4a8b-bb08-6def1338cb45
+
+	/// KPI-DIA-08. Días promedio de entrega del mismo período del año anterior (DIM_FECHA). Vacío si no hay filtro de fecha activo, para no mezclar años.
+	measure 'Días promedio de entrega AA' =
+			IF(
+			    ISCROSSFILTERED(DIM_FECHA[FECHA]),
+			    CALCULATE(
+			        [Días promedio de entrega],
+			        SAMEPERIODLASTYEAR(DIM_FECHA[FECHA])
+			    ),
+			    BLANK()
+			)
+		formatString: 0.0
+		displayFolder: 3 Año anterior
+		lineageTag: 2503bf59-33e5-42b4-910d-7c926de98d72
+
+	/// KPI-DIA-08. Variación en días: días promedio de entrega menos el mismo período del año anterior. Negativo = mejora (se entrega más rápido).
+	measure 'Variación días de entrega vs AA (días)' =
+			VAR actual = [Días promedio de entrega]
+			VAR anterior = [Días promedio de entrega AA]
+			RETURN
+			    IF(
+			        ISBLANK(actual) || ISBLANK(anterior), BLANK(),
+			        actual - anterior
+			    )
+		formatString: +0.0" días";-0.0" días";0.0" días"
+		displayFolder: 3 Año anterior
+		lineageTag: b0223b34-c1e4-4a78-957e-491406e88667
+
+	/// KPI-DIA-08. Color en hexadecimal para formato condicional según el semáforo: verde (#2E9E5B) si es Verde, ámbar (#F5A623) si es Amarillo, rojo (#E24B4A) si es Rojo y gris (#8795AA) si no hay datos.
+	measure 'Color semáforo días de entrega' =
+			SWITCH(
+			    [Semáforo días de entrega (num)],
+			    3, "#2E9E5B",
+			    2, "#F5A623",
+			    1, "#E24B4A",
+			    "#8795AA"
+			)
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 2c917b21-0b38-45e3-b3ac-da1613313d33
+
+	/// KPI-DIA-08. Color en hexadecimal para la variación vs año anterior: verde (#2E9E5B) si los días bajan (mejora), rojo (#E24B4A) si suben o no cambian, gris (#8795AA) si no hay dato.
+	measure 'Color variación días' =
+			VAR v = [Variación días de entrega vs AA (días)]
+			RETURN
+			    IF(ISBLANK(v), "#8795AA",
+			    IF(v < 0, "#2E9E5B", "#E24B4A"))
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 142d5837-83e8-4fd9-9775-66d7a94e23c1
+
+	column 'Columna auxiliar'
+		isHidden
+		lineageTag: 5067cad9-bcf8-4a03-b1a8-8160f693297f
+		isNameInferred
+		sourceColumn: [Columna auxiliar]
+
+	partition 'Medidas KPI 8' = calculated
+		mode: import
+		source = ROW("Columna auxiliar", 1)
+

@@ -43,6 +43,42 @@ table DIM_CLIENTE
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Estado completo' =
+			SWITCH(
+			    DIM_CLIENTE[ESTADO],
+			    "AC", "Acre, Brazil",
+			    "AL", "Alagoas, Brazil",
+			    "AP", "Amapá, Brazil",
+			    "AM", "Amazonas, Brazil",
+			    "BA", "Bahia, Brazil",
+			    "CE", "Ceará, Brazil",
+			    "DF", "Distrito Federal, Brazil",
+			    "ES", "Espírito Santo, Brazil",
+			    "GO", "Goiás, Brazil",
+			    "MA", "Maranhão, Brazil",
+			    "MT", "Mato Grosso, Brazil",
+			    "MS", "Mato Grosso do Sul, Brazil",
+			    "MG", "Minas Gerais, Brazil",
+			    "PA", "Pará, Brazil",
+			    "PB", "Paraíba, Brazil",
+			    "PR", "Paraná, Brazil",
+			    "PE", "Pernambuco, Brazil",
+			    "PI", "Piauí, Brazil",
+			    "RJ", "Rio de Janeiro, Brazil",
+			    "RN", "Rio Grande do Norte, Brazil",
+			    "RS", "Rio Grande do Sul, Brazil",
+			    "RO", "Rondônia, Brazil",
+			    "RR", "Roraima, Brazil",
+			    "SC", "Santa Catarina, Brazil",
+			    "SP", "São Paulo, Brazil",
+			    "SE", "Sergipe, Brazil",
+			    "TO", "Tocantins, Brazil",
+			    BLANK()
+			)
+		lineageTag: 6cb41b2f-faef-48a1-b7eb-86be4e548ad0
+		dataCategory: StateOrProvince
+		summarizeBy: none
+
 	partition DIM_CLIENTE = m
 		mode: import
 		source =

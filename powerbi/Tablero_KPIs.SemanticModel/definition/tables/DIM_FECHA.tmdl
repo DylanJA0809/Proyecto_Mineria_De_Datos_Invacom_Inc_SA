@@ -24,8 +24,9 @@ table DIM_FECHA
 
 	column ANIO
 		dataType: double
+		formatString: 0
 		lineageTag: 23c0eec9-15ff-4b14-b1e4-3b03d5d36d8d
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ANIO
 
 		annotation SummarizationSetBy = Automatic
@@ -34,8 +35,9 @@ table DIM_FECHA
 
 	column TRIMESTRE
 		dataType: double
+		formatString: 0
 		lineageTag: e37d4619-b07d-4421-806c-cade567d2818
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: TRIMESTRE
 
 		annotation SummarizationSetBy = Automatic
@@ -44,8 +46,9 @@ table DIM_FECHA
 
 	column MES
 		dataType: double
+		formatString: 0
 		lineageTag: bbcd61bc-ce0c-449c-b9ab-06b9649310cb
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: MES
 
 		annotation SummarizationSetBy = Automatic
@@ -86,6 +89,20 @@ table DIM_FECHA
 		lineageTag: 0221e70a-d796-4408-ac4f-3e206fda53a3
 		summarizeBy: none
 		sourceColumn: FIN_DE_SEMANA
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Año y mes como texto AAAA-MM (ordena solo). Lo usan las páginas KPI 4 y KPI 7 para ver los meses de varios años sin mezclarlos.
+	column Año-Mes = FORMAT(DIM_FECHA[FECHA], "yyyy-MM")
+		lineageTag: 1dda0ee1-693b-56d7-a80a-ea533bcd1a54
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Semestre como texto AAAA-S1 / AAAA-S2. La ficha del KPI 4 pide revisión semestral.
+	column Semestre = DIM_FECHA[ANIO] & "-S" & IF(DIM_FECHA[MES] <= 6, 1, 2)
+		lineageTag: 5715203b-f03b-5b35-81f1-d15b07282521
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
