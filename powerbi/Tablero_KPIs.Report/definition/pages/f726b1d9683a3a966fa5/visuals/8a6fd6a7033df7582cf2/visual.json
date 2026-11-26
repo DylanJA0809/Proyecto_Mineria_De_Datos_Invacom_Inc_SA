@@ -40,13 +40,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Ticket Promedio"
                 }
               },
-              "queryRef": "Medidas.Ticket Promedio",
+              "queryRef": "Medidas KPI 1.Ticket Promedio",
               "nativeQueryRef": "Ticket 2018",
               "displayName": "Ticket 2018"
             },
@@ -55,13 +55,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Ticket Año Anterior"
                 }
               },
-              "queryRef": "Medidas.Ticket Año Anterior",
+              "queryRef": "Medidas KPI 1.Ticket Año Anterior",
               "nativeQueryRef": "Ticket 2017",
               "displayName": "Ticket 2017"
             },
@@ -70,13 +70,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Variación % Ticket"
                 }
               },
-              "queryRef": "Medidas.Variación % Ticket",
+              "queryRef": "Medidas KPI 1.Variación % Ticket",
               "nativeQueryRef": "Variación vs 2017",
               "displayName": "Variación vs 2017"
             }
@@ -119,7 +119,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Medidas"
+                                      "Entity": "Medidas KPI 1"
                                     }
                                   },
                                   "Property": "Variación % Ticket"
@@ -146,7 +146,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Medidas"
+                                      "Entity": "Medidas KPI 1"
                                     }
                                   },
                                   "Property": "Variación % Ticket"
@@ -180,7 +180,7 @@
                 }
               }
             ],
-            "metadata": "Medidas.Variación % Ticket"
+            "metadata": "Medidas KPI 1.Variación % Ticket"
           }
         }
       ],
@@ -229,7 +229,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Ticket Promedio"
+            "metadata": "Medidas KPI 1.Ticket Promedio"
           }
         },
         {
@@ -243,7 +243,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Ticket Año Anterior"
+            "metadata": "Medidas KPI 1.Ticket Año Anterior"
           }
         },
         {
@@ -257,7 +257,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Variación % Ticket"
+            "metadata": "Medidas KPI 1.Variación % Ticket"
           }
         }
       ],
@@ -273,7 +273,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Ticket Promedio"
+            "metadata": "Medidas KPI 1.Ticket Promedio"
           }
         },
         {
@@ -287,7 +287,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Ticket Año Anterior"
+            "metadata": "Medidas KPI 1.Ticket Año Anterior"
           }
         },
         {
@@ -301,7 +301,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Variación % Ticket"
+            "metadata": "Medidas KPI 1.Variación % Ticket"
           }
         }
       ],

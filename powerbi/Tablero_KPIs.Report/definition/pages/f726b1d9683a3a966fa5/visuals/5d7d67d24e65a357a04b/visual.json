@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Línea Base Ticket"
                 }
               },
-              "queryRef": "Medidas.Línea Base Ticket",
+              "queryRef": "Medidas KPI 1.Línea Base Ticket",
               "nativeQueryRef": "Línea Base Ticket"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "Medidas KPI 1"
                   }
                 },
                 "Property": "Línea Base Ticket"

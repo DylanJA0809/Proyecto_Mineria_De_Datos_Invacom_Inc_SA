@@ -78,8 +78,21 @@
             "x": 2840.3468617806261,
             "y": 384.18092536051381
           },
-          "nodeIndex": "Medidas",
-          "nodeLineageTag": "81e293fa-0620-42e1-9802-7ae5c6d68ca0",
+          "nodeIndex": "Medidas KPI 1",
+          "nodeLineageTag": "fecfdb4f-acd2-413b-891b-843e0f4014d2",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840.3468617806261,
+            "y": 514.1809253605138
+          },
+          "nodeIndex": "Medidas KPI 6",
+          "nodeLineageTag": "4d56d3fe-a30f-47c0-8947-e7a19acc7873",
           "size": {
             "height": 104,
             "width": 234

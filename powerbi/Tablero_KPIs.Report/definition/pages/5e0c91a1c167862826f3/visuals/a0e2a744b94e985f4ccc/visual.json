@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 6"
                     }
                   },
                   "Property": "Crecimiento % Ventas"
                 }
               },
-              "queryRef": "Medidas.Crecimiento % Ventas",
+              "queryRef": "Medidas KPI 6.Crecimiento % Ventas",
               "nativeQueryRef": "Crecimiento % Ventas",
               "displayName": "Crecimiento vs 2017"
             }
@@ -59,7 +59,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "Medidas KPI 6"
                   }
                 },
                 "Property": "Crecimiento % Ventas"
@@ -82,7 +82,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas"
+                          "Entity": "Medidas KPI 6"
                         }
                       },
                       "Property": "Color Semáforo Ventas"
@@ -206,7 +206,7 @@
                       },
                       {
                         "Name": "m",
-                        "Entity": "Medidas",
+                        "Entity": "Medidas KPI 1",
                         "Type": 0
                       }
                     ],

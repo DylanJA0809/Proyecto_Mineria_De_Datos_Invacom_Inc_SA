@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "KPI1 Ventas"
                 }
               },
-              "queryRef": "Medidas.KPI1 Ventas",
+              "queryRef": "Medidas KPI 1.KPI1 Ventas",
               "nativeQueryRef": "KPI1 Ventas",
               "displayName": "Ventas 2018"
             }
@@ -58,13 +58,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 6"
                     }
                   },
                   "Property": "Ventas Año Anterior"
                 }
               },
-              "queryRef": "Medidas.Ventas Año Anterior",
+              "queryRef": "Medidas KPI 6.Ventas Año Anterior",
               "nativeQueryRef": "Ventas Año Anterior",
               "displayName": "Ventas 2017"
             },
@@ -73,13 +73,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 6"
                     }
                   },
                   "Property": "Crecimiento % Ventas"
                 }
               },
-              "queryRef": "Medidas.Crecimiento % Ventas",
+              "queryRef": "Medidas KPI 6.Crecimiento % Ventas",
               "nativeQueryRef": "Crecimiento % Ventas",
               "displayName": "Crecimiento vs 2017"
             }
@@ -98,7 +98,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas"
+                          "Entity": "Medidas KPI 6"
                         }
                       },
                       "Property": "Color Semáforo Ventas"

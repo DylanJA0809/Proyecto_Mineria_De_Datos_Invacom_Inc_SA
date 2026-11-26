@@ -1,0 +1,76 @@
+/// Tabla de medidas del KPI 6 - Incremento de ventas (KPI-INC-06). Usa KPI1 Ventas de la tabla Medidas KPI 1.
+table 'Medidas KPI 6'
+	lineageTag: 4d56d3fe-a30f-47c0-8947-e7a19acc7873
+
+	/// Crecimiento de las ventas contra el año anterior. Es el KPI.
+	measure 'Crecimiento % Ventas' =
+			IF(
+			    ISBLANK([KPI1 Ventas]) || ISBLANK([Ventas Año Anterior]),
+			    BLANK(),
+			    DIVIDE([KPI1 Ventas] - [Ventas Año Anterior], [Ventas Año Anterior])
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 1 Valor
+		lineageTag: 4da35a99-b340-44c0-bf06-1d9084d0e366
+
+	/// Ventas de enero a agosto de 2018.
+	measure 'Ventas 2018' = CALCULATE([KPI1 Ventas], DATESBETWEEN(DIM_FECHA[FECHA], DATE(2018,1,1), DATE(2018,8,31)))
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 1 Valor
+		lineageTag: e28b5857-17f6-4492-85f6-ffb2225a3846
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Ventas de enero a agosto de 2017.
+	measure 'Línea Base Ventas' = CALCULATE([KPI1 Ventas], DATESBETWEEN(DIM_FECHA[FECHA], DATE(2017,1,1), DATE(2017,8,31)))
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 3972e50f-9e9d-48cd-8d35-8ed4543e0d76
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Ventas del año anterior + 10 %.
+	measure 'Meta Ventas' = [Ventas Año Anterior] * 1.10
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 765410cf-0dbb-4fc5-93ac-58d2af61f8ed
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Verde si crece 10 % o más, amarillo de 0 a 10 %, rojo si cae.
+	measure 'Color Semáforo Ventas' =
+			VAR c = [Crecimiento % Ventas]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(c), "#9E9E9E",
+			        c >= 0.10, "#2E7D32",
+			        c >= 0, "#F9A825",
+			        "#C62828"
+			    )
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 8725fb9c-ec2d-488c-9d97-901c2c58d39b
+
+	/// Ventas del mismo período, un año antes.
+	measure 'Ventas Año Anterior' =
+			IF(
+			    ISBLANK([KPI1 Ventas]),
+			    BLANK(),
+			    CALCULATE([KPI1 Ventas], SAMEPERIODLASTYEAR(DIM_FECHA[FECHA]))
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 3 Año anterior
+		lineageTag: 0f239fe8-1387-40ec-822c-b0b41d05cf47
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column 'Columna auxiliar'
+		isHidden
+		lineageTag: 390b1356-647c-4fc4-bd4e-053acbe9fcda
+		isNameInferred
+		sourceColumn: [Columna auxiliar]
+
+	partition 'Medidas KPI 6' = calculated
+		mode: import
+		source = ROW("Columna auxiliar", 1)
+

@@ -1,0 +1,98 @@
+/// Tabla de medidas del KPI 1 - Ticket promedio por pedido (KPI-TIC-01).
+table 'Medidas KPI 1'
+	lineageTag: fecfdb4f-acd2-413b-891b-843e0f4014d2
+
+	/// Total vendido, sin flete. La usa también el KPI 6.
+	measure 'KPI1 Ventas' = SUM(FACT_VENTAS[PRECIO])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 1 Valor
+		lineageTag: 56524049-7e86-4e1b-8479-a76783899e65
+
+	/// Pedidos distintos.
+	measure 'KPI1 Pedidos' = DISTINCTCOUNT(FACT_VENTAS[ORDER_ID])
+		formatString: 0
+		displayFolder: 1 Valor
+		lineageTag: 057a505f-ed7e-4dca-800c-1cfae966204d
+
+	/// Ventas entre pedidos. Es el KPI.
+	measure 'Ticket Promedio' = DIVIDE([KPI1 Ventas], [KPI1 Pedidos])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 1 Valor
+		lineageTag: 7686f79b-f4d5-4654-88dd-1d098da767c2
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Ticket de enero a agosto de 2018.
+	measure 'Ticket 2018' = CALCULATE([Ticket Promedio], DATESBETWEEN(DIM_FECHA[FECHA], DATE(2018,1,1),DATE(2018,8,31)))
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 1 Valor
+		lineageTag: d164d386-af2f-4334-9527-bff9d2e268b8
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Ticket de enero a agosto de 2017.
+	measure 'Línea Base Ticket' = CALCULATE([Ticket Promedio], DATESBETWEEN(DIM_FECHA[FECHA], DATE(2017,1,1),DATE(2017,8,31)))
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 2 Meta y semáforo
+		lineageTag: ebd1cfed-0ffb-45f9-b147-596b2991f9bb
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Línea base + 5 %.
+	measure 'Meta Ticket' = [Línea Base Ticket] * 1.05
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 839b7a0a-34e4-41b2-9c20-6f32820ded75
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Verde si llega a la meta, amarillo si supera la base, rojo si no.
+	measure 'Color Semáforo Ticket' = ```
+			
+			  VAR t = [Ticket Promedio]
+			  RETURN
+			      SWITCH(
+			          TRUE(),
+			          ISBLANK(t), "#9E9E9E",
+			          t >= [Meta Ticket], "#2E7D32",
+			          t >= [Línea Base Ticket], "#F9A825",
+			          "#C62828"
+			      )
+			```
+		displayFolder: 2 Meta y semáforo
+		lineageTag: 6d2b9a0a-f6e3-4d5f-9c20-58b92bb47d77
+
+	/// Ticket del mismo período, un año antes.
+	measure 'Ticket Año Anterior' =
+			IF(
+			    ISBLANK([Ticket Promedio]),
+			    BLANK(),
+			    CALCULATE([Ticket Promedio], SAMEPERIODLASTYEAR(DIM_FECHA[FECHA]))
+			  )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: 3 Año anterior
+		lineageTag: ff042f0a-5681-48a2-8f7f-36dfff17cd6a
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Variación del ticket contra el año anterior.
+	measure 'Variación % Ticket' =
+			IF(
+			    ISBLANK([Ticket Promedio]) || ISBLANK([Ticket Año Anterior]),
+			    BLANK(),
+			    DIVIDE([Ticket Promedio] - [Ticket Año Anterior], [Ticket Año Anterior])
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 3 Año anterior
+		lineageTag: 66b88899-8909-4b42-909d-f64aa945e5da
+
+	column 'Columna auxiliar'
+		isHidden
+		lineageTag: 28632a27-b3d5-4a42-92b2-1d9d3a958572
+		isNameInferred
+		sourceColumn: [Columna auxiliar]
+
+	partition 'Medidas KPI 1' = calculated
+		mode: import
+		source = ROW("Columna auxiliar", 1)
+

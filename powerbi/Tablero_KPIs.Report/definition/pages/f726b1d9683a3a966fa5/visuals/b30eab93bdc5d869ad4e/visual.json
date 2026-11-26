@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Ticket Promedio"
                 }
               },
-              "queryRef": "Medidas.Ticket Promedio",
+              "queryRef": "Medidas KPI 1.Ticket Promedio",
               "nativeQueryRef": "Ticket Promedio"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "Medidas KPI 1"
                   }
                 },
                 "Property": "Ticket Promedio"

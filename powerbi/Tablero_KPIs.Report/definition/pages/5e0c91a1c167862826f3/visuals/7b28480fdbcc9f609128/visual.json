@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 6"
                     }
                   },
                   "Property": "Meta Ventas"
                 }
               },
-              "queryRef": "Medidas.Meta Ventas",
+              "queryRef": "Medidas KPI 6.Meta Ventas",
               "nativeQueryRef": "Meta Ventas"
             }
           ]
@@ -38,13 +38,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "KPI1 Ventas"
                 }
               },
-              "queryRef": "Medidas.KPI1 Ventas",
+              "queryRef": "Medidas KPI 1.KPI1 Ventas",
               "nativeQueryRef": "KPI1 Ventas",
               "displayName": "Ventas 2018"
             }
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "Medidas KPI 1"
                   }
                 },
                 "Property": "KPI1 Ventas"
@@ -101,7 +101,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas"
+                          "Entity": "Medidas KPI 6"
                         }
                       },
                       "Property": "Color Semáforo Ventas"

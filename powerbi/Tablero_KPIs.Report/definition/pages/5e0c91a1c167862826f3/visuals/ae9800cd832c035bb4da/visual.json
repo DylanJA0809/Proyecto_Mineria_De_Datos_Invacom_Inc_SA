@@ -40,13 +40,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "KPI1 Ventas"
                 }
               },
-              "queryRef": "Medidas.KPI1 Ventas",
+              "queryRef": "Medidas KPI 1.KPI1 Ventas",
               "nativeQueryRef": "Ventas 2018",
               "displayName": "Ventas 2018"
             },
@@ -55,13 +55,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 6"
                     }
                   },
                   "Property": "Ventas Año Anterior"
                 }
               },
-              "queryRef": "Medidas.Ventas Año Anterior",
+              "queryRef": "Medidas KPI 6.Ventas Año Anterior",
               "nativeQueryRef": "Ventas 2017",
               "displayName": "Ventas 2017"
             },
@@ -70,13 +70,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 6"
                     }
                   },
                   "Property": "Crecimiento % Ventas"
                 }
               },
-              "queryRef": "Medidas.Crecimiento % Ventas",
+              "queryRef": "Medidas KPI 6.Crecimiento % Ventas",
               "nativeQueryRef": "Crecimiento vs 2017",
               "displayName": "Crecimiento vs 2017"
             }
@@ -119,7 +119,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Medidas"
+                                      "Entity": "Medidas KPI 6"
                                     }
                                   },
                                   "Property": "Crecimiento % Ventas"
@@ -146,7 +146,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Medidas"
+                                      "Entity": "Medidas KPI 6"
                                     }
                                   },
                                   "Property": "Crecimiento % Ventas"
@@ -180,7 +180,7 @@
                 }
               }
             ],
-            "metadata": "Medidas.Crecimiento % Ventas"
+            "metadata": "Medidas KPI 6.Crecimiento % Ventas"
           }
         }
       ],
@@ -229,7 +229,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.KPI1 Ventas"
+            "metadata": "Medidas KPI 1.KPI1 Ventas"
           }
         },
         {
@@ -243,7 +243,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Ventas Año Anterior"
+            "metadata": "Medidas KPI 6.Ventas Año Anterior"
           }
         },
         {
@@ -257,7 +257,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Crecimiento % Ventas"
+            "metadata": "Medidas KPI 6.Crecimiento % Ventas"
           }
         }
       ],
@@ -273,7 +273,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.KPI1 Ventas"
+            "metadata": "Medidas KPI 1.KPI1 Ventas"
           }
         },
         {
@@ -287,7 +287,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Ventas Año Anterior"
+            "metadata": "Medidas KPI 6.Ventas Año Anterior"
           }
         },
         {
@@ -301,7 +301,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Crecimiento % Ventas"
+            "metadata": "Medidas KPI 6.Crecimiento % Ventas"
           }
         }
       ],

@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Meta Ticket"
                 }
               },
-              "queryRef": "Medidas.Meta Ticket",
+              "queryRef": "Medidas KPI 1.Meta Ticket",
               "nativeQueryRef": "Meta Ticket"
             }
           ]
@@ -38,13 +38,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Ticket Promedio"
                 }
               },
-              "queryRef": "Medidas.Ticket Promedio",
+              "queryRef": "Medidas KPI 1.Ticket Promedio",
               "nativeQueryRef": "Ticket Promedio"
             }
           ]
@@ -57,7 +57,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "Medidas KPI 1"
                   }
                 },
                 "Property": "Ticket Promedio"
@@ -100,7 +100,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Medidas"
+                          "Entity": "Medidas KPI 1"
                         }
                       },
                       "Property": "Color Semáforo Ticket"

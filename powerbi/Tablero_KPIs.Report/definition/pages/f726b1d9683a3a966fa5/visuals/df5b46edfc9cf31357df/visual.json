@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "Medidas KPI 1"
                     }
                   },
                   "Property": "Meta Ticket"
                 }
               },
-              "queryRef": "Medidas.Meta Ticket",
+              "queryRef": "Medidas KPI 1.Meta Ticket",
               "nativeQueryRef": "Meta Ticket"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "Medidas KPI 1"
                   }
                 },
                 "Property": "Meta Ticket"
