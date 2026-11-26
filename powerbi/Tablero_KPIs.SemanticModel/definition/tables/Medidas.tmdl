@@ -67,6 +67,56 @@ table Medidas
 			```
 		lineageTag: 6d2b9a0a-f6e3-4d5f-9c20-58b92bb47d77
 
+	measure 'Ventas Año Anterior' =
+			IF(
+			    ISBLANK([KPI1 Ventas]),
+			    BLANK(),
+			    CALCULATE([KPI1 Ventas], SAMEPERIODLASTYEAR(DIM_FECHA[FECHA]))
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 0f239fe8-1387-40ec-822c-b0b41d05cf47
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Crecimiento % Ventas' =
+			IF(
+			    ISBLANK([KPI1 Ventas]) || ISBLANK([Ventas Año Anterior]),
+			    BLANK(),
+			    DIVIDE([KPI1 Ventas] - [Ventas Año Anterior], [Ventas Año Anterior])
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 4da35a99-b340-44c0-bf06-1d9084d0e366
+
+	measure 'Línea Base Ventas' = CALCULATE([KPI1 Ventas], DATESBETWEEN(DIM_FECHA[FECHA], DATE(2017,1,1), DATE(2017,8,31)))
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 3972e50f-9e9d-48cd-8d35-8ed4543e0d76
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Ventas 2018' = CALCULATE([KPI1 Ventas], DATESBETWEEN(DIM_FECHA[FECHA], DATE(2018,1,1), DATE(2018,8,31)))
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: e28b5857-17f6-4492-85f6-ffb2225a3846
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Meta Ventas' = [Ventas Año Anterior] * 1.10
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 765410cf-0dbb-4fc5-93ac-58d2af61f8ed
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Color Semáforo Ventas' =
+			VAR c = [Crecimiento % Ventas]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(c), "#9E9E9E",
+			        c >= 0.10, "#2E7D32",
+			        c >= 0, "#F9A825",
+			        "#C62828"
+			    )
+		lineageTag: 8725fb9c-ec2d-488c-9d97-901c2c58d39b
+
 	partition Medidas = m
 		mode: import
 		source =
