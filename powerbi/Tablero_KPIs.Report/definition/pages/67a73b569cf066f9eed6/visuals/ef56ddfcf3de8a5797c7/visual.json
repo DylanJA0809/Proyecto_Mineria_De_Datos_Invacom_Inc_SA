@@ -134,6 +134,24 @@
           "selector": {
             "metadata": "Medidas KPI 5.KPI5 Meta"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E76C6B'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas KPI 5.KPI5 Línea base"
+          }
         }
       ]
     },

@@ -150,7 +150,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2B9E5B'"
+                      "Value": "'#4FAF75'"
                     }
                   }
                 }
@@ -167,7 +167,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F5A623'"
+                      "Value": "'#F4B345'"
                     }
                   }
                 }
@@ -183,9 +183,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#E76C6B'"
                     }
                   }
                 }

@@ -18,7 +18,6 @@ ref table DIM_FECHA
 ref table DIM_PRODUCTO
 ref table DIM_VENDEDOR
 ref table FACT_VENTAS
-ref table Medidas
 ref table 'Medidas KPI 2'
 ref table 'Medidas KPI 8'
 ref table 'Medidas KPI 3'
@@ -26,6 +25,7 @@ ref table 'Medidas KPI 5'
 ref table 'Medidas KPI 4'
 ref table 'Medidas KPI 7'
 ref table 'Top vendedores'
+ref table Medidas
 
 ref cultureInfo en-US
 

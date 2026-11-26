@@ -2412,6 +2412,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "Resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2447,6 +2457,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2595,6 +2615,16 @@ cultureInfo en-US
 			          "días promedio de entrega": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2626,6 +2656,16 @@ cultureInfo en-US
 			        {
 			          "meta días de entrega": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2935,6 +2975,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "% buen desempeño": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Resultado": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3572,6 +3622,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "% flete sobre precio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Resultado": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4291,6 +4351,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4814,6 +4884,26 @@ cultureInfo en-US
 			          "KPI1 ventas": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Ventas 2018": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4849,6 +4939,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "Ticket 2018": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Resultado": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5262,6 +5362,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.475
 			          }
+			        },
+			        {
+			          "Meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5467,6 +5577,16 @@ cultureInfo en-US
 			          "tasa de recompra": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5520,6 +5640,16 @@ cultureInfo en-US
 			        {
 			          "meta recompra": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6108,6 +6238,16 @@ cultureInfo en-US
 			          "meta reseña positiva": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6606,10 +6746,156 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "medida.ventas_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ventas Año Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas año anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ventas 2017": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.crecimiento__ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Crecimiento % Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crecimiento % ventas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crecimiento percentage venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "crecimiento pct venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Crecimiento vs 2017": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.línea_base_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Línea Base Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "línea base ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ventas_2018": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ventas 2018"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas 2018": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meta_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Meta Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta ventas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.color_semáforo_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Color Semáforo Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color semáforo ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_venta_has_dim_producto": {
+			    "fact_venta_has_medida_línea_base_ventas": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_VENTAS"
 			      },
@@ -6620,9 +6906,9 @@ cultureInfo en-US
 			            "Entity": "fact_venta"
 			          }
 			        },
-			        "dim_producto": {
+			        "medida.línea_base_ventas": {
 			          "Target": {
-			            "Entity": "dim_producto"
+			            "Entity": "medida.línea_base_ventas"
 			          }
 			        }
 			      },
@@ -6633,29 +6919,16 @@ cultureInfo en-US
 			              "Role": "fact_venta"
 			            },
 			            "Object": {
-			              "Role": "dim_producto"
+			              "Role": "medida.línea_base_ventas"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dim_productos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_producto"
-			            },
-			            "Object": {
-			              "Role": "fact_venta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_productos_have_fact_ventas"
+			          "ID": "fact_ventas_have_línea_base_ventas"
 			        }
 			      ]
 			    },
-			    "fact_venta_has_dim_fecha": {
+			    "fact_venta_has_medida_crecimiento__ventas": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_VENTAS"
 			      },
@@ -6666,9 +6939,9 @@ cultureInfo en-US
 			            "Entity": "fact_venta"
 			          }
 			        },
-			        "dim_fecha": {
+			        "medida.crecimiento__ventas": {
 			          "Target": {
-			            "Entity": "dim_fecha"
+			            "Entity": "medida.crecimiento__ventas"
 			          }
 			        }
 			      },
@@ -6679,29 +6952,16 @@ cultureInfo en-US
 			              "Role": "fact_venta"
 			            },
 			            "Object": {
-			              "Role": "dim_fecha"
+			              "Role": "medida.crecimiento__ventas"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dim_fechas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_venta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_fact_ventas"
+			          "ID": "fact_ventas_have_crecimiento__ventas"
 			        }
 			      ]
 			    },
-			    "fact_venta_has_dim_cliente": {
+			    "fact_venta_has_medida_ventas_año_anterior": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_VENTAS"
 			      },
@@ -6712,9 +6972,9 @@ cultureInfo en-US
 			            "Entity": "fact_venta"
 			          }
 			        },
-			        "dim_cliente": {
+			        "medida.ventas_año_anterior": {
 			          "Target": {
-			            "Entity": "dim_cliente"
+			            "Entity": "medida.ventas_año_anterior"
 			          }
 			        }
 			      },
@@ -6725,25 +6985,12 @@ cultureInfo en-US
 			              "Role": "fact_venta"
 			            },
 			            "Object": {
-			              "Role": "dim_cliente"
+			              "Role": "medida.ventas_año_anterior"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ventas_have_dim_clientes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_cliente"
-			            },
-			            "Object": {
-			              "Role": "fact_venta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clientes_have_fact_ventas"
+			          "ID": "fact_ventas_have_ventas_año_anterior"
 			        }
 			      ]
 			    },
@@ -12498,6 +12745,243 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_clientes_are_in_estado_completos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_ventas_2018": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.ventas_2018": {
+			          "Target": {
+			            "Entity": "medida.ventas_2018"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.ventas_2018"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_ventas_2018"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_meta_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.meta_ventas": {
+			          "Target": {
+			            "Entity": "medida.meta_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_meta_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_medida_color_semáforo_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "medida.color_semáforo_ventas": {
+			          "Target": {
+			            "Entity": "medida.color_semáforo_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "medida.color_semáforo_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_color_semáforo_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dim_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_dim_clientes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "fact_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dim_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_dim_fechas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dim_producto": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_VENTAS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "dim_producto": {
+			          "Target": {
+			            "Entity": "dim_producto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_producto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_dim_productos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_producto"
+			            },
+			            "Object": {
+			              "Role": "fact_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_productos_have_fact_ventas"
 			        }
 			      ]
 			    },

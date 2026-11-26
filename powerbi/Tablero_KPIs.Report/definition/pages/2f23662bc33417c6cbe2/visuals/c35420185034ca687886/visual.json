@@ -169,7 +169,7 @@
                   "identityValues": [
                     {
                       "Literal": {
-                        "Value": "'ibitinga'"
+                        "Value": "'sao paulo'"
                       }
                     }
                   ],
@@ -289,6 +289,23 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F9F7F2'"
+                    }
+                  }
                 }
               }
             }
