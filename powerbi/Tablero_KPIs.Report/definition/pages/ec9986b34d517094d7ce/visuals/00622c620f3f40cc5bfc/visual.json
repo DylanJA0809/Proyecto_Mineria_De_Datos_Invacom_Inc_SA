@@ -311,5 +311,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "50d5777df915120c5804",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_FECHA"
+              }
+            },
+            "Property": "ANIO"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

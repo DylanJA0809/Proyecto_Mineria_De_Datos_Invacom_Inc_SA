@@ -154,5 +154,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5245ea292630b9c3a7ea",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_FECHA"
+              }
+            },
+            "Property": "NOMBRE_MES"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d968914ea8bff4b2a8f7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 8"
+              }
+            },
+            "Property": "Días promedio de entrega"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1194e60ea89bd990ec6c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 8"
+              }
+            },
+            "Property": "Días promedio de entrega AA"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

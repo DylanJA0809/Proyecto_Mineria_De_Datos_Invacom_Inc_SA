@@ -153,11 +153,50 @@
                   "Value": "true"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Avance hacia la meta (95 %)'"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "00729ff4b9fa17a5fb53",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 2"
+              }
+            },
+            "Property": "% Entregados a tiempo"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3b9385a7a1a401236942",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 2"
+              }
+            },
+            "Property": "Meta % a tiempo"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -117,7 +117,7 @@
             "areaShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -178,8 +178,67 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cada mes comparado con el mismo mes del año anterior'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c15d44b9385ae8f05987",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_FECHA"
+              }
+            },
+            "Property": "NOMBRE_MES"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9ea1596c631457a30a59",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 2"
+              }
+            },
+            "Property": "% Entregados a tiempo"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a268a08fb090b91724f8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 2"
+              }
+            },
+            "Property": "% Entregados a tiempo AA"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

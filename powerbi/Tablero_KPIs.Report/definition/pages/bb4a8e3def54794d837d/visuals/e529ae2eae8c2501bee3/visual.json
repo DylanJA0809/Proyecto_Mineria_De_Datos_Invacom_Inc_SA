@@ -77,7 +77,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% a tiempo por categoría (10 con más pedidos)'"
+                  "Value": "'Categorías con más pedidos entregados'"
                 }
               }
             },
@@ -229,6 +229,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "9701d5a8aa52d46e40ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 2"
+              }
+            },
+            "Property": "% Entregados a tiempo"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

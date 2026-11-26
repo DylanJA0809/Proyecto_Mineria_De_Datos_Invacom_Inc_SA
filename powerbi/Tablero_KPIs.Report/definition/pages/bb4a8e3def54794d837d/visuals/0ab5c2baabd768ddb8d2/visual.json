@@ -99,7 +99,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% a tiempo por estado del vendedor (10 con más pedidos)'"
+                  "Value": "'Estados con más pedidos entregados'"
                 }
               }
             },
@@ -258,6 +258,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "429f80a70eba73d6c742",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas KPI 2"
+              }
+            },
+            "Property": "% Entregados a tiempo"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
